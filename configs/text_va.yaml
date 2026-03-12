@@ -1,0 +1,45 @@
+defaults:
+  - _self_
+
+project:
+  name: "TextVAPred"
+  seed: 42
+
+data:
+  chinese_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\Chinese+English\\chinese_va.json"
+  english_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\Chinese+English\\english_va.json"
+
+  # 模型相关
+  model_name: "xlm-roberta-base"
+  max_length: 128 # 文本最大长度，超过截断，不足补0
+  batch_size: 32
+  num_workers: 4  # Windows下如果报错可以改为 0
+
+model:
+  learning_rate: 2e-5  # 微调预训练模型的标准学习率
+  weight_decay: 0.01
+  dropout: 0.1
+
+training:
+  max_epochs: 10
+  accelerator: 'gpu'
+  devices: [0]
+  val_split_ratio: 0.1    # 验证集比例 10%
+  test_split_ratio: 0.1   # 测试集比例 10%
+
+save:
+  result_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\results"
+  log_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\tb_logs"
+  checkpoint_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\checkpoints"
+
+hydra:
+  run:
+    dir: .                # 将运行目录设置为当前目录，不再创建日期文件夹
+  output_subdir: null     # 禁止创建 .hydra 子目录（存放 config 副本的地方）
+  job_logging:
+    root:
+      handlers: [console] # 只在控制台输出日志
+    handlers:
+      file:
+        class: logging.FileHandler
+        filename: NUL

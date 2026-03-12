@@ -1,0 +1,8 @@
+# 忽略输出文件夹
+/outputs/
+
+/tools/
+# 忽略 PyCharm 自己的配置文件 (推荐加上)
+.idea/
+__pycache__/
+*.pyc

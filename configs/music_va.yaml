@@ -1,0 +1,42 @@
+defaults:
+  - _self_
+
+project:
+  name: "MusicVAPred"
+  seed: 42
+
+data:
+  json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\DEAM+PMEMO\\music_va.json"
+  feature_root: "D:\\AAAA_audio_dataset"
+
+  batch_size: 64
+  num_workers: 4
+
+model:
+  input_dim: 1536   # 因为我们用了均值(768) + 最大值(768)
+  learning_rate: 1e-4
+  weight_decay: 1e-4
+
+training:
+  max_epochs: 100
+  accelerator: 'gpu'
+  devices: [0]
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+save:
+  result_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\results"
+  checkpoint_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\checkpoints"
+  log_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\tb_logs"
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job_logging:
+    root:
+      handlers: [console]
+    handlers:
+      file:
+        class: logging.FileHandler
+        filename: NUL
