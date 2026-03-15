@@ -2,10 +2,8 @@
 /outputs/
 /tools/
 /data/music_db/
-/src/application/build_sem_db.py/
-/src/application/build_db.py/
-/src/application/trajectory.py/
-/src/application/trajectory_rule.py/
+/src/application/*
+!/src/application/build_sem_db.py
 /src/inference/
 
 
