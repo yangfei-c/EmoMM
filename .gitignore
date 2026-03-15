@@ -1,8 +1,15 @@
-# 忽略输出文件夹
+# 忽略不想上传文件夹和文件
 /outputs/
-
 /tools/
-# 忽略 PyCharm 自己的配置文件 (推荐加上)
+/data/music_db/
+/src/application/build_sem_db.py/
+/src/application/build_db.py/
+/src/application/trajectory.py/
+/src/application/trajectory_rule.py/
+/src/inference/
+
+
+# 忽略 PyCharm 自己的配置文件
 .idea/
 __pycache__/
 *.pyc
