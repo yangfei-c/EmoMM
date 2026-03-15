@@ -2,9 +2,7 @@
 /outputs/
 /tools/
 /data/music_db/
-/src/application/*
-!/src/application/build_sem_db.py
-/src/inference/
+/src/application/text_app.py
 
 
 # 忽略 PyCharm 自己的配置文件

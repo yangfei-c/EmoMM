@@ -10,7 +10,7 @@ task_name: "${model_type}_${loss_type}"
 data:
   split_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\MTG-Jamendo"
   feature_dir: "D:\\AAAA_audio_dataset\\mtg-jamendo\\MERT_95M_30s"
-  tag_path: "D:\\AAAA_audio_dataset\\mtg-jamendo\\meta\\tag_recsys.npy"
+  tag_path: "D:\\AAAA_audio_dataset\\mtg-jamendo\\meta\\tags_26.npy"
 
   batch_size: 64
   num_workers: 4
