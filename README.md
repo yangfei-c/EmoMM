@@ -49,15 +49,13 @@ EmoMusicRec/
  
  
 ## 核心引擎
-
-| 步骤 | 输入 |                                                      公式                                                      | 作用 |
-|:---:|:---:|:------------------------------------------------------------------------------------------------------------:|:---:|
-| F1：文本情绪估计 | 用户文本 $t_q$ |                                            ${z}_q=f_{text}(t_q)$                                             | 得到当前情绪点 ${z}_q$ |
-| F2：意图调节 | ${z}_q$ 与意图 $r$ |                                      ${\mu}_q={z}_q+{\Delta}_r({z}_q)$                                       | 得到目标情绪点 ${\mu}_q$ |
-| F3：标签原型 | 语义库向量 ${s}_i=[{z}_i,{y}_i]$ |                               ${c}_j=\frac{\sum_i w_{ij}{z}_i}{\sum_i w_{ij}}$                               | 将标签映射到 VA 原型空间 |
-| F4：目标偏好分布 | ${\mu}_q,{c}_j$ | $\tau_{q,j}=\frac{\exp(-\alpha\lVert{\mu}_q-{c}_j\rVert^2)}{\sum_k\exp(-\alpha\lVert{\mu}_q-{c}_k\rVert^2)}$ | 得到标签偏好分布 ${\tau}_q$ |
-| F5：VA 约束重排 | ${\mu}_q,{\tau}_q,{s}_i$ |        $S_i=\lambda_{\text{va}}{RankNorm}(-d_i^2)+\lambda_{\text{tag}}{RankNorm}({\tau}_q^\top{y}_i)$        | 输出 Top-K 结果（先 VA 后语义） |
-
+| 步骤 | 输入 | 公式 | 作用 |
+| :---: | :---: | :---: | :---: |
+| F1：文本情绪估计 | 用户文本 $t_q$ | $z_q = f_{\text{text}}(t_q)$ | 得到当前情绪点 $z_q$ |
+| F2：意图调节 | $z_q$ 与意图 $r$ | $\mu_q = z_q + \Delta_r(z_q)$ | 得到目标情绪点 $\mu_q$ |
+| F3：标签原型 | 语义库向量 $s_i = [z_i, y_i]$ | $c_j = \frac{\sum_i w_{ij} z_i}{\sum_i w_{ij}}$ | 将标签映射到 VA 原型空间 |
+| F4：目标偏好分布 | $\mu_q, c_j$ | $\tau_{q,j} = \frac{\exp(-\alpha \lVert \mu_q - c_j \rVert^2)}{\sum_k \exp(-\alpha \lVert \mu_q - c_k \rVert^2)}$ | 得到标签偏好分布 $\tau_q$ |
+| F5：VA 约束重排 | $\mu_q, \tau_q, s_i$ | $S_i = \lambda_{\text{va}} \text{RankNorm}(-d_i^2) + \lambda_{\text{tag}} \text{RankNorm}(\tau_q^\top y_i)$ | 输出 Top-K 结果（先 VA 后语义） |
 ## 实验结果
 
 ### MusicTag 不同（模型+损失）训练结果对比：
