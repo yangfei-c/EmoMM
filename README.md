@@ -58,7 +58,6 @@ EmoMusicRec/
 | F4：目标偏好分布 | ${\mu}_q,{c}_j$ | $\tau_{q,j}=\frac{\exp(-\alpha\lVert{\mu}_q-{c}_j\rVert^2)}{\sum_k\exp(-\alpha\lVert{\mu}_q-{c}_k\rVert^2)}$ | 得到标签偏好分布 ${\tau}_q$ |
 | F5：VA 约束重排 | ${\mu}_q,{\tau}_q,{s}_i$ | $S_i=\lambda_{\text{va}}{RankNorm}(-d_i^2)+\lambda_{\text{tag}}{RankNorm}({\tau}_q^\top{y}_i)$ | 输出 Top-K 结果（先 VA 后语义） |
 
-
 ## 实验结果
 
 ### MusicTag 不同（模型+损失）训练结果对比：
