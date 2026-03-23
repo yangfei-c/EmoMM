@@ -52,11 +52,11 @@ EmoMusicRec/
 
 | 步骤 | 输入 |                                                      公式                                                      | 作用 |
 |:---:|:---:|:------------------------------------------------------------------------------------------------------------:|:---:|
-| F1：文本情绪估计 | 用户文本 $t_q$ |                                         ${z}_q=f_{\text{text}}(t_q)$                                         | 得到当前情绪点 ${z}_q$ |
-| F2：意图调节 | ${z}_q$ 与意图 $r$ |                                   ${\mu}_q={z}_q+{\Delta}_r({z}_q)$                                   | 得到目标情绪点 ${\mu}_q$ |
+| F1：文本情绪估计 | 用户文本 $t_q$ |                                            ${z}_q=f_{text}(t_q)$                                             | 得到当前情绪点 ${z}_q$ |
+| F2：意图调节 | ${z}_q$ 与意图 $r$ |                                      ${\mu}_q={z}_q+{\Delta}_r({z}_q)$                                       | 得到目标情绪点 ${\mu}_q$ |
 | F3：标签原型 | 语义库向量 ${s}_i=[{z}_i,{y}_i]$ |                               ${c}_j=\frac{\sum_i w_{ij}{z}_i}{\sum_i w_{ij}}$                               | 将标签映射到 VA 原型空间 |
 | F4：目标偏好分布 | ${\mu}_q,{c}_j$ | $\tau_{q,j}=\frac{\exp(-\alpha\lVert{\mu}_q-{c}_j\rVert^2)}{\sum_k\exp(-\alpha\lVert{\mu}_q-{c}_k\rVert^2)}$ | 得到标签偏好分布 ${\tau}_q$ |
-| F5：VA 约束重排 | ${\mu}_q,{\tau}_q,{s}_i$ | $S_i=\lambda_{\text{va}}{RankNorm}(-d_i^2)+\lambda_{\text{tag}}{RankNorm}({\tau}_q^\top{y}_i)$ | 输出 Top-K 结果（先 VA 后语义） |
+| F5：VA 约束重排 | ${\mu}_q,{\tau}_q,{s}_i$ |        $S_i=\lambda_{\text{va}}{RankNorm}(-d_i^2)+\lambda_{\text{tag}}{RankNorm}({\tau}_q^\top{y}_i)$        | 输出 Top-K 结果（先 VA 后语义） |
 
 ## 实验结果
 
