@@ -19,9 +19,9 @@ class MusicVAModel(nn.Module):
             nn.Linear(128, 2)  # 输出两维：Valence 和 Arousal
         )
 
-        # 边界约束，保证预测的情绪坐标永远在 [0, 1] 之间
-        self.sigmoid = nn.Hardsigmoid()
+        # 输出约束到 [-1, 1]
+        self.output_activation = nn.Tanh()
 
     def forward(self, x):
         logits = self.mlp(x)
-        return self.sigmoid(logits)
+        return self.output_activation(logits)

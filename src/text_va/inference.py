@@ -1,13 +1,28 @@
 import os
+import warnings
+import logging
 import torch
 from transformers import AutoTokenizer
-from trainer import TextVATrainer  # 导入我们写好的 Lightning 模块
+warnings.filterwarnings("ignore")
+for _logger in ("transformers", "huggingface_hub", "urllib3", "filelock", "requests"): 
+    logging.getLogger(_logger).setLevel(logging.ERROR)
+try:
+    from transformers import logging as transformers_logging
+    transformers_logging.set_verbosity_error()
+except Exception:
+    pass
+
+try:
+    from .trainer import TextVATrainer
+except ImportError:
+    from trainer import TextVATrainer
 
 
 def load_model_and_tokenizer(ckpt_path, model_name="xlm-roberta-base"):
     """
     加载训练好的模型和分词器
     """
+    # Informative prints are kept at a minimal level; transformers/hf internals are silenced
     print(f"Loading tokenizer: {model_name}...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -47,7 +62,7 @@ def predict_emotion(text, model_system, tokenizer, device, max_length=128):
     with torch.no_grad():  # 推理时不计算梯度
         logits = model_system(input_ids, attention_mask)
 
-    # logits 的 shape 是 [1, 2]，里面是被 HardSigmoid 约束在 [0, 1] 之间的连续值
+    # logits 的 shape 是 [1, 2]，输出已被 tanh 约束在 [-1, 1]
     valence = logits[0, 0].item()
     arousal = logits[0, 1].item()
 

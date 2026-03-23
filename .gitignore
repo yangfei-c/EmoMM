@@ -2,9 +2,11 @@
 /outputs/
 /tools/
 /data/music_db/
-/src/application/text_app.py
-
-
+/tools/application/text_app.py
+/src/application/test.py
+/src/application/outputs
+/docs
+/scripts
 # 忽略 PyCharm 自己的配置文件
 .idea/
 __pycache__/

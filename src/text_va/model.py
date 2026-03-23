@@ -5,10 +5,7 @@ from transformers import XLMRobertaForSequenceClassification
 class XLMRobertaVA(XLMRobertaForSequenceClassification):
     def __init__(self, config):
         super().__init__(config)
-        self.sigmoid = self.customHardSigmoid
-
-    def customHardSigmoid(self, x):
-        return torch.nn.functional.hardsigmoid(3 * x)
+        self.output_activation = torch.tanh
 
     def forward(
             self,
@@ -23,7 +20,6 @@ class XLMRobertaVA(XLMRobertaForSequenceClassification):
             output_hidden_states=None,
             return_dict=None,
     ):
-        # 调用父类的 forward
         outputs = super().forward(
             input_ids,
             attention_mask=attention_mask,
@@ -31,12 +27,12 @@ class XLMRobertaVA(XLMRobertaForSequenceClassification):
             position_ids=position_ids,
             head_mask=head_mask,
             inputs_embeds=inputs_embeds,
-            labels=None,  # 我们自己计算 Loss，所以这里不传 label 给父类
+            labels=None,
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
 
-        logits = self.sigmoid(outputs.logits)
+        logits = self.output_activation(outputs.logits)
         outputs.logits = logits
         return outputs

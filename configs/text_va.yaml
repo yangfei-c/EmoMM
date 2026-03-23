@@ -2,13 +2,13 @@ defaults:
   - _self_
 
 project:
-  name: "TextVAPred"
+  name: "TextVAPred_${data.label_range}"
   seed: 42
 
 data:
   chinese_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\Chinese+English\\chinese_va.json"
   english_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\Chinese+English\\english_va.json"
-
+  label_range: "m11"
   # 模型相关
   model_name: "xlm-roberta-base"
   max_length: 128 # 文本最大长度，超过截断，不足补0

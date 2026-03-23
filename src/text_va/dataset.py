@@ -6,11 +6,17 @@ class TextVADataset(Dataset):
     def __init__(self, data_list, cfg):
         self.data = data_list
         self.max_len = cfg.data.max_length
+        self.label_range = str(getattr(cfg.data, "label_range", "m11")).lower()
         # 加载分词器 (XLM-RoBERTa-base)
         self.tokenizer = AutoTokenizer.from_pretrained(cfg.data.model_name)
 
     def __len__(self):
         return len(self.data)
+
+    def _map_label_range(self, valence: float, arousal: float):
+        if self.label_range == "m11":
+            return 2.0 * valence - 1.0, 2.0 * arousal - 1.0
+        return valence, arousal
 
     def __getitem__(self, idx):
         item = self.data[idx]
@@ -33,6 +39,7 @@ class TextVADataset(Dataset):
         # 标签处理：Valence 和 Arousal
         valence = float(item['valence'])
         arousal = float(item['arousal'])
+        valence, arousal = self._map_label_range(valence, arousal)
         labels = torch.tensor([valence, arousal], dtype=torch.float)
 
         # squeeze(0) 是因为 tokenizer 默认返回 [1, len]，我们需要去掉 batch 维度变成 [len]

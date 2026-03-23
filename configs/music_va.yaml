@@ -2,13 +2,13 @@ defaults:
   - _self_
 
 project:
-  name: "MusicVAPred"
+  name: "MusicVAPred_${data.label_range}"
   seed: 42
 
 data:
   json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\DEAM+PMEMO\\music_va.json"
   feature_root: "D:\\AAAA_audio_dataset"
-
+  label_range: "m11"
   batch_size: 64
   num_workers: 4
 
