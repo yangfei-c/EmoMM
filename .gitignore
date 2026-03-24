@@ -4,7 +4,7 @@
 /data/music_db/
 /tools/application/text_app.py
 /src/application/test.py
-/src/application/outputs
+/src/application/outputs/
 /scripts/
 # 忽略 PyCharm 自己的配置文件
 .idea/
