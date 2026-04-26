@@ -1,77 +1,92 @@
 from __future__ import annotations
 
-import sys
-from pathlib import Path
-
-cur_dir = Path(__file__).resolve().parent
-src_dir = cur_dir.parent
-if str(src_dir) not in sys.path:
-    sys.path.insert(0, str(src_dir))
-
-try:
-    from .config import retrieval_config
-    from .core import Emo2Music
-except ImportError:
-    from application.config import retrieval_config
-    from application.core import Emo2Music
-
-topk = int(retrieval_config["topk"])
-VALID_INTENTS = {"validate", "soothe", "uplift", "energize"}
+from application.config import default_strength, text_list
+from application.music_repository import load_tracks
+from application.user_state import UserStateEstimator
+from application.utils import va_score, tag_score, total_score
 
 
-def main() -> None:
-    text = input("Please enter your current feeling text: ").strip()
-    intent = input("Please enter your intent(validate/soothe/uplift/energize): ").strip().lower()
-    if not intent:
-        intent = "validate"
-    if intent not in VALID_INTENTS:
-        print(f"Unknown intent '{intent}', fallback to 'validate'.")
-        intent = "validate"
+def build_candidates(mu_q, tau, gamma=1.0):
+    tracks = load_tracks()
+    results = []
 
-    emo2music = Emo2Music()
-    result = emo2music.run(text=text, intent=intent, topk=topk)
-    save_path = emo2music.save_result(result)
+    for track in tracks:
+        z_i = track["va"]
+        y_i = track["tag26"]
 
-    z_q = result["f_1"]["z_q"]
-    mu_q = result["f_2"]["mu_q"]
-    delta = result["f_2"]["delta_va"]
-    sel_proto = result["f_3"]["sel_proto"]
-    tau_sorted = sorted(result["f_4"]["tau_selected"].items(), key=lambda x: x[1], reverse=True)
-    d2_map = result["f_4"]["distance_squared_to_mu"]
+        v_score = va_score(z_i, mu_q)
+        t_score = tag_score(y_i, tau)
+        both_score = total_score(z_i, y_i, mu_q, tau, gamma=gamma)
 
-    tau_top = " | ".join([f"{t}:{w:.3f}(d2={d2_map.get(t, 0.0):.3f})" for t, w in tau_sorted[:5]])
-    proto_top = ", ".join([f"{t}:{[round(v, 3) for v in va]}" for t, va in list(sel_proto.items())[:6]])
+        results.append({
+            "song_id": track["song_id"],
+            "song_path": track["song_path"],
+            "display_tags": track["display_tags"],
+            "va": z_i,
+            "va_score": v_score,
+            "tag_score": t_score,
+            "both_score": both_score,
+        })
 
-    print("\n=== Compact View ===")
-    print(
-        f"intent={result['meta']['intent']} | mode={result['meta']['tag_mode']} | "
-        f"topk={result['meta']['topk']} | pool={result['meta']['pool_size']}"
-    )
-    print(f"z_q={[round(x, 4) for x in z_q]} | delta={[round(x, 4) for x in delta]} | mu_q={[round(x, 4) for x in mu_q]}")
-    print(f"proto(sample) {proto_top}")
-    print(f"tau(top5) {tau_top}")
+    return results
 
-    print("\n=== Rank (compact) ===")
-    print("rk | total    | va_norm  | tag_norm | mu_d2    | va               | top_tags")
-    for i, item in enumerate(result["f_5"]["results"], 1):
-        top_tags = ",".join([f"{t}:{v:.2f}" for t, v in item.get("top_tags", [])[:3]])
-        print(
-            f"{i:>2d} | "
-            f"{item['score_total']:>8.5f} | "
-            f"{item['score_va']:>8.5f} | "
-            f"{item['score_tag']:>8.5f} | "
-            f"{item.get('mu_d2', 0.0):>8.5f} | "
-            f"{str([round(x, 3) for x in item['song_va']]):<16} | "
-            f"{top_tags}"
+
+def topk_by(results, key, top_k=5):
+    return sorted(results, key=lambda x: x[key], reverse=True)[:top_k]
+
+
+def print_group(title, items):
+    print("\n" + title)
+    print("-" * 100)
+
+    for rank, item in enumerate(items, start=1):
+        print(f"[Top {rank}] {item['song_id']}")
+        print(f"  VA: {item['va']}")
+        print(f"  Display tags: {item['display_tags']}")
+        print(f"  VA score: {item['va_score']:.4f}")
+        print(f"  Tag score: {item['tag_score']:.4f}")
+        print(f"  VA+Tag score: {item['both_score']:.4f}")
+        print(f"  Path: {item['song_path']}")
+        print()
+
+
+def run_one(text, strategy, strength=default_strength, top_k=5, gamma=1.0):
+    estimator = UserStateEstimator()
+    state = estimator.process(text, strategy=strategy, strength=strength)
+
+    mu_q = state["mu_q"]
+    tau = state["tag_prior"]
+
+    results = build_candidates(mu_q, tau, gamma=gamma)
+
+    va_top = topk_by(results, "va_score", top_k=top_k)
+    tag_top = topk_by(results, "tag_score", top_k=top_k)
+    both_top = topk_by(results, "both_score", top_k=top_k)
+
+    print("=" * 100)
+    print(f"Text: {text}")
+    print(f"Strategy: {strategy}")
+    print(f"Strength: {state['strength']}")
+    print(f"Current VA z_q: {state['z_q']}")
+    print(f"Strategy anchor: {state['anchor']}")
+    print(f"Target VA mu_q: {state['mu_q']}")
+    print(f"Delta: {state['delta']}")
+
+    print_group("1) 只看 VA：按目标 VA 距离排序", va_top)
+    print_group("2) 只看 Tag：按策略标签匹配排序", tag_top)
+    print_group("3) VA + Tag：最终联合排序", both_top)
+
+
+def main():
+    for item in text_list:
+        run_one(
+            text=item["text"],
+            strategy=item["intent"],
+            strength=default_strength,
+            top_k=5,
+            gamma=1.0,
         )
-
-    print("\n=== Paths ===")
-    for i, item in enumerate(result["f_5"]["results"], 1):
-        print(f"{i:>2d}. {item.get('song_path')}")
-
-    print(f"\nSaved result: {Path(save_path)}")
 
 
 if __name__ == "__main__":
     main()
-

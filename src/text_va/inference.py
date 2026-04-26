@@ -23,10 +23,10 @@ def load_model_and_tokenizer(ckpt_path, model_name="xlm-roberta-base"):
     加载训练好的模型和分词器
     """
     # Informative prints are kept at a minimal level; transformers/hf internals are silenced
-    print(f"Loading tokenizer: {model_name}...")
+    # print(f"Loading tokenizer: {model_name}...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    print(f"Loading model from checkpoint: {ckpt_path}...")
+    # print(f"Loading model from checkpoint: {ckpt_path}...")
     # 使用 PyTorch Lightning 的内置方法加载权重
     # 它会自动读取超参数并恢复模型架构
     model_system = TextVATrainer.load_from_checkpoint(ckpt_path)

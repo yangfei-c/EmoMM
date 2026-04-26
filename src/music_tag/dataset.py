@@ -5,6 +5,7 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset
 from omegaconf import DictConfig
+from pathlib import Path
 
 
 class JamendoDataset(Dataset):
@@ -24,11 +25,47 @@ class JamendoDataset(Dataset):
         print(f"[{split.upper()}] Samples: {len(self.data)} | Mode: {self.model_type}")
 
     def _load_data(self):
-        split_dir = self.cfg.data.split_dir
-        json_filename = f"{self.split}.json"
-        json_path = os.path.join(split_dir, json_filename)
-        with open(json_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        split_dir = Path(self.cfg.data.split_dir)
+        split_path = split_dir / f"{self.split}.json"
+        if split_path.exists():
+            with split_path.open('r', encoding='utf-8') as f:
+                return json.load(f)
+
+        jamendo_path = split_dir / "jamendo.json"
+        alt_path = getattr(self.cfg.data, "jamendo_json_path", None)
+        if alt_path and Path(str(alt_path)).exists():
+            jamendo_path = Path(str(alt_path))
+        if not jamendo_path.exists():
+            raise FileNotFoundError(f"Missing split file {split_path} and fallback jamendo file {jamendo_path}")
+
+        with jamendo_path.open('r', encoding='utf-8') as f:
+            all_rows = json.load(f)
+
+        val_ratio = float(getattr(self.cfg.data, "val_ratio", 0.1))
+        test_ratio = float(getattr(self.cfg.data, "test_ratio", 0.1))
+        seed = int(getattr(self.cfg, "seed", 42))
+
+        total = len(all_rows)
+        val_len = int(total * val_ratio)
+        test_len = int(total * test_ratio)
+        train_len = total - val_len - test_len
+        if train_len <= 0:
+            raise ValueError("Invalid split ratios: train set would be empty")
+
+        g = torch.Generator().manual_seed(seed)
+        order = torch.randperm(total, generator=g).tolist()
+
+        split_name = self.split.lower()
+        if split_name == "train":
+            idxs = order[:train_len]
+        elif split_name in {"validation", "val"}:
+            idxs = order[train_len: train_len + val_len]
+        elif split_name == "test":
+            idxs = order[train_len + val_len:]
+        else:
+            raise ValueError(f"Unknown split: {self.split}")
+
+        return [all_rows[i] for i in idxs]
 
     def _load_tag_mappings(self):
         target_path = self.cfg.data.tag_path
