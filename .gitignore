@@ -3,6 +3,7 @@
 /tools/
 /data/music_db/
 /data/figure/
+/src/eval_rec/data
 /tools/application/text_app.py
 /src/application/test.py
 /src/application/outputs/

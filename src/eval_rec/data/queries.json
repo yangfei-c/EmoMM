@@ -1,221 +1,74 @@
 [
   {
-    "base_id": "HVHA_CN_01",
+    "base_id": "HVHA_CN",
     "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
+    "quadrant_name": "高V高A：积极激活",
     "expected_va": "+V,+A",
     "language": "CN",
     "sample_id": 1,
-    "text": "我今天特别兴奋，感觉什么都能做好。"
+    "text": "刚收到一个好消息，我一路走得很快，脑子里已经开始计划下一步。"
   },
   {
-    "base_id": "HVHA_CN_02",
+    "base_id": "HVHA_EN",
     "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
-    "expected_va": "+V,+A",
-    "language": "CN",
-    "sample_id": 2,
-    "text": "我现在很开心，整个人特别有动力。"
-  },
-  {
-    "base_id": "HVHA_CN_03",
-    "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
-    "expected_va": "+V,+A",
-    "language": "CN",
-    "sample_id": 3,
-    "text": "今天状态很好，心情很亮，精力也很足。"
-  },
-  {
-    "base_id": "HVHA_EN_01",
-    "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
-    "expected_va": "+V,+A",
-    "language": "EN",
-    "sample_id": 1,
-    "text": "I feel excited and full of energy today."
-  },
-  {
-    "base_id": "HVHA_EN_02",
-    "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
+    "quadrant_name": "高V高A：积极激活",
     "expected_va": "+V,+A",
     "language": "EN",
     "sample_id": 2,
-    "text": "I am very happy and motivated right now."
+    "text": "The good news came in, and I immediately started moving around the room, planning the next steps."
   },
   {
-    "base_id": "HVHA_EN_03",
-    "quadrant": "HVHA",
-    "quadrant_name": "高V高A：开心兴奋",
-    "expected_va": "+V,+A",
-    "language": "EN",
-    "sample_id": 3,
-    "text": "Everything feels bright and I have a lot of energy."
-  },
-
-  {
-    "base_id": "HVLA_CN_01",
+    "base_id": "HVLA_CN",
     "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
-    "expected_va": "+V,-A",
-    "language": "CN",
-    "sample_id": 1,
-    "text": "今天很安静，我感觉很放松。"
-  },
-  {
-    "base_id": "HVLA_CN_02",
-    "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
-    "expected_va": "+V,-A",
-    "language": "CN",
-    "sample_id": 2,
-    "text": "我现在很满足，心里很平和。"
-  },
-  {
-    "base_id": "HVLA_CN_03",
-    "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
+    "quadrant_name": "高V低A：积极低唤醒",
     "expected_va": "+V,-A",
     "language": "CN",
     "sample_id": 3,
-    "text": "今晚很舒服，我只想安静地待一会儿。"
+    "text": "晚饭后没有别的安排，灯光很柔和，我想安安稳稳地待着。"
   },
   {
-    "base_id": "HVLA_EN_01",
+    "base_id": "HVLA_EN",
     "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
+    "quadrant_name": "高V低A：积极低唤醒",
     "expected_va": "+V,-A",
     "language": "EN",
-    "sample_id": 1,
-    "text": "I feel peaceful and relaxed tonight."
+    "sample_id": 4,
+    "text": "The day went smoothly, and I am sitting by the window letting time move slowly."
   },
   {
-    "base_id": "HVLA_EN_02",
-    "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
-    "expected_va": "+V,-A",
-    "language": "EN",
-    "sample_id": 2,
-    "text": "I feel calm, content, and safe."
-  },
-  {
-    "base_id": "HVLA_EN_03",
-    "quadrant": "HVLA",
-    "quadrant_name": "高V低A：平静满足",
-    "expected_va": "+V,-A",
-    "language": "EN",
-    "sample_id": 3,
-    "text": "I am in a quiet and comfortable mood."
-  },
-
-  {
-    "base_id": "LVHA_CN_01",
+    "base_id": "LVHA_CN",
     "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
+    "quadrant_name": "低V高A：消极高唤醒",
     "expected_va": "-V,+A",
     "language": "CN",
-    "sample_id": 1,
-    "text": "我现在很烦躁，心里压着一团火。"
+    "sample_id": 5,
+    "text": "刚才那件事一直卡在心里，我在房间里来回走，没法坐稳。"
   },
   {
-    "base_id": "LVHA_CN_02",
+    "base_id": "LVHA_EN",
     "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
-    "expected_va": "-V,+A",
-    "language": "CN",
-    "sample_id": 2,
-    "text": "我很焦虑，脑子停不下来。"
-  },
-  {
-    "base_id": "LVHA_CN_03",
-    "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
-    "expected_va": "-V,+A",
-    "language": "CN",
-    "sample_id": 3,
-    "text": "我有点生气，也很不安。"
-  },
-  {
-    "base_id": "LVHA_EN_01",
-    "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
+    "quadrant_name": "低V高A：消极高唤醒",
     "expected_va": "-V,+A",
     "language": "EN",
-    "sample_id": 1,
-    "text": "I feel angry and restless."
+    "sample_id": 6,
+    "text": "Messages keep coming in, my hands will not stop moving, and my mind is racing."
   },
   {
-    "base_id": "LVHA_EN_02",
-    "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
-    "expected_va": "-V,+A",
-    "language": "EN",
-    "sample_id": 2,
-    "text": "I feel anxious and my mind will not stop racing."
-  },
-  {
-    "base_id": "LVHA_EN_03",
-    "quadrant": "LVHA",
-    "quadrant_name": "低V高A：愤怒焦虑",
-    "expected_va": "-V,+A",
-    "language": "EN",
-    "sample_id": 3,
-    "text": "I am irritated and tense right now."
-  },
-
-  {
-    "base_id": "LVLA_CN_01",
+    "base_id": "LVLA_CN",
     "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
+    "quadrant_name": "低V低A：消极低唤醒",
     "expected_va": "-V,-A",
     "language": "CN",
-    "sample_id": 1,
-    "text": "我很难过，什么都不想做。"
+    "sample_id": 7,
+    "text": "房间里很暗，我躺了很久，连回消息都觉得费劲。"
   },
   {
-    "base_id": "LVLA_CN_02",
+    "base_id": "LVLA_EN",
     "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
-    "expected_va": "-V,-A",
-    "language": "CN",
-    "sample_id": 2,
-    "text": "我今天很低落，感觉没有力气。"
-  },
-  {
-    "base_id": "LVLA_CN_03",
-    "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
-    "expected_va": "-V,-A",
-    "language": "CN",
-    "sample_id": 3,
-    "text": "我觉得很失落，只想一个人待着。"
-  },
-  {
-    "base_id": "LVLA_EN_01",
-    "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
+    "quadrant_name": "低V低A：消极低唤醒",
     "expected_va": "-V,-A",
     "language": "EN",
-    "sample_id": 1,
-    "text": "I feel sad and exhausted."
-  },
-  {
-    "base_id": "LVLA_EN_02",
-    "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
-    "expected_va": "-V,-A",
-    "language": "EN",
-    "sample_id": 2,
-    "text": "I feel down and have no energy today."
-  },
-  {
-    "base_id": "LVLA_EN_03",
-    "quadrant": "LVLA",
-    "quadrant_name": "低V低A：悲伤低落",
-    "expected_va": "-V,-A",
-    "language": "EN",
-    "sample_id": 3,
-    "text": "I feel lonely, heavy, and unmotivated."
+    "sample_id": 8,
+    "text": "I cannot get myself to start anything today, and I just want the room to stay quiet."
   }
 ]
