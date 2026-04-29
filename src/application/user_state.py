@@ -40,7 +40,7 @@ class UserStateEstimator:
         z_q = clip_va(z_q)
         s = max(0.0, min(1.0, float(strength)))
 
-        # maintain: target stays at current VA. Others: interpolate toward data-driven anchor.
+        # maintain: target stays at current VA. Others: interpolate toward result-driven anchor.
         z_anchor = z_q if strategy == "maintain" else strategy_anchors[strategy]
         mu_q = interpolate_va(z_q, z_anchor, s)
         tau = make_tag_prior(strategy_tag.get(strategy, []), tags_26)

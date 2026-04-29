@@ -20,7 +20,7 @@ from application.music_repository import load_tracks
 from application.user_state import UserStateEstimator
 
 
-QUERY_JSON = EVAL_REC_DIR / "data" / "queries.json"
+QUERY_JSON = EVAL_REC_DIR / "result" / "queries.json"
 
 
 def load_rep_queries():

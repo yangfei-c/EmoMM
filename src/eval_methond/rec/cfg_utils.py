@@ -29,8 +29,8 @@ EXPERIMENT_STRATEGIES = ["maintain", "calm", "energize", "comfort"]
 
 
 # 输入输出路径
-QUERY_JSON = EVAL_REC_DIR / "data" / "queries.json"
-OUT_DIR = SRC_DIR / "eval_rec" / "data"
+QUERY_JSON = EVAL_REC_DIR / "result" / "queries.json"
+OUT_DIR = SRC_DIR / "eval_methond" / "result"
 
 
 def load_queries():

@@ -6,7 +6,7 @@ current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parents[1]
 
 # Paths
-music_db_path = project_root / "data" / "music_db" / "semantic_db.json"
+music_db_path = project_root / "result" / "music_db" / "semantic_db.json"
 text_ckpt = project_root / "outputs" / "checkpoints" / "TextVAPred_m11" / "last.ckpt"
 
 # Text VA model

@@ -8,10 +8,10 @@ project_name: "MusicTag"
 task_name: "${model_type}_${loss_type}"
 
 data:
-  split_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\MTG-Jamendo"
+  split_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\result\\MTG-Jamendo"
   feature_dir: "D:\\AAAA_audio_dataset\\mtg-jamendo\\MERT_95M_30s"
-  tag_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\MTG-Jamendo\\tags_26.npy"
-  jamendo_json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\data\\MTG-Jamendo\\jamendo.json"
+  tag_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\result\\MTG-Jamendo\\tags_26.npy"
+  jamendo_json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\result\\MTG-Jamendo\\jamendo.json"
   val_ratio: 0.1
   test_ratio: 0.1
 

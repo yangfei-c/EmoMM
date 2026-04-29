@@ -11,14 +11,14 @@ from tqdm import tqdm
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-JAMENDO_JSON = PROJECT_ROOT / "data" / "MTG-Jamendo" / "jamendo.json"
-TAGS_26_NPY = PROJECT_ROOT / "data" / "MTG-Jamendo" / "tags_26.npy"
+JAMENDO_JSON = PROJECT_ROOT / "result" / "MTG-Jamendo" / "jamendo.json"
+TAGS_26_NPY = PROJECT_ROOT / "result" / "MTG-Jamendo" / "tags_26.npy"
 MERT_ROOT = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\MERT_95M_30s")
 AUDIO_ROOT = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\audio")
-TAG_CKPT = PROJECT_ROOT / "src" / "eval" / "tag.ckpt"
-MUSIC_VA_CKPT = PROJECT_ROOT / "src" / "eval" / "m_va.ckpt"
-OUT_JSON = PROJECT_ROOT / "data" / "music_db" / "semantic_db.json"
-OUT_PT = PROJECT_ROOT / "data" / "music_db" / "semantic_db.pt"
+TAG_CKPT = PROJECT_ROOT / "src" / "eval_model" / "tag.ckpt"
+MUSIC_VA_CKPT = PROJECT_ROOT / "src" / "eval_model" / "m_va.ckpt"
+OUT_JSON = PROJECT_ROOT / "result" / "music_db" / "semantic_db.json"
+OUT_PT = PROJECT_ROOT / "result" / "music_db" / "semantic_db.pt"
 
 
 def setup_imports() -> None:
