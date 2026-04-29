@@ -2,15 +2,15 @@ from __future__ import annotations
 
 import pandas as pd
 
-from cfg_metrics import OUT_DIR, TOP_K
+from common import metric_out_dir, top_k, save_df
 
 
 def main():
-    input_path = OUT_DIR / "metric_topk_results.csv"
+    input_path = metric_out_dir / "metric_topk_results.csv"
     df = pd.read_csv(input_path)
 
-    va_col = f"VA-Dist@{TOP_K} ↓"
-    tag_col = f"Tag-Align@{TOP_K} ↑"
+    va_col = f"VA-Dist@{top_k} ↓"
+    tag_col = f"Tag-Align@{top_k} ↑"
 
     # 每个 query-condition-method 的 Top-K 平均指标
     query_level = (
@@ -56,14 +56,12 @@ def main():
         )
     )
 
-    query_level_path = OUT_DIR / "metric_query_level.csv"
-    summary_path = OUT_DIR / "metric_summary.csv"
-    strategy_path = OUT_DIR / "metric_by_strategy.csv"
-
-    query_level.to_csv(query_level_path, index=False, encoding="utf-8-sig")
-    summary.to_csv(summary_path, index=False, encoding="utf-8-sig")
-    by_strategy.to_csv(strategy_path, index=False, encoding="utf-8-sig")
-
+    query_level_path = metric_out_dir / "metric_query_level.csv"
+    summary_path = metric_out_dir / "metric_summary.csv"
+    strategy_path = metric_out_dir / "metric_by_strategy.csv"
+    save_df(query_level, query_level_path)
+    save_df(summary, summary_path)
+    save_df(by_strategy, strategy_path)
     print("\nsaved:")
     print(query_level_path)
     print(summary_path)

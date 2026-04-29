@@ -1,9 +1,6 @@
 from __future__ import annotations
-
 from application.user_state import UserStateEstimator
-
-from cfg_utils import fmt_pair, get_quadrant, load_queries, save_csv
-
+from common import rec_out_dir, fmt_pair, get_quadrant, load_queries, save_csv
 
 def main():
     queries = load_queries()
@@ -31,7 +28,7 @@ def main():
 
         print(q["base_id"], fmt_pair(z_q), get_quadrant(z_q))
 
-    save_csv(rows, "va_results.csv")
+    save_csv(rows, rec_out_dir / "va_results.csv")
 
 
 if __name__ == "__main__":

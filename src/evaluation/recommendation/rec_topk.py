@@ -1,31 +1,23 @@
 from __future__ import annotations
 
-import json
-
 import numpy as np
-import pandas as pd
-
-from cfg_utils import (
-    EVAL_REC_DIR,
-    OUT_DIR,
-    STRENGTH,
-    GAMMA,
-    TOP_K,
-    EXPERIMENT_STRATEGIES,
-    fmt_pair,
-)
 
 from application.config import tags_26
 from application.music_repository import load_tracks
+from application.scoring import compute_scores, topk_indices
 from application.user_state import UserStateEstimator
 
-
-QUERY_JSON = EVAL_REC_DIR /  "queries.json"
-
-
-def load_rep_queries():
-    with open(QUERY_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
+from common import (
+    strategies,
+    gamma,
+    music_db_json,
+    rec_out_dir,
+    strength,
+    top_k,
+    fmt_pair,
+    load_queries,
+    save_csv,
+)
 
 
 def top5_tags(tag_probs):
@@ -35,15 +27,14 @@ def top5_tags(tag_probs):
 
 
 def rank_topk(tracks, z_matrix, y_matrix, mu_q, tau):
-    mu = np.asarray(mu_q, dtype=np.float32)
-    tau = np.asarray(tau, dtype=np.float32)
+    scores = compute_scores(z_matrix,y_matrix,mu_q,tau,gamma,)
 
-    va_distance = np.sum((z_matrix - mu[None, :]) ** 2, axis=1)
-    va_score = -va_distance
-    tag_score = y_matrix @ tau
-    total_score = va_score + GAMMA * tag_score
+    va_distance = scores["va_distance"]
+    va_score = scores["va_score"]
+    tag_score = scores["tag_score"]
+    total_score = scores["total_score"]
 
-    top_idx = np.argsort(-total_score)[:TOP_K]
+    top_idx = topk_indices(total_score, top_k)
 
     rows = []
     for rank, i in enumerate(top_idx, start=1):
@@ -68,8 +59,8 @@ def rank_topk(tracks, z_matrix, y_matrix, mu_q, tau):
 
 
 def main():
-    queries = load_rep_queries()
-    tracks = load_tracks()
+    queries = load_queries()
+    tracks = load_tracks(music_db_json)
     estimator = UserStateEstimator()
 
     z_matrix = np.asarray([t["va"] for t in tracks], dtype=np.float32)
@@ -81,11 +72,11 @@ def main():
     for q in queries:
         z_q = estimator.infer_z_q(q["text"])
 
-        for strategy in EXPERIMENT_STRATEGIES:
+        for strategy in strategies:
             state = estimator.infer_mu_q(
                 z_q=z_q,
                 strategy=strategy,
-                strength=STRENGTH,
+                strength=strength,
             )
 
             top_rows = rank_topk(
@@ -124,32 +115,23 @@ def main():
             )
 
             for row in top_rows:
-                row = {
-                    "Query ID": query_id,
-                    "Quadrant": q["quadrant"],
-                    "Language": q["language"],
-                    "Text": q["text"],
-                    "Strategy": strategy,
-                    "Predicted z_q": fmt_pair(state["z_q"]),
-                    "Target μ_q": fmt_pair(state["mu_q"]),
-                    **row,
-                }
-                topk_rows.append(row)
+                topk_rows.append(
+                    {
+                        "Query ID": query_id,
+                        "Quadrant": q["quadrant"],
+                        "Language": q["language"],
+                        "Text": q["text"],
+                        "Strategy": strategy,
+                        "Predicted z_q": fmt_pair(state["z_q"]),
+                        "Target μ_q": fmt_pair(state["mu_q"]),
+                        **row,
+                    }
+                )
 
             print(query_id, "->", top1["Song ID"], top1["Top-5 Pred Tags"])
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    main_path = OUT_DIR / "rec_results.csv"
-    topk_path = OUT_DIR / f"rec_top{TOP_K}.csv"
-
-    pd.DataFrame(main_rows).to_csv(main_path, index=False, encoding="utf-8-sig")
-    pd.DataFrame(topk_rows).to_csv(topk_path, index=False, encoding="utf-8-sig")
-
-    print("\nsaved:")
-    print(main_path)
-    print(topk_path)
-
+    save_csv(main_rows, rec_out_dir / "rec_results.csv")
+    save_csv(topk_rows, rec_out_dir / f"rec_top{top_k}.csv")
 
 if __name__ == "__main__":
     main()

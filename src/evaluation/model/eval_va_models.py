@@ -50,7 +50,7 @@ def get_regression_metrics(pt_path):
 
 
 if __name__ == "__main__":
-    base_dir = r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\outputs\results"
+    base_dir = r"/outputs/results"
 
     models = [
         ("Music VA (Audio)", os.path.join(base_dir, "MusicVAPred", "results.pt")),

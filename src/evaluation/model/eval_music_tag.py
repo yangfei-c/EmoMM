@@ -34,7 +34,7 @@ def get_metrics(pt_path):
     return results
 
 if __name__ == "__main__":
-    base_dir = r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\outputs\results"
+    base_dir = r"/outputs/results"
 
     models = [
         ("MLP + BCE", r"MusicTag\MLP_BCE\results.pt"),

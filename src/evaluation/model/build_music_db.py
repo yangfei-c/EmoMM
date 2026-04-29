@@ -11,14 +11,14 @@ from tqdm import tqdm
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-JAMENDO_JSON = PROJECT_ROOT / "result" / "MTG-Jamendo" / "jamendo.json"
-TAGS_26_NPY = PROJECT_ROOT / "result" / "MTG-Jamendo" / "tags_26.npy"
-MERT_ROOT = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\MERT_95M_30s")
-AUDIO_ROOT = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\audio")
-TAG_CKPT = PROJECT_ROOT / "src" / "eval_model" / "tag.ckpt"
-MUSIC_VA_CKPT = PROJECT_ROOT / "src" / "eval_model" / "m_va.ckpt"
-OUT_JSON = PROJECT_ROOT / "result" / "music_db" / "semantic_db.json"
-OUT_PT = PROJECT_ROOT / "result" / "music_db" / "semantic_db.pt"
+jamendo_json = PROJECT_ROOT / "recommendation_eval" / "MTG-Jamendo" / "jamendo.json"
+tags_26_npy = PROJECT_ROOT / "recommendation_eval" / "MTG-Jamendo" / "tags_26.npy"
+mert_root = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\MERT_95M_30s")
+audio_root = Path(r"D:\AAAA_audio_dataset\mtg-jamendo\audio")
+tag_ckpt = PROJECT_ROOT / "src" / "model" / "tag.ckpt"
+music_va_ckpt = PROJECT_ROOT / "src" / "model" / "m_va.ckpt"
+out_json = PROJECT_ROOT / "recommendation_eval" / "music_db" / "semantic_db.json"
+out_pt = PROJECT_ROOT / "recommendation_eval" / "music_db" / "semantic_db.pt"
 
 
 def setup_imports() -> None:
@@ -59,7 +59,7 @@ def load_mert(song_dir: Path) -> Tuple[Optional[torch.Tensor], Optional[torch.Te
 
 def resolve_audio_path(rel_path: str) -> str:
     rel = Path(rel_path.replace("/", "\\"))
-    base = AUDIO_ROOT / rel
+    base = audio_root / rel
     if base.exists():
         return str(base)
     for ext in [".mp3", ".ogg", ".wav", ".flac"]:
@@ -78,23 +78,23 @@ def build_db() -> None:
     from music_tag.trainer import MusicTagTrainer
     from music_va.trainer import MusicVATrainer
 
-    for p in [JAMENDO_JSON, TAGS_26_NPY, TAG_CKPT, MUSIC_VA_CKPT]:
+    for p in [jamendo_json, tags_26_npy, tag_ckpt, music_va_ckpt]:
         if not p.exists():
             raise FileNotFoundError(f"Missing file: {p}")
 
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PT.parent.mkdir(parents=True, exist_ok=True)
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_pt.parent.mkdir(parents=True, exist_ok=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"[*] Device: {device}")
 
-    tags = np.load(str(TAGS_26_NPY), allow_pickle=True)
+    tags = np.load(str(tags_26_npy), allow_pickle=True)
     genre_names, inst_names, mood_names = tags[:10], tags[10:17], tags[17:]
 
-    tag_model = MusicTagTrainer.load_from_checkpoint(str(TAG_CKPT), map_location=device).to(device).eval()
-    va_model = MusicVATrainer.load_from_checkpoint(str(MUSIC_VA_CKPT), map_location=device).to(device).eval()
+    tag_model = MusicTagTrainer.load_from_checkpoint(str(tag_ckpt), map_location=device).to(device).eval()
+    va_model = MusicVATrainer.load_from_checkpoint(str(music_va_ckpt), map_location=device).to(device).eval()
 
-    with JAMENDO_JSON.open("r", encoding="utf-8") as f:
+    with jamendo_json.open("r", encoding="utf-8") as f:
         items = json.load(f)
 
     rows: List[Dict] = []
@@ -110,7 +110,7 @@ def build_db() -> None:
         if not rel_path:
             continue
 
-        feat_768, feat_1536 = load_mert(MERT_ROOT / rel_path)
+        feat_768, feat_1536 = load_mert(mert_root / rel_path)
         if feat_768 is None or feat_1536 is None:
             continue
 
@@ -148,7 +148,7 @@ def build_db() -> None:
         va_2d_all.append(va.tolist())
         tag_probs_all.append(probs_26.tolist())
 
-    with OUT_JSON.open("w", encoding="utf-8") as f:
+    with out_json.open("w", encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
 
     torch.save(
@@ -160,11 +160,11 @@ def build_db() -> None:
             "va_2d": torch.tensor(va_2d_all, dtype=torch.float32),
             "tag_probs_26": torch.tensor(tag_probs_all, dtype=torch.float32),
         },
-        str(OUT_PT),
+        str(out_pt),
     )
 
-    print(f"\n[OK] Saved JSON: {OUT_JSON}")
-    print(f"[OK] Saved PT:   {OUT_PT}")
+    print(f"\n[OK] Saved JSON: {out_json}")
+    print(f"[OK] Saved PT:   {out_pt}")
     print(f"[OK] Total songs: {len(rows)}")
 
 

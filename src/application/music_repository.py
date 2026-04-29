@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence
 
-from application.config import music_db_path, tags_26
+from application.config import music_db_path
 from application.utils import load_music_db
 
 
@@ -13,8 +13,6 @@ def _to_float_list(values: Sequence[object]) -> List[float]:
 
 def normalize_track(raw: Dict[str, object]) -> Optional[Dict[str, object]]:
     vec28 = raw.get("semantic_vector_28d")
-    if not isinstance(vec28, list) or len(vec28) < 28:
-        return None
     try:
         vector = _to_float_list(vec28[:28])
     except (TypeError, ValueError):
@@ -39,26 +37,6 @@ def load_tracks(db_path: Optional[Path] = None) -> List[Dict[str, object]]:
             if track is not None:
                 tracks.append(track)
     return tracks
-
-
-def track_by_id(tracks: Sequence[Dict[str, object]], song_id: str) -> Optional[Dict[str, object]]:
-    return next((t for t in tracks if str(t.get("song_id", "")) == str(song_id)), None)
-
-
-def as_arrays(tracks: Sequence[Dict[str, object]]) -> Tuple[List[str], List[List[float]], List[List[float]]]:
-    song_ids: List[str] = []
-    va_matrix: List[List[float]] = []
-    tag26_matrix: List[List[float]] = []
-
-    for track in tracks:
-        tag26 = [float(x) for x in track.get("tag26", [])]
-        if len(tag26) != len(tags_26):
-            continue
-        song_ids.append(str(track.get("song_id", "Unknown")))
-        va_matrix.append([float(x) for x in track.get("va", [0.0, 0.0])])
-        tag26_matrix.append(tag26)
-
-    return song_ids, va_matrix, tag26_matrix
 
 
 if __name__ == "__main__":

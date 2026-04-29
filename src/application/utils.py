@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Dict, List, Sequence
 
 
+
 def clip_value(x: float, lo: float = -1.0, hi: float = 1.0) -> float:
     return max(lo, min(hi, float(x)))
 
@@ -34,26 +35,6 @@ def make_tag_prior(labels: Sequence[str], tag26: Sequence[str]) -> List[float]:
     for label in selected:
         prior[index[label]] = w
     return prior
-
-
-def va_score(z_i: Sequence[float], mu_q: Sequence[float]) -> float:
-    # Smaller distance => larger score.
-    return -((float(z_i[0]) - float(mu_q[0])) ** 2 + (float(z_i[1]) - float(mu_q[1])) ** 2)
-
-
-def tag_score(y_i: Sequence[float], tau: Sequence[float]) -> float:
-    return sum(float(y) * float(t) for y, t in zip(y_i, tau))
-
-
-def total_score(
-    z_i: Sequence[float],
-    y_i: Sequence[float],
-    mu_q: Sequence[float],
-    tau: Sequence[float],
-    gamma: float = 1.0,
-) -> float:
-    return va_score(z_i, mu_q) + float(gamma) * tag_score(y_i, tau)
-
 
 def cosine_similarity(a: Sequence[float], b: Sequence[float]) -> float:
     dot = sum(float(x) * float(y) for x, y in zip(a, b))

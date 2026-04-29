@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import numpy as np
 import streamlit as st
 
 from application.config import diversity_weights, rerank_pool_size
 from application.music_repository import load_tracks
-from application.utils import mmr_rerank, tag_score, total_score, va_score
+from application.scoring import compute_scores
+from application.utils import mmr_rerank
 
 
 @st.cache_resource(show_spinner="正在加载 Text VA 模型...")
@@ -20,15 +22,23 @@ def get_tracks():
 
 
 def build_candidates(mu_q, tau, gamma=1.0):
-    results = []
+    tracks = get_tracks()
 
-    for track in get_tracks():
+    z_matrix = np.asarray([t["va"] for t in tracks], dtype=np.float32)
+    y_matrix = np.asarray([t["tag26"] for t in tracks], dtype=np.float32)
+
+    scores = compute_scores(
+        z_matrix=z_matrix,
+        y_matrix=y_matrix,
+        mu_q=mu_q,
+        tau=tau,
+        gamma=gamma,
+    )
+
+    results = []
+    for i, track in enumerate(tracks):
         z_i = track["va"]
         y_i = track["tag26"]
-
-        v_score = va_score(z_i, mu_q)
-        t_score = tag_score(y_i, tau)
-        both_score = total_score(z_i, y_i, mu_q, tau, gamma=gamma)
 
         results.append({
             "song_id": track["song_id"],
@@ -38,9 +48,9 @@ def build_candidates(mu_q, tau, gamma=1.0):
             "va": z_i,
             "V": float(z_i[0]),
             "A": float(z_i[1]),
-            "va_score": float(v_score),
-            "tag_score": float(t_score),
-            "both_score": float(both_score),
+            "va_score": float(scores["va_score"][i]),
+            "tag_score": float(scores["tag_score"][i]),
+            "both_score": float(scores["total_score"][i]),
         })
 
     return results

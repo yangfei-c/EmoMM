@@ -6,19 +6,18 @@ current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parents[1]
 
 # Paths
-music_db_path = project_root / "result" / "music_db" / "semantic_db.json"
+music_db_path = project_root / "data" / "music_db" / "semantic_db.json"
 text_ckpt = project_root / "outputs" / "checkpoints" / "TextVAPred_m11" / "last.ckpt"
 
 # Text VA model
 text_model_name = "xlm-roberta-base"
 text_max_length = 128
 
-# Strategy settings
+# Strategy
 strategies = ["maintain", "calm", "energize", "comfort"]
 default_strength = 0.5
 
-# 26-d tag order: semantic_vector_28d = [V, A] + tags_26
-# Genre(10) + Instrument(7) + Mood(9)
+#Tag List
 tags_26 = [
     "ambient", "classical", "electronic", "folk", "hiphop", "jazz",
     "metal", "pop", "rock", "soundtrack",
@@ -26,7 +25,6 @@ tags_26 = [
     "dark", "dream", "energetic", "epic", "film", "happy", "love", "relaxing", "sad",
 ]
 
-# Data-driven strategy anchors from top-5% tag VA prototypes.
 strategy_anchors = {
     "calm": [-0.2437, -0.3755],      # ambient, relaxing, piano, dream, classical
     "energize": [0.1588, 0.2711],    # energetic, electronic, rock, pop, happy, drums
@@ -40,7 +38,12 @@ strategy_tag = {
     "comfort": ["piano", "sad", "classical", "dream", "relaxing"],
 }
 
-# Optional diversity re-ranking. Applied after relevance ranking over top-N candidates.
+text_list = [
+    {"text": "我现在有点低落，想听点能慢慢安慰我的音乐。", "intent": "comfort"},
+    {"text": "I feel tired and quiet tonight.", "intent": "comfort"},
+]
+
+#diversity
 diversity_weights = {
     "关闭": 0.00,
     "低": 0.15,

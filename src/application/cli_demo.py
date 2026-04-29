@@ -1,38 +1,39 @@
 from __future__ import annotations
 
-from application.config import default_strength, text_list
+import numpy as np
+
+from application.config import default_strength
 from application.music_repository import load_tracks
+from application.scoring import compute_scores
 from application.user_state import UserStateEstimator
-from application.utils import va_score, tag_score, total_score
+from config import text_list
 
 
 def build_candidates(mu_q, tau, gamma=1.0):
     tracks = load_tracks()
+
+    z_matrix = np.asarray([t["va"] for t in tracks], dtype=np.float32)
+    y_matrix = np.asarray([t["tag26"] for t in tracks], dtype=np.float32)
+
+    scores = compute_scores(z_matrix,y_matrix,mu_q,tau,gamma)
+
     results = []
-
-    for track in tracks:
+    for i, track in enumerate(tracks):
         z_i = track["va"]
-        y_i = track["tag26"]
-
-        v_score = va_score(z_i, mu_q)
-        t_score = tag_score(y_i, tau)
-        both_score = total_score(z_i, y_i, mu_q, tau, gamma=gamma)
 
         results.append({
             "song_id": track["song_id"],
             "song_path": track["song_path"],
             "display_tags": track["display_tags"],
             "va": z_i,
-            "va_score": v_score,
-            "tag_score": t_score,
-            "both_score": both_score,
+            "va_score": float(scores["va_score"][i]),
+            "tag_score": float(scores["tag_score"][i]),
+            "total_score": float(scores["total_score"][i]),
         })
-
     return results
 
-
 def topk_by(results, key, top_k=5):
-    return sorted(results, key=lambda x: x[key], reverse=True)[:top_k]
+    return sorted(results, key=lambda x: float(x[key]), reverse=True)[:top_k]
 
 
 def print_group(title, items):
@@ -45,7 +46,7 @@ def print_group(title, items):
         print(f"  Display tags: {item['display_tags']}")
         print(f"  VA score: {item['va_score']:.4f}")
         print(f"  Tag score: {item['tag_score']:.4f}")
-        print(f"  VA+Tag score: {item['both_score']:.4f}")
+        print(f"  VA+Tag score: {item['total_score']:.4f}")
         print(f"  Path: {item['song_path']}")
         print()
 
@@ -61,7 +62,7 @@ def run_one(text, strategy, strength=default_strength, top_k=5, gamma=1.0):
 
     va_top = topk_by(results, "va_score", top_k=top_k)
     tag_top = topk_by(results, "tag_score", top_k=top_k)
-    both_top = topk_by(results, "both_score", top_k=top_k)
+    both_top = topk_by(results, "total_score", top_k=top_k)
 
     print("=" * 100)
     print(f"Text: {text}")

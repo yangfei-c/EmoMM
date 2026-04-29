@@ -2,8 +2,8 @@
 /outputs/
 /tools/
 /data/music_db/
-/data/figure/
-/src/eval_methond/result
+/docs/figures/
+/outputs/results/recommendation_eval
 /tools/application/text_app.py
 /src/application/test.py
 /src/application/outputs/
