@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from application.config import default_strength
+from application.config import strength
 from application.music_repository import load_tracks
 from application.scoring import compute_scores
 from application.user_state import UserStateEstimator
@@ -51,7 +51,7 @@ def print_group(title, items):
         print()
 
 
-def run_one(text, strategy, strength=default_strength, top_k=5, gamma=1.0):
+def run_one(text, strategy, strength=strength, top_k=5, gamma=1.0):
     estimator = UserStateEstimator()
     state = estimator.process(text, strategy=strategy, strength=strength)
 
@@ -83,7 +83,7 @@ def main():
         run_one(
             text=item["text"],
             strategy=item["intent"],
-            strength=default_strength,
+            strength=strength,
             top_k=5,
             gamma=1.0,
         )

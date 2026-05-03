@@ -15,7 +15,7 @@ text_max_length = 128
 
 # Strategy
 strategies = ["maintain", "calm", "energize", "comfort"]
-default_strength = 0.5
+strength = 0.5
 
 #Tag List
 tags_26 = [
@@ -32,12 +32,13 @@ strategy_anchors = {
 }
 
 strategy_tag = {
-    "maintain": [],
+    "maintain": ["auto"],
     "calm": ["ambient", "relaxing", "piano", "dream", "classical"],
-    "energize": ["energetic", "electronic", "rock", "pop", "happy", "drums"],
+    "energize": ["energetic", "electronic", "rock", "pop", "happy"],
     "comfort": ["piano", "sad", "classical", "dream", "relaxing"],
 }
-
+prototype_top_percent = 0.05
+prototype_alpha = 10.0
 text_list = [
     {"text": "我现在有点低落，想听点能慢慢安慰我的音乐。", "intent": "comfort"},
     {"text": "I feel tired and quiet tonight.", "intent": "comfort"},

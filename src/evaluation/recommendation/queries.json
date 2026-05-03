@@ -1,6 +1,6 @@
 [
   {
-    "base_id": "HVHA_CN",
+    "id": "HVHA_CN",
     "quadrant": "HVHA",
     "quadrant_name": "高V高A：积极激活",
     "expected_va": "+V,+A",
@@ -9,7 +9,7 @@
     "text": "刚收到一个好消息，我一路走得很快，脑子里已经开始计划下一步。"
   },
   {
-    "base_id": "HVHA_EN",
+    "id": "HVHA_EN",
     "quadrant": "HVHA",
     "quadrant_name": "高V高A：积极激活",
     "expected_va": "+V,+A",
@@ -18,7 +18,7 @@
     "text": "The good news came in, and I immediately started moving around the room, planning the next steps."
   },
   {
-    "base_id": "HVLA_CN",
+    "id": "HVLA_CN",
     "quadrant": "HVLA",
     "quadrant_name": "高V低A：积极低唤醒",
     "expected_va": "+V,-A",
@@ -27,7 +27,7 @@
     "text": "晚饭后没有别的安排，灯光很柔和，我想安安稳稳地待着。"
   },
   {
-    "base_id": "HVLA_EN",
+    "id": "HVLA_EN",
     "quadrant": "HVLA",
     "quadrant_name": "高V低A：积极低唤醒",
     "expected_va": "+V,-A",
@@ -36,7 +36,7 @@
     "text": "The day went smoothly, and I am sitting by the window letting time move slowly."
   },
   {
-    "base_id": "LVHA_CN",
+    "id": "LVHA_CN",
     "quadrant": "LVHA",
     "quadrant_name": "低V高A：消极高唤醒",
     "expected_va": "-V,+A",
@@ -45,7 +45,7 @@
     "text": "刚才那件事一直卡在心里，我在房间里来回走，没法坐稳。"
   },
   {
-    "base_id": "LVHA_EN",
+    "id": "LVHA_EN",
     "quadrant": "LVHA",
     "quadrant_name": "低V高A：消极高唤醒",
     "expected_va": "-V,+A",
@@ -54,7 +54,7 @@
     "text": "Messages keep coming in, my hands will not stop moving, and my mind is racing."
   },
   {
-    "base_id": "LVLA_CN",
+    "id": "LVLA_CN",
     "quadrant": "LVLA",
     "quadrant_name": "低V低A：消极低唤醒",
     "expected_va": "-V,-A",
@@ -63,7 +63,7 @@
     "text": "房间里很暗，我躺了很久，连回消息都觉得费劲。"
   },
   {
-    "base_id": "LVLA_EN",
+    "id": "LVLA_EN",
     "quadrant": "LVLA",
     "quadrant_name": "低V低A：消极低唤醒",
     "expected_va": "-V,-A",

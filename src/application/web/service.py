@@ -7,19 +7,50 @@ from application.config import diversity_weights, rerank_pool_size
 from application.music_repository import load_tracks
 from application.scoring import compute_scores
 from application.utils import mmr_rerank
-
+from application.tag_prototype import compute_tag_prototypes
+from application.utils import (
+    make_uniform_prior,
+    make_prototype_prior,
+    select_nearest_tags,
+)
+from application.config import (
+    strategy_tag,
+    tags_26,
+    prototype_alpha,
+)
 
 @st.cache_resource(show_spinner="正在加载 Text VA 模型...")
 def get_estimator():
     from application.user_state import UserStateEstimator
-
     return UserStateEstimator()
-
 
 @st.cache_data(show_spinner="正在加载音乐库...")
 def get_tracks():
     return load_tracks()
 
+@st.cache_data(show_spinner="正在计算标签原型...")
+def get_tag_prototypes():
+    tracks = get_tracks()
+    return compute_tag_prototypes(tracks)
+
+
+def build_tag_prior(strategy, mu_q, prior_mode="uniform"):
+    prototypes = get_tag_prototypes()
+
+    labels = strategy_tag.get(strategy, [])
+    if labels == "auto" or labels == ["auto"]:
+        labels = select_nearest_tags(
+            mu_q=mu_q,
+            prototypes=prototypes,
+            tag26=tags_26,
+        )
+
+    if prior_mode == "uniform":
+        return make_uniform_prior(labels, tags_26), labels
+    if prior_mode == "prototype":
+        return make_prototype_prior(mu_q,labels,tags_26,prototypes,prototype_alpha,), labels
+
+    raise ValueError(f"Unknown prior_mode: {prior_mode}")
 
 def build_candidates(mu_q, tau, gamma=1.0):
     tracks = get_tracks()
@@ -71,11 +102,21 @@ def topk_by(results, key, top_k=5, diversity_weight=0.0):
     )
 
 
-def recommend(text, strategy, strength, gamma, top_k, diversity_mode="低"):
+def recommend(text, strategy, strength, gamma, top_k, diversity_mode="低", prior_mode="uniform"):
     estimator = get_estimator()
     state = estimator.process(text, strategy=strategy, strength=strength)
 
-    results = build_candidates(state["mu_q"], state["tag_prior"], gamma=gamma)
+    tau, selected_labels = build_tag_prior(
+        strategy=strategy,
+        mu_q=state["mu_q"],
+        prior_mode=prior_mode,
+    )
+
+    state["tag_prior"] = tau
+    state["selected_strategy_tags"] = selected_labels
+    state["prior_mode"] = prior_mode
+
+    results = build_candidates(state["mu_q"], tau, gamma=gamma)
     eta = float(diversity_weights.get(diversity_mode, 0.0))
 
     return state, {

@@ -5,6 +5,7 @@ import math
 from pathlib import Path
 from typing import Dict, List, Sequence
 
+import numpy as np
 
 
 def clip_value(x: float, lo: float = -1.0, hi: float = 1.0) -> float:
@@ -21,20 +22,49 @@ def interpolate_va(z_q: Sequence[float], z_anchor: Sequence[float], strength: fl
     v = (1.0 - s) * float(z_q[0]) + s * float(z_anchor[0])
     a = (1.0 - s) * float(z_q[1]) + s * float(z_anchor[1])
     return clip_va([v, a])
+def select_nearest_tags(mu_q, prototypes, tag26):
+    mu = np.asarray(mu_q, dtype=np.float32)
+    dist = np.sum((prototypes - mu[None, :]) ** 2, axis=1)
+    idx = np.argsort(dist)[:5]
+    return [tag26[i] for i in idx]
+def make_uniform_prior(labels, tag26):
+    prior = np.zeros(len(tag26), dtype=np.float32)
+    if not labels:
+        return prior.tolist()
 
-
-def make_tag_prior(labels: Sequence[str], tag26: Sequence[str]) -> List[float]:
-    """Uniform 26-d prior over selected strategy labels."""
-    prior = [0.0] * len(tag26)
-    selected = [x for x in labels if x in tag26]
-    if not selected:
-        return prior
-
-    w = 1.0 / len(selected)
     index = {tag: i for i, tag in enumerate(tag26)}
+    selected = [x for x in labels if x in index]
+
+    if not selected:
+        return prior.tolist()
+
+    weight = 1.0 / len(selected)
     for label in selected:
-        prior[index[label]] = w
-    return prior
+        prior[index[label]] = weight
+    return prior.tolist()
+
+
+def make_prototype_prior(mu_q, labels, tag26, prototypes, alpha=10.0):
+    prior = np.zeros(len(tag26), dtype=np.float32)
+    index = {tag: i for i, tag in enumerate(tag26)}
+
+    selected = [x for x in labels if x in index]
+    if not selected:
+        return prior.tolist()
+
+    mu = np.asarray(mu_q, dtype=np.float32)
+
+    selected_idx = [index[x] for x in selected]
+    selected_proto = prototypes[selected_idx]
+    dist = np.sum((selected_proto - mu[None, :]) ** 2, axis=1)
+    logits = -alpha * dist
+    logits = logits - logits.max()
+    weights = np.exp(logits)
+    weights = weights / (weights.sum() + 1e-8)
+    for tag_idx, w in zip(selected_idx, weights):
+        prior[tag_idx] = float(w)
+
+    return prior.tolist()
 
 def cosine_similarity(a: Sequence[float], b: Sequence[float]) -> float:
     dot = sum(float(x) * float(y) for x, y in zip(a, b))
@@ -102,3 +132,5 @@ def load_music_db(path: Path) -> List[Dict[str, object]]:
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data if isinstance(data, list) else list(data.values())
+def make_tag_prior(labels, tag26):
+    return make_uniform_prior(labels, tag26)

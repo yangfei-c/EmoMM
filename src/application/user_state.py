@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Dict, List
 
 from application.config import (
-    default_strength,
+    strength,
     strategies,
     strategy_anchors,
     strategy_tag,
@@ -33,7 +33,7 @@ class UserStateEstimator:
         v, a = predict_emotion(text, model, tokenizer, device, max_length=text_max_length)
         return clip_va([v, a])
 
-    def infer_mu_q(self, z_q, strategy: str, strength: float = default_strength) -> Dict[str, object]:
+    def infer_mu_q(self, z_q, strategy: str, strength: float = strength) -> Dict[str, object]:
         if strategy not in strategies:
             raise ValueError(f"Unknown strategy: {strategy}")
 
@@ -54,7 +54,7 @@ class UserStateEstimator:
             "tag_prior": tau,
         }
 
-    def process(self, text: str, strategy: str, strength: float = default_strength) -> Dict[str, object]:
+    def process(self, text: str, strategy: str, strength: float = strength) -> Dict[str, object]:
         text = text.strip()
         if not text:
             raise ValueError("text cannot be empty")
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     estimator = UserStateEstimator()
     for item in text_list:
-        result = estimator.process(item["text"], strategy=item["intent"], strength=default_strength)
+        result = estimator.process(item["text"], strategy=item["intent"], strength=strength)
         print(f"Text: {item['text']}")
         print(f"Strategy: {item['intent']}")
         print(f"current_va: {result['z_q']}")

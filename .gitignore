@@ -5,8 +5,9 @@
 /docs/figures/
 /outputs/results/recommendation_eval
 /tools/application/text_app.py
-/src/application/test.py
+/src/evaluation/recommendation/test.py
 /src/application/outputs/
+/src/backend/
 /scripts/
 # 忽略 PyCharm 自己的配置文件
 .idea/

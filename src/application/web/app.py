@@ -9,7 +9,7 @@ if str(src_dir) not in sys.path:
 
 import streamlit as st
 
-from application.config import default_strength, strategies
+from application.config import strength, strategies
 from application.web.plots import make_va_plot
 from application.web.service import recommend
 from application.web.ui import render_recommendations, render_sidebar, render_state
@@ -41,7 +41,7 @@ def main():
         diversity_mode,
         show_debug,
         run_btn,
-    ) = render_sidebar(strategies, default_strength)
+    ) = render_sidebar(strategies, strength)
 
     if not run_btn:
         st.info("在左侧输入文本、策略和强度，然后点击“开始推荐”。")
