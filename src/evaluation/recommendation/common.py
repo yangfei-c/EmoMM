@@ -29,7 +29,7 @@ strategies = ["maintain","calm","energize","comfort",]
 methods = ["VA-only","Tag-only","Proposed VA+Tag",]
 
 
-query_json = cur_dir / "queries.json"
+query_json = cur_dir / "query_test_32.json"
 music_db_json = project_root / "data" / "music_db" / "semantic_db.json"
 rec_out_dir = project_root / "outputs" / "results" / "recommendation_eval" / "rec"
 metric_out_dir = project_root / "outputs" / "results" / "recommendation_eval" / "metrics"

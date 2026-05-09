@@ -12,7 +12,7 @@ import pandas as pd
 cur_dir = Path(__file__).resolve().parent
 src_dir = cur_dir.parent.parent
 project_root = src_dir.parent
-QUERY_JSON = cur_dir / "queries.json"
+QUERY_JSON = cur_dir / "query_test_32.json"
 if str(src_dir) not in sys.path:
     sys.path.insert(0, str(src_dir))
 

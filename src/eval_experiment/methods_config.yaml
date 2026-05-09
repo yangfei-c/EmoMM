@@ -1,0 +1,29 @@
+top_k: 5
+
+paths:
+  queries: "src/eval_experiment/data/query_test_32.json"
+  music_db: "src/eval_experiment/data/music_eval_db.json"
+  output_dir: "src/eval_experiment/outputs"
+
+methods:
+  - name: "clamp3"
+    type: "external_baseline"
+    description: "Text-to-music cross-modal retrieval baseline using CLaMP3 prompt similarity."
+
+  - name: "va_only"
+    type: "internal_ablation"
+    description: "Rank music only by target VA distance."
+
+  - name: "tag_only"
+    type: "internal_ablation"
+    description: "Rank music only by target tag distribution alignment."
+
+  - name: "ours_vatag"
+    type: "proposed"
+    description: "Joint ranking with target VA distance and target tag alignment."
+
+metrics:
+  - target_va_dist_at_5
+  - tag_align_at_5
+  - diversity_at_5
+  - clamp3_prompt_sim_at_5

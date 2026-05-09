@@ -3,7 +3,7 @@ from __future__ import annotations
 import plotly.graph_objects as go
 
 
-def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommendation TopK"):
+def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="推荐音乐"):
     bg = all_tracks[:: max(1, len(all_tracks) // 2000)]
 
     fig = go.Figure()
@@ -12,7 +12,7 @@ def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommend
         x=[t["V"] for t in bg],
         y=[t["A"] for t in bg],
         mode="markers",
-        name="Music library",
+        name="音乐库",
         marker=dict(size=4, opacity=0.15),
         hoverinfo="skip",
     ))
@@ -31,8 +31,8 @@ def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommend
         x=[z_q[0]],
         y=[z_q[1]],
         mode="markers+text",
-        name="Current VA",
-        text=["z_q"],
+        name="当前状态",
+        text=["当前"],
         textposition="top center",
         marker=dict(size=14, symbol="x"),
     ))
@@ -41,8 +41,8 @@ def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommend
         x=[z_anchor[0]],
         y=[z_anchor[1]],
         mode="markers+text",
-        name="Strategy anchor",
-        text=["z_s"],
+        name="策略方向",
+        text=["方向"],
         textposition="top center",
         marker=dict(size=14, symbol="square"),
     ))
@@ -51,8 +51,8 @@ def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommend
         x=[mu_q[0]],
         y=[mu_q[1]],
         mode="markers+text",
-        name="Target VA",
-        text=["μ_q"],
+        name="目标状态",
+        text=["目标"],
         textposition="top center",
         marker=dict(size=16, symbol="cross"),
     ))
@@ -73,9 +73,9 @@ def make_va_plot(all_tracks, selected_top, z_q, z_anchor, mu_q, label="Recommend
     )
 
     fig.update_layout(
-        title="Valence-Arousal Space",
-        xaxis_title="Valence",
-        yaxis_title="Arousal",
+        title="情绪空间",
+        xaxis_title="愉悦度 Valence",
+        yaxis_title="唤醒度 Arousal",
         xaxis=dict(range=[-1, 1], zeroline=True),
         yaxis=dict(range=[-1, 1], zeroline=True),
         height=620,
