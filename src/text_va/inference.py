@@ -1,6 +1,7 @@
 import os
 import warnings
 import logging
+from pathlib import Path
 import torch
 from transformers import AutoTokenizer
 warnings.filterwarnings("ignore")
@@ -74,7 +75,8 @@ if __name__ == "__main__":
     # ⚠️ 请修改这里的 Checkpoint 路径！
     # 指向你在 ../checkpoints/Text_VA_Prediction/ 下最好的 .ckpt 文件
     # ==========================================
-    CKPT_PATH = r"D:\AAAAAAAAAA_emotion\Code\MusicRecsys\MusicRecsys\src\text\checkpoints\Text_VA_Prediction\best-epoch_04-val_loss_0.2260.ckpt"
+    PROJECT_ROOT = Path(__file__).resolve().parents[2]
+    CKPT_PATH = PROJECT_ROOT / "outputs" / "checkpoints" / "TextVAPred_m11" / "last.ckpt"
     MODEL_NAME = "xlm-roberta-base"
 
     # 检查权重文件是否存在
@@ -84,7 +86,7 @@ if __name__ == "__main__":
         exit()
 
     # 加载系统
-    model_system, tokenizer, device = load_model_and_tokenizer(CKPT_PATH, MODEL_NAME)
+    model_system, tokenizer, device = load_model_and_tokenizer(str(CKPT_PATH), MODEL_NAME)
     print(f"\n✅ 模型加载成功！使用设备: {device}\n")
     print("-" * 50)
 

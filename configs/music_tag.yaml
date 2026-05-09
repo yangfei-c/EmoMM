@@ -8,10 +8,10 @@ project_name: "MusicTag"
 task_name: "${model_type}_${loss_type}"
 
 data:
-  split_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\MTG-Jamendo"
+  split_dir: "data/MTG-Jamendo"
   feature_dir: "D:\\AAAA_audio_dataset\\mtg-jamendo\\MERT_95M_30s"
-  tag_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\MTG-Jamendo\\tags_26.npy"
-  jamendo_json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\MTG-Jamendo\\jamendo.json"
+  tag_path: "data/MTG-Jamendo/tags_26.npy"
+  jamendo_json_path: "data/MTG-Jamendo/jamendo.json"
   val_ratio: 0.1
   test_ratio: 0.1
 
@@ -51,9 +51,9 @@ training:
     factor: 0.5
 
 save:
-  result_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\results"
-  checkpoint_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\checkpoints"
-  log_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\tb_logs"
+  result_dir: "outputs/results"
+  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "outputs/tb_logs"
 
 hydra:
   run:

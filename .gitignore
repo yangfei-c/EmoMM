@@ -1,15 +1,16 @@
-# 忽略不想上传文件夹和文件
-/outputs/
-/tools/
-/data/music_db/
-/docs/figures/
-/outputs/results/recommendation_eval
-/tools/application/text_app.py
-/src/evaluation/recommendation/test.py
-/src/core/outputs/
-/src/backend/
-/scripts/
-# 忽略 PyCharm 自己的配置文件
+# Local IDE files
 .idea/
+# Python cache
 __pycache__/
 *.pyc
+# Training and inference artifacts
+/outputs/
+/src/core/outputs/
+
+# Large data
+/data/music_db/
+/docs/figures/
+
+# External baselines and scratch tools
+/tools/
+

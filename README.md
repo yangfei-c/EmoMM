@@ -12,10 +12,10 @@ EmoMusicRec/
 │  ├─ DEAM+PMEMO/
 │  ├─ MTG-Jamendo/
 │  └─ music_db/
-├─ outputs/
+├─ docs/
 └─ src/
-   ├─ application/
-   ├─ eval/
+   ├─ core/
+   ├─ eval_experiment/
    ├─ music_tag/
    ├─ music_va/
    └─ text_va/

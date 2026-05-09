@@ -2,12 +2,12 @@ defaults:
   - _self_
 
 project:
-  name: "TextVAPred_${recommendation_eval.label_range}"
+  name: "TextVAPred_${data.label_range}"
   seed: 42
 
 data:
-  chinese_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\Chinese+English\\chinese_va.json"
-  english_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\Chinese+English\\english_va.json"
+  chinese_path: "data/Chinese+English/chinese_va.json"
+  english_path: "data/Chinese+English/english_va.json"
   label_range: "m11"
   # 模型相关
   model_name: "xlm-roberta-base"
@@ -28,9 +28,9 @@ training:
   test_split_ratio: 0.1   # 测试集比例 10%
 
 save:
-  result_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\results"
-  log_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\tb_logs"
-  checkpoint_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\checkpoints"
+  result_dir: "outputs/results"
+  log_dir: "outputs/tb_logs"
+  checkpoint_dir: "outputs/checkpoints"
 
 hydra:
   run:

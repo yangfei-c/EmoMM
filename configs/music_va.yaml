@@ -2,11 +2,11 @@ defaults:
   - _self_
 
 project:
-  name: "MusicVAPred_${recommendation_eval.label_range}"
+  name: "MusicVAPred_${data.label_range}"
   seed: 42
 
 data:
-  json_path: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\recommendation_eval\\DEAM+PMEMO\\music_va.json"
+  json_path: "data/DEAM+PMEMO/music_va.json"
   feature_root: "D:\\AAAA_audio_dataset"
   label_range: "m11"
   batch_size: 64
@@ -25,9 +25,9 @@ training:
   test_ratio: 0.1
 
 save:
-  result_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\results"
-  checkpoint_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\checkpoints"
-  log_dir: "D:\\AAAAAAAAAA_emotion\\Code\\EmoMusicRec\\outputs\\tb_logs"
+  result_dir: "outputs/results"
+  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "outputs/tb_logs"
 
 hydra:
   run:
