@@ -2,23 +2,22 @@
 
 import csv
 import json
-import sys
 from pathlib import Path
 
 import numpy as np
 from msclap import CLAP
 
 
-ROOT = Path(r"/")
+ROOT = Path(r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec")
 
-QUERY_JSON = ROOT / "data" / "eval" / "queries_zh16.json"
-POOL_JSON = ROOT / "data" / "eval" /"candidate_pool.json"
+QUERY_JSON = ROOT / "eval" / "queries_zh16.json"
+POOL_JSON = ROOT / "eval" / "candidate_pool.json"
 
 CLAP_DIR = Path(r"D:\AAAA_audio_dataset\eval\clap")
 AUDIO_EMB = CLAP_DIR / "audio_embd.npz"
 TEXT_EMB = CLAP_DIR / "text_embd.npz"
 
-OUT_CSV = ROOT / "data" / "eval" / "clap" / "clap_top5.csv"
+OUT_CSV = ROOT / "eval" / "clap" / "clap_top5.csv"
 
 TOP_K = 5
 BATCH_SIZE = 16
@@ -35,7 +34,7 @@ def norm(x):
     return x / np.maximum(np.linalg.norm(x, axis=1, keepdims=True), 1e-8)
 
 
-def qid(q):
+def get_query_id(q):
     return str(q.get("query_id") or q.get("id"))
 
 
@@ -46,34 +45,35 @@ def main():
     queries = json.loads(QUERY_JSON.read_text(encoding="utf-8"))
     pool = json.loads(POOL_JSON.read_text(encoding="utf-8"))
 
-    qids = [qid(q) for q in queries]
-    qtexts = [q["text"] for q in queries]
+    pool_info = {str(x["song_id"]): x for x in pool}
+
+    query_ids = [get_query_id(q) for q in queries]
+    query_texts = [q["text"] for q in queries]
 
     song_ids = [str(x["song_id"]) for x in pool]
     audio_paths = [str(x["song_path"]) for x in pool]
 
-    print(f"query 数量: {len(qtexts)}")
+    print(f"query 数量: {len(query_texts)}")
     print(f"候选歌曲数量: {len(audio_paths)}")
 
     model = CLAP(version="2023", use_cuda=True)
 
-    # audio embedding
     if AUDIO_EMB.exists():
         data = np.load(AUDIO_EMB, allow_pickle=True)
         song_ids = [str(x) for x in data["song_ids"]]
         audio_paths = [str(x) for x in data["audio_paths"]]
-        audio_emb = data["audio_emb"]
-        print(f"读取已有 audio embedding: {AUDIO_EMB}")
+        audio_emb = data["audio_emb"].astype(np.float32)
+        print(f"读取 audio embedding: {AUDIO_EMB}")
     else:
-        audio_embs = []
+        audio_emb_list = []
 
         for i in range(0, len(audio_paths), BATCH_SIZE):
             batch = audio_paths[i:i + BATCH_SIZE]
             emb = model.get_audio_embeddings(batch)
-            audio_embs.append(to_numpy(emb).astype(np.float32))
+            audio_emb_list.append(to_numpy(emb).astype(np.float32))
             print(f"audio embedding: {min(i + BATCH_SIZE, len(audio_paths))}/{len(audio_paths)}")
 
-        audio_emb = np.concatenate(audio_embs, axis=0)
+        audio_emb = np.concatenate(audio_emb_list, axis=0)
 
         np.savez(
             AUDIO_EMB,
@@ -83,23 +83,24 @@ def main():
         )
         print(f"保存 audio embedding: {AUDIO_EMB}")
 
-    # text embedding
-    text_emb = model.get_text_embeddings(qtexts)
-    text_emb = to_numpy(text_emb).astype(np.float32)
+    text_emb_list = []
+
+    for i, text in enumerate(query_texts):
+        emb = model.get_text_embeddings([text])
+        text_emb_list.append(to_numpy(emb).astype(np.float32))
+        print(f"text embedding: {i + 1}/{len(query_texts)}")
+
+    text_emb = np.concatenate(text_emb_list, axis=0)
 
     np.savez(
         TEXT_EMB,
-        query_ids=np.array(qids),
-        query_texts=np.array(qtexts),
+        query_ids=np.array(query_ids),
+        query_texts=np.array(query_texts),
         text_emb=text_emb,
     )
     print(f"保存 text embedding: {TEXT_EMB}")
 
-    # similarity
-    audio_emb = norm(audio_emb)
-    text_emb = norm(text_emb)
-
-    scores = audio_emb @ text_emb.T
+    scores = norm(audio_emb) @ norm(text_emb).T
 
     rows = []
 
@@ -107,14 +108,19 @@ def main():
         top_idx = np.argsort(-scores[:, qi])[:TOP_K]
 
         for rank, idx in enumerate(top_idx, start=1):
+            song_id = song_ids[int(idx)]
+            info = pool_info.get(song_id, {})
+
             rows.append({
                 "method": "clap",
-                "query_id": qids[qi],
+                "query_id": query_ids[qi],
                 "rank": rank,
-                "song_id": song_ids[int(idx)],
+                "song_id": song_id,
                 "score": round(float(scores[int(idx), qi]), 6),
                 "text": q["text"],
                 "strategy": q.get("strategy", ""),
+                "display_tags": "|".join(map(str, info.get("display_tags", []))),
+                "va": json.dumps(info.get("va", []), ensure_ascii=False),
                 "audio_path": audio_paths[int(idx)],
             })
 
@@ -129,6 +135,8 @@ def main():
                 "score",
                 "text",
                 "strategy",
+                "display_tags",
+                "va",
                 "audio_path",
             ],
         )
