@@ -3,8 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence
 
-from application.config import music_db_path
-from application.utils import load_music_db
+from core.config import music_db_path
+from core.utils import load_music_db
 
 
 def _to_float_list(values: Sequence[object]) -> List[float]:

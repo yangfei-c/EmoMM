@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import numpy as np
 
-from application.config import tags_26
-from application.music_repository import load_tracks
-from application.scoring import compute_scores, topk_indices
-from application.user_state import UserStateEstimator
+from core.config import tags_26
+from core.music_repository import load_tracks
+from core.scoring import compute_scores, topk_indices
+from core.user_state import UserStateEstimator
 
 from common import (
     strategies,

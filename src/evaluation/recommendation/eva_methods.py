@@ -16,8 +16,8 @@ QUERY_JSON = cur_dir / "query_test_32.json"
 if str(src_dir) not in sys.path:
     sys.path.insert(0, str(src_dir))
 
-from application.web.service import recommend, build_tag_prior
-from application.config import strategies,strength
+from core.web.service import recommend, build_tag_prior
+from core.config import strategies,strength
 
 GAMMA = 1.0
 TOP_K = 5

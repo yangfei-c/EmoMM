@@ -1,5 +1,5 @@
 from __future__ import annotations
-from application.user_state import UserStateEstimator
+from core.user_state import UserStateEstimator
 from common import rec_out_dir, fmt_pair, get_quadrant, load_queries, save_csv
 
 def main():

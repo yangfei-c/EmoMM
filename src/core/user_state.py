@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Dict, List
 
-from application.config import (
+from core.config import (
     strength,
     strategies,
     strategy_anchors,
@@ -12,7 +12,7 @@ from application.config import (
     text_max_length,
     text_model_name,
 )
-from application.utils import clip_va, interpolate_va, make_tag_prior
+from core.utils import clip_va, interpolate_va, make_tag_prior
 from text_va.inference import load_model_and_tokenizer, predict_emotion
 
 
@@ -63,7 +63,7 @@ class UserStateEstimator:
 
 
 if __name__ == "__main__":
-    from application.config import text_list
+    from core.config import text_list
 
     estimator = UserStateEstimator()
     for item in text_list:

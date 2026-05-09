@@ -6,7 +6,7 @@
 /outputs/results/recommendation_eval
 /tools/application/text_app.py
 /src/evaluation/recommendation/test.py
-/src/application/outputs/
+/src/core/outputs/
 /src/backend/
 /scripts/
 # 忽略 PyCharm 自己的配置文件
