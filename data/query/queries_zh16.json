@@ -1,0 +1,322 @@
+[
+  {
+    "query_id": "q01",
+    "strategy": "maintain",
+    "text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+    "z_q": [
+      0.4382,
+      0.1759
+    ],
+    "mu_q": [
+      0.4382,
+      0.1759
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "auto"
+    ]
+  },
+  {
+    "query_id": "q02",
+    "strategy": "calm",
+    "text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+    "z_q": [
+      0.2539,
+      -0.1007
+    ],
+    "mu_q": [
+      0.0051,
+      -0.2381
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "ambient",
+      "relaxing",
+      "piano",
+      "dream",
+      "classical"
+    ]
+  },
+  {
+    "query_id": "q03",
+    "strategy": "comfort",
+    "text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+    "z_q": [
+      0.1423,
+      -0.1744
+    ],
+    "mu_q": [
+      -0.0258,
+      -0.2461
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "piano",
+      "sad",
+      "classical",
+      "dream",
+      "relaxing"
+    ]
+  },
+  {
+    "query_id": "q04",
+    "strategy": "energize",
+    "text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+    "z_q": [
+      0.3036,
+      0.2327
+    ],
+    "mu_q": [
+      0.2312,
+      0.2519
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "energetic",
+      "electronic",
+      "rock",
+      "pop",
+      "happy"
+    ]
+  },
+  {
+    "query_id": "q05",
+    "strategy": "maintain",
+    "text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+    "z_q": [
+      0.1167,
+      -0.3041
+    ],
+    "mu_q": [
+      0.1167,
+      -0.3041
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "auto"
+    ]
+  },
+  {
+    "query_id": "q06",
+    "strategy": "calm",
+    "text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+    "z_q": [
+      0.2148,
+      -0.2901
+    ],
+    "mu_q": [
+      -0.0144,
+      -0.3328
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "ambient",
+      "relaxing",
+      "piano",
+      "dream",
+      "classical"
+    ]
+  },
+  {
+    "query_id": "q07",
+    "strategy": "comfort",
+    "text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+    "z_q": [
+      0.2817,
+      -0.169
+    ],
+    "mu_q": [
+      0.0438,
+      -0.2434
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "piano",
+      "sad",
+      "classical",
+      "dream",
+      "relaxing"
+    ]
+  },
+  {
+    "query_id": "q08",
+    "strategy": "energize",
+    "text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+    "z_q": [
+      0.1526,
+      -0.2565
+    ],
+    "mu_q": [
+      0.1557,
+      0.0073
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "energetic",
+      "electronic",
+      "rock",
+      "pop",
+      "happy"
+    ]
+  },
+  {
+    "query_id": "q09",
+    "strategy": "maintain",
+    "text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+    "z_q": [
+      -0.1371,
+      -0.0184
+    ],
+    "mu_q": [
+      -0.1371,
+      -0.0184
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "auto"
+    ]
+  },
+  {
+    "query_id": "q10",
+    "strategy": "calm",
+    "text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+    "z_q": [
+      -0.0239,
+      -0.0922
+    ],
+    "mu_q": [
+      -0.1338,
+      -0.2339
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "ambient",
+      "relaxing",
+      "piano",
+      "dream",
+      "classical"
+    ]
+  },
+  {
+    "query_id": "q11",
+    "strategy": "comfort",
+    "text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+    "z_q": [
+      -0.0226,
+      0.0293
+    ],
+    "mu_q": [
+      -0.1083,
+      -0.1443
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "piano",
+      "sad",
+      "classical",
+      "dream",
+      "relaxing"
+    ]
+  },
+  {
+    "query_id": "q12",
+    "strategy": "energize",
+    "text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+    "z_q": [
+      0.0832,
+      -0.0156
+    ],
+    "mu_q": [
+      0.121,
+      0.1278
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "energetic",
+      "electronic",
+      "rock",
+      "pop",
+      "happy"
+    ]
+  },
+  {
+    "query_id": "q13",
+    "strategy": "maintain",
+    "text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+    "z_q": [
+      -0.1948,
+      -0.2688
+    ],
+    "mu_q": [
+      -0.1948,
+      -0.2688
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "auto"
+    ]
+  },
+  {
+    "query_id": "q14",
+    "strategy": "calm",
+    "text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+    "z_q": [
+      -0.1998,
+      -0.0728
+    ],
+    "mu_q": [
+      -0.2217,
+      -0.2241
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "ambient",
+      "relaxing",
+      "piano",
+      "dream",
+      "classical"
+    ]
+  },
+  {
+    "query_id": "q15",
+    "strategy": "comfort",
+    "text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+    "z_q": [
+      -0.107,
+      -0.1101
+    ],
+    "mu_q": [
+      -0.1505,
+      -0.214
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "piano",
+      "sad",
+      "classical",
+      "dream",
+      "relaxing"
+    ]
+  },
+  {
+    "query_id": "q16",
+    "strategy": "energize",
+    "text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+    "z_q": [
+      -0.0758,
+      -0.0666
+    ],
+    "mu_q": [
+      0.0415,
+      0.1023
+    ],
+    "strength": 0.5,
+    "strategy_tags": [
+      "energetic",
+      "electronic",
+      "rock",
+      "pop",
+      "happy"
+    ]
+  }
+]
