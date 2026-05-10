@@ -1,4 +1,4 @@
-const MATERIALS_PATH = "../data/materials.json";
+const MATERIALS_PATH = "data/materials.json";
 
 async function main() {
   const params = new URLSearchParams(window.location.search);
