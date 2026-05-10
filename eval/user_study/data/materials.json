@@ -1,0 +1,3122 @@
+[
+  {
+    "token": "P001_XMQ53651",
+    "participant_index": 1,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P002_9CSU3G26",
+    "participant_index": 2,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P003_Q2L14ER5",
+    "participant_index": 3,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P004_XGM0J2AF",
+    "participant_index": 4,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P005_A28FMPHC",
+    "participant_index": 5,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P006_8RWJAU5I",
+    "participant_index": 6,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P007_8O4I6SF0",
+    "participant_index": 7,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P008_KIT60YJ7",
+    "participant_index": 8,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P009_MYAGYEDW",
+    "participant_index": 9,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P010_WBB64UT2",
+    "participant_index": 10,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P011_UH53KJ7N",
+    "participant_index": 11,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P012_1V3OE9ZC",
+    "participant_index": 12,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P013_MLC8D2M4",
+    "participant_index": 13,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P014_BI7N7IKL",
+    "participant_index": 14,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P015_YR180FYT",
+    "participant_index": 15,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P016_LWLQ350S",
+    "participant_index": 16,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P017_3LU742H7",
+    "participant_index": 17,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P018_7RGNOAF3",
+    "participant_index": 18,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P019_V08LBWKW",
+    "participant_index": 19,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P020_98NHR9NS",
+    "participant_index": 20,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P021_R9IGQG1K",
+    "participant_index": 21,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P022_GDWLG6UR",
+    "participant_index": 22,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P023_ESUKQQEA",
+    "participant_index": 23,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P024_0Q0ADGPB",
+    "participant_index": 24,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P025_THG9WU3C",
+    "participant_index": 25,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P026_ZUN31HX6",
+    "participant_index": 26,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P027_QYSWD1BS",
+    "participant_index": 27,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P028_VSHT0UB8",
+    "participant_index": 28,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P029_VM9DHKHH",
+    "participant_index": 29,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P030_CI7WTB1I",
+    "participant_index": 30,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P031_W0YYP0OI",
+    "participant_index": 31,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P032_L8B89ZQJ",
+    "participant_index": 32,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P033_OBBR840Q",
+    "participant_index": 33,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P034_UIFL9C6Q",
+    "participant_index": 34,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P035_V7UDAP4D",
+    "participant_index": 35,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P036_O6JZXO9R",
+    "participant_index": 36,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P037_VMXW3394",
+    "participant_index": 37,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P038_TMK0J5AW",
+    "participant_index": 38,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "ours",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P039_70CLFTX8",
+    "participant_index": 39,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clamp3",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  },
+  {
+    "token": "P040_QIGB8NTC",
+    "participant_index": 40,
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "A": {
+          "method": "clap",
+          "items": []
+        },
+        "B": {
+          "method": "clamp3",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "ours",
+          "items": []
+        },
+        "C": {
+          "method": "clap",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "A": {
+          "method": "clamp3",
+          "items": []
+        },
+        "B": {
+          "method": "clap",
+          "items": []
+        },
+        "C": {
+          "method": "ours",
+          "items": []
+        },
+        "rating_fields": [
+          "regulation_fit",
+          "helpfulness",
+          "satisfaction"
+        ],
+        "top_k": 3
+      }
+    ]
+  }
+]

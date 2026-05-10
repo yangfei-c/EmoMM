@@ -1,0 +1,36 @@
+body {
+  max-width: 1000px;
+  margin: 40px auto;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
+
+.trial {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.query {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.method-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.hidden-method {
+  color: #999;
+  font-size: 13px;
+}
