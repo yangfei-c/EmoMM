@@ -4,11 +4,13 @@ const SUBMIT_API = "/api/submit";
 
 let currentUser = null;
 
-const audioBlobCache = new Map();
-const audioPreloadPromises = new Map();
+// 只用于预热浏览器缓存，不再把 blob URL 交给 audio 播放
+const audioWarmCache = new Map();
+const audioWarmPromises = new Map();
+
 let activeAudio = null;
 
-const AUDIO_PRELOAD_CONCURRENCY = 4;
+const AUDIO_PRELOAD_CONCURRENCY = 3;
 let audioPreloadStarted = false;
 
 async function main() {
@@ -124,7 +126,7 @@ function renderPage(user) {
     </p>
     <p>
       建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。页面打开后会自动在后台准备音频，
-      音频准备完成后播放会更稳定。
+      若个别播放器显示加载失败，请刷新页面或换浏览器打开。
     </p>
   `;
   app.appendChild(intro);
@@ -238,8 +240,10 @@ function renderAudio(item) {
 
   return `
     <div class="audio-box is-pending" data-src="${escapeAttribute(src)}">
-      <span class="audio-status">音频等待自动加载...</span>
-      <audio controls preload="none" class="study-audio"></audio>
+      <span class="audio-status">音频正在准备...</span>
+      <audio controls preload="auto" class="study-audio" src="${escapeAttribute(src)}">
+        你的浏览器不支持音频播放。
+      </audio>
     </div>
   `;
 }
@@ -297,64 +301,47 @@ async function preloadOneAudioBox(box) {
     return;
   }
 
+  bindAudioEvents(audio, box, status);
+
   try {
     box.className = "audio-box is-loading";
-    status.innerText = "正在自动加载音频...";
+    status.innerText = "正在准备音频...";
 
-    const blobUrl = await getAudioBlobUrl(src);
-
-    audio.src = blobUrl;
+    // 直接让 audio 使用 CDN mp3 URL，避免微信/iOS 内置浏览器对 blob 音频不兼容
+    audio.src = src;
+    audio.preload = "auto";
     audio.load();
 
-    audio.addEventListener("play", () => {
-      if (activeAudio && activeAudio !== audio) {
-        activeAudio.pause();
-      }
+    // fetch 只用于预热浏览器缓存，不再把 blob URL 交给 audio 播放
+    await warmAudioCache(src);
 
-      document.querySelectorAll("audio").forEach(a => {
-        if (a !== audio) {
-          a.pause();
-        }
-      });
-
-      activeAudio = audio;
-    });
-
-    box.className = "audio-box is-ready";
-    status.innerText = "音频已加载，可直接播放。";
+    if (audio.readyState >= 3) {
+      box.className = "audio-box is-ready";
+      status.innerText = "音频已准备好，可直接播放。";
+    } else {
+      box.className = "audio-box is-loading";
+      status.innerText = "音频已缓存，播放器正在准备。";
+    }
   } catch (err) {
     console.error(err);
 
-    // 兜底：如果 CORS / fetch 失败，退回普通 URL 播放
+    // 即使 fetch 失败，仍保留原始 URL 播放
     audio.src = src;
+    audio.preload = "auto";
     audio.load();
 
-    audio.addEventListener("play", () => {
-      if (activeAudio && activeAudio !== audio) {
-        activeAudio.pause();
-      }
-
-      document.querySelectorAll("audio").forEach(a => {
-        if (a !== audio) {
-          a.pause();
-        }
-      });
-
-      activeAudio = audio;
-    });
-
-    box.className = "audio-box is-error";
-    status.innerText = "自动加载失败，播放器将尝试直接在线播放。";
+    box.className = "audio-box is-loading";
+    status.innerText = "自动缓存失败，播放器将直接加载音频。";
   }
 }
 
-async function getAudioBlobUrl(src) {
-  if (audioBlobCache.has(src)) {
-    return audioBlobCache.get(src);
+async function warmAudioCache(src) {
+  if (audioWarmCache.has(src)) {
+    return true;
   }
 
-  if (audioPreloadPromises.has(src)) {
-    return await audioPreloadPromises.get(src);
+  if (audioWarmPromises.has(src)) {
+    return await audioWarmPromises.get(src);
   }
 
   const promise = fetch(src, {
@@ -367,22 +354,89 @@ async function getAudioBlobUrl(src) {
         throw new Error(`HTTP ${res.status}`);
       }
 
-      const blob = await res.blob();
+      // 读取完整 body，才算真正预热缓存
+      const buffer = await res.arrayBuffer();
 
-      if (!blob || blob.size === 0) {
-        throw new Error("Empty audio blob");
+      if (!buffer || buffer.byteLength === 0) {
+        throw new Error("Empty audio body");
       }
 
-      const blobUrl = URL.createObjectURL(blob);
-      audioBlobCache.set(src, blobUrl);
-      return blobUrl;
+      audioWarmCache.set(src, true);
+      return true;
     })
     .finally(() => {
-      audioPreloadPromises.delete(src);
+      audioWarmPromises.delete(src);
     });
 
-  audioPreloadPromises.set(src, promise);
+  audioWarmPromises.set(src, promise);
   return await promise;
+}
+
+function bindAudioEvents(audio, box, status) {
+  if (audio.dataset.bound === "1") {
+    return;
+  }
+
+  audio.dataset.bound = "1";
+
+  audio.addEventListener("loadstart", () => {
+    if (!box.classList.contains("is-error")) {
+      box.className = "audio-box is-loading";
+      status.innerText = "播放器正在加载音频...";
+    }
+  });
+
+  audio.addEventListener("canplay", () => {
+    if (!box.classList.contains("is-error")) {
+      box.className = "audio-box is-ready";
+      status.innerText = "音频已准备好，可直接播放。";
+    }
+  });
+
+  audio.addEventListener("canplaythrough", () => {
+    if (!box.classList.contains("is-error")) {
+      box.className = "audio-box is-ready";
+      status.innerText = "音频已充分加载，可稳定播放。";
+    }
+  });
+
+  audio.addEventListener("waiting", () => {
+    if (!box.classList.contains("is-error")) {
+      box.className = "audio-box is-loading";
+      status.innerText = "音频缓冲中，请稍候。";
+    }
+  });
+
+  audio.addEventListener("playing", () => {
+    box.className = "audio-box is-ready";
+    status.innerText = "正在播放。";
+  });
+
+  audio.addEventListener("ended", () => {
+    if (!box.classList.contains("is-error")) {
+      status.innerText = "播放结束。";
+    }
+  });
+
+  audio.addEventListener("error", () => {
+    const code = audio.error ? audio.error.code : "";
+    box.className = "audio-box is-error";
+    status.innerText = `播放器加载失败，请刷新页面或换浏览器打开。错误码：${code}`;
+  });
+
+  audio.addEventListener("play", () => {
+    if (activeAudio && activeAudio !== audio) {
+      activeAudio.pause();
+    }
+
+    document.querySelectorAll("audio").forEach(a => {
+      if (a !== audio) {
+        a.pause();
+      }
+    });
+
+    activeAudio = audio;
+  });
 }
 
 function updateAudioPreloadSummary(done, total, finished = false) {
@@ -405,8 +459,8 @@ function updateAudioPreloadSummary(done, total, finished = false) {
 
   if (finished) {
     card.innerHTML = `
-      <strong>音频加载完成</strong>
-      <span>所有 ${total} 段音频已准备好，播放时会更稳定。</span>
+      <strong>音频准备完成</strong>
+      <span>所有 ${total} 段音频已尝试加载。若个别播放器显示错误，请刷新页面或换浏览器打开。</span>
     `;
     card.className = "audio-preload-summary is-ready";
     return;
@@ -414,7 +468,7 @@ function updateAudioPreloadSummary(done, total, finished = false) {
 
   card.innerHTML = `
     <strong>正在准备音频</strong>
-    <span>${done}/${total} 段已加载。你可以先阅读说明，音频会在后台自动准备。</span>
+    <span>${done}/${total} 段已处理。你可以先阅读说明，音频会在后台自动准备。</span>
   `;
   card.className = "audio-preload-summary";
 }
@@ -708,15 +762,5 @@ function escapeHtml(text) {
 function escapeAttribute(text) {
   return escapeHtml(text);
 }
-
-window.addEventListener("beforeunload", () => {
-  for (const blobUrl of audioBlobCache.values()) {
-    try {
-      URL.revokeObjectURL(blobUrl);
-    } catch (err) {
-      // ignore
-    }
-  }
-});
 
 main();

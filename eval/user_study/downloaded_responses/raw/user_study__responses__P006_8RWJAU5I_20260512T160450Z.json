@@ -1,0 +1,79 @@
+{
+  "token": "P006_8RWJAU5I",
+  "participant_index": 6,
+  "submitted_at": "2026-05-12T16:04:39.664Z",
+  "trials": [
+    {
+      "trial_index": 1,
+      "query_id": "q04",
+      "strategy": "energize",
+      "preference": "A",
+      "ratings": {
+        "A": {
+          "regulation_fit": "4",
+          "helpfulness": "5",
+          "satisfaction": "4"
+        },
+        "B": {
+          "regulation_fit": "1",
+          "helpfulness": "1",
+          "satisfaction": "1"
+        },
+        "C": {
+          "regulation_fit": "4",
+          "helpfulness": "3",
+          "satisfaction": "4"
+        }
+      }
+    },
+    {
+      "trial_index": 2,
+      "query_id": "q03",
+      "strategy": "comfort",
+      "preference": "C",
+      "ratings": {
+        "A": {
+          "regulation_fit": "6",
+          "helpfulness": "5",
+          "satisfaction": "6"
+        },
+        "B": {
+          "regulation_fit": "2",
+          "helpfulness": "3",
+          "satisfaction": "2"
+        },
+        "C": {
+          "regulation_fit": "7",
+          "helpfulness": "7",
+          "satisfaction": "7"
+        }
+      }
+    },
+    {
+      "trial_index": 3,
+      "query_id": "q15",
+      "strategy": "comfort",
+      "preference": "B",
+      "ratings": {
+        "A": {
+          "regulation_fit": "5",
+          "helpfulness": "5",
+          "satisfaction": "5"
+        },
+        "B": {
+          "regulation_fit": "7",
+          "helpfulness": "7",
+          "satisfaction": "7"
+        },
+        "C": {
+          "regulation_fit": "1",
+          "helpfulness": "1",
+          "satisfaction": "1"
+        }
+      }
+    }
+  ],
+  "received_at": "2026-05-12T16:04:50.700360+00:00",
+  "user_agent": "Mozilla/5.0 (Linux; Android 16; PKB110 Build/BP2A.250605.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/146.0.7680.177 Mobile Safari/537.36 XWEB/1460075 MMWEBSDK/20260202 MMWEBID/3242 REV/e8852504e3943486f8d8f1a0a6576b3ec4d02859 MicroMessenger/8.0.71.3080(0x2800473C) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64",
+  "ip": "211.145.54.91"
+}

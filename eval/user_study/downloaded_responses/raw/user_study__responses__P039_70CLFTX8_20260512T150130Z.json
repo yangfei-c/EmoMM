@@ -1,0 +1,79 @@
+{
+  "token": "P039_70CLFTX8",
+  "participant_index": 39,
+  "submitted_at": "2026-05-12T15:01:29.150Z",
+  "trials": [
+    {
+      "trial_index": 1,
+      "query_id": "q13",
+      "strategy": "maintain",
+      "preference": "B",
+      "ratings": {
+        "A": {
+          "regulation_fit": "2",
+          "helpfulness": "2",
+          "satisfaction": "2"
+        },
+        "B": {
+          "regulation_fit": "6",
+          "helpfulness": "6",
+          "satisfaction": "6"
+        },
+        "C": {
+          "regulation_fit": "4",
+          "helpfulness": "4",
+          "satisfaction": "4"
+        }
+      }
+    },
+    {
+      "trial_index": 2,
+      "query_id": "q15",
+      "strategy": "comfort",
+      "preference": "C",
+      "ratings": {
+        "A": {
+          "regulation_fit": "2",
+          "helpfulness": "2",
+          "satisfaction": "2"
+        },
+        "B": {
+          "regulation_fit": "5",
+          "helpfulness": "5",
+          "satisfaction": "5"
+        },
+        "C": {
+          "regulation_fit": "6",
+          "helpfulness": "6",
+          "satisfaction": "6"
+        }
+      }
+    },
+    {
+      "trial_index": 3,
+      "query_id": "q08",
+      "strategy": "energize",
+      "preference": "B",
+      "ratings": {
+        "A": {
+          "regulation_fit": "2",
+          "helpfulness": "2",
+          "satisfaction": "2"
+        },
+        "B": {
+          "regulation_fit": "5",
+          "helpfulness": "5",
+          "satisfaction": "5"
+        },
+        "C": {
+          "regulation_fit": "2",
+          "helpfulness": "2",
+          "satisfaction": "2"
+        }
+      }
+    }
+  ],
+  "received_at": "2026-05-12T15:01:30.019464+00:00",
+  "user_agent": "Mozilla/5.0 (Linux; Android 16; V2505A Build/BP2A.250605.031.A3_V0105L42; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/146.0.7680.177 Mobile Safari/537.36 XWEB/1460075 MMWEBSDK/20260202 MMWEBID/6873 REV/e8852504e3943486f8d8f1a0a6576b3ec4d02859 MicroMessenger/8.0.71.3080(0x2800473C) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64",
+  "ip": "2409:891f:8fe0:c1e5:46:1eff:feea:fefe"
+}

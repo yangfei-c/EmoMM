@@ -476,3 +476,67 @@ audio {
     width: 100%;
   }
 }
+.audio-preload-summary {
+  margin: 16px 0 24px 0;
+  padding: 14px 18px;
+  border: 1px solid #cfe3ff;
+  border-radius: 14px;
+  background: #f8fbff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.audio-preload-summary strong {
+  color: #0b4ea2;
+  font-size: 17px;
+}
+
+.audio-preload-summary.is-ready {
+  border-color: #b7eb8f;
+  background: #f6ffed;
+}
+
+.audio-preload-summary.is-ready strong {
+  color: #237804;
+}
+
+.audio-box {
+  margin: 8px 0 14px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.audio-status {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.audio-box.is-loading .audio-status {
+  color: #0958d9;
+}
+
+.audio-box.is-ready .audio-status {
+  color: #237804;
+}
+
+.audio-box.is-error .audio-status {
+  color: #d4380d;
+  font-weight: 700;
+}
+
+.audio-box.is-pending .study-audio,
+.audio-box.is-loading .study-audio {
+  opacity: 0.55;
+}
+
+.study-audio {
+  width: 100%;
+  max-width: 360px;
+}
