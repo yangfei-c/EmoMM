@@ -8,8 +8,8 @@ from pathlib import Path
 import boto3
 
 
-SPACES_KEY = os.environ["DO_SPACES_KEY"]
-SPACES_SECRET = os.environ["DO_SPACES_SECRET"]
+SPACES_KEY = "DO801HBPLEHUEQZFKVXV"
+SPACES_SECRET = "wqIPqYRPHVkHkjVcYV4XHvfyZCbXQvSHj7wKTx9HIZc"
 SPACES_REGION = "sfo3"
 SPACES_BUCKET = "emmrmusic"
 SPACES_ENDPOINT = "https://sfo3.digitaloceanspaces.com"

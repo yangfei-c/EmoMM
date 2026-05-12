@@ -18,7 +18,12 @@ async function main() {
 
 async function autoAssignToken() {
   const app = document.getElementById("app");
-  app.innerHTML = "正在为你分配实验任务，请稍候...";
+  app.innerHTML = `
+    <div class="loading-card">
+      <h2>正在分配实验任务</h2>
+      <p>请稍候，系统正在为你分配本次用户研究的问卷。</p>
+    </div>
+  `;
 
   try {
     const res = await fetch(START_API, {
@@ -31,7 +36,12 @@ async function autoAssignToken() {
     const data = await res.json();
 
     if (!res.ok) {
-      app.innerHTML = data.error || "实验名额已满或分配失败，请联系研究者。";
+      app.innerHTML = `
+        <div class="error-card">
+          <h2>分配失败</h2>
+          <p>${escapeHtml(data.error || "实验名额已满或分配失败，请联系研究者。")}</p>
+        </div>
+      `;
       return;
     }
 
@@ -39,7 +49,12 @@ async function autoAssignToken() {
     window.location.href = `${window.location.origin}${window.location.pathname}?token=${token}`;
   } catch (err) {
     console.error(err);
-    app.innerHTML = "无法连接服务器，请稍后重试。";
+    app.innerHTML = `
+      <div class="error-card">
+        <h2>无法连接服务器</h2>
+        <p>请稍后重试，或联系研究者。</p>
+      </div>
+    `;
   }
 }
 
@@ -53,15 +68,29 @@ async function loadUserByToken(token) {
     currentUser = materials.find(x => x.token === token);
 
     if (!currentUser) {
-      app.innerHTML = "token 无效，请联系研究者。";
+      app.innerHTML = `
+        <div class="error-card">
+          <h2>token 无效</h2>
+          <p>请使用研究者提供的链接，或联系研究者。</p>
+        </div>
+      `;
       return;
     }
 
-    document.getElementById("user-info").innerText = `当前用户：${currentUser.token}`;
+    const userInfo = document.getElementById("user-info");
+    if (userInfo) {
+      userInfo.innerText = `当前用户：${currentUser.token}`;
+    }
+
     renderPage(currentUser);
   } catch (err) {
     console.error(err);
-    app.innerHTML = "加载实验材料失败，请稍后重试。";
+    app.innerHTML = `
+      <div class="error-card">
+        <h2>加载实验材料失败</h2>
+        <p>请稍后重试，或联系研究者。</p>
+      </div>
+    `;
   }
 }
 
@@ -70,20 +99,55 @@ function renderPage(user) {
   app.innerHTML = "";
 
   const intro = document.createElement("div");
-  intro.className = "intro";
+  intro.className = "intro-card";
   intro.innerHTML = `
-    <p>请根据每一轮情绪场景，分别试听方法 A、方法 B、方法 C 的推荐结果，并完成评分。</p>
-    <p>评分范围为 1–7 分，1 表示非常不同意，7 表示非常同意。</p>
+    <h2>研究说明</h2>
+    <p>
+      本研究用于评估不同音乐推荐方法在<strong>情绪调节</strong>场景下的效果。
+      你将看到 <strong>3 个情绪场景</strong>。每一轮包含方法 A、方法 B、方法 C 三组推荐，
+      每组有 <strong>3 段约 15 秒音乐</strong>。
+    </p>
+    <p>
+      请根据每一轮的情绪场景，分别试听三组推荐，并从 1–7 分评价：
+      <strong>1 表示非常不同意，7 表示非常同意</strong>。
+      每轮最后还需要选择你最喜欢的一组推荐。
+    </p>
+    <p>
+      建议佩戴耳机，在安静环境下完成。预计耗时约 8–12 分钟。
+      数据匿名，仅用于学术研究。
+    </p>
   `;
   app.appendChild(intro);
+
+  const progress = document.createElement("div");
+  progress.className = "progress-card";
+  progress.innerHTML = `
+    <div>
+      <strong>完成进度</strong>
+      <span id="progress-text">0%</span>
+    </div>
+    <div class="progress-track">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+  `;
+  app.appendChild(progress);
 
   user.trials.forEach(trial => {
     const div = document.createElement("div");
     div.className = "trial";
 
     div.innerHTML = `
-      <h2>第 ${trial.trial_index} 轮</h2>
+      <div class="trial-header">
+        <h2>第 ${trial.trial_index} 轮</h2>
+        <span class="strategy-badge">${strategyText(trial.strategy)}</span>
+      </div>
+
       <p class="query">${escapeHtml(trial.query_text)}</p>
+
+      <p class="trial-hint">
+        请想象你正处于上述情绪场景中。分别试听方法 A、方法 B、方法 C 的三组音乐，
+        然后评价哪一组更适合帮助你达到目标情绪。
+      </p>
 
       <div class="methods">
         ${renderMethod(trial.trial_index, "A", trial.A)}
@@ -93,6 +157,7 @@ function renderPage(user) {
 
       <div class="preference-box">
         <h3>本轮你最喜欢哪一组推荐？</h3>
+        <p class="preference-hint">请综合三首音乐的整体感觉进行选择。</p>
         ${renderPreference(trial.trial_index)}
       </div>
     `;
@@ -101,14 +166,20 @@ function renderPage(user) {
   });
 
   const submitBox = document.createElement("div");
-  submitBox.className = "submit-box";
+  submitBox.className = "submit-bar";
   submitBox.innerHTML = `
-    <button id="submit-btn">提交问卷</button>
-    <p id="submit-msg"></p>
+    <div class="submit-left">
+      <div class="submit-title">完成所有评分后提交问卷</div>
+      <div id="submit-msg" class="submit-msg">请确认每一轮 A/B/C 三组评分和偏好选择都已完成。</div>
+    </div>
+    <button id="submit-btn" class="primary-submit">提交问卷</button>
   `;
   app.appendChild(submitBox);
 
   document.getElementById("submit-btn").addEventListener("click", submitResponses);
+
+  app.addEventListener("change", updateProgress);
+  updateProgress();
 }
 
 function renderMethod(trialIndex, label, data) {
@@ -169,13 +240,13 @@ function renderRating(trialIndex, methodLabel, field, text) {
       <span>${text}</span>
       <select name="${name}" required>
         <option value="">请选择</option>
-        <option value="1">1</option>
+        <option value="1">1 - 非常不同意</option>
         <option value="2">2</option>
         <option value="3">3</option>
-        <option value="4">4</option>
+        <option value="4">4 - 一般</option>
         <option value="5">5</option>
         <option value="6">6</option>
-        <option value="7">7</option>
+        <option value="7">7 - 非常同意</option>
       </select>
     </label>
   `;
@@ -183,18 +254,20 @@ function renderRating(trialIndex, methodLabel, field, text) {
 
 function renderPreference(trialIndex) {
   return `
-    <label>
-      <input type="radio" name="t${trialIndex}_preference" value="A">
-      方法 A
-    </label>
-    <label>
-      <input type="radio" name="t${trialIndex}_preference" value="B">
-      方法 B
-    </label>
-    <label>
-      <input type="radio" name="t${trialIndex}_preference" value="C">
-      方法 C
-    </label>
+    <div class="preference-options">
+      <label>
+        <input type="radio" name="t${trialIndex}_preference" value="A">
+        <span>方法 A</span>
+      </label>
+      <label>
+        <input type="radio" name="t${trialIndex}_preference" value="B">
+        <span>方法 B</span>
+      </label>
+      <label>
+        <input type="radio" name="t${trialIndex}_preference" value="C">
+        <span>方法 C</span>
+      </label>
+    </div>
   `;
 }
 
@@ -206,11 +279,15 @@ async function submitResponses() {
 
   if (error) {
     msg.innerText = error;
+    msg.className = "submit-msg error";
+    scrollToFirstIncomplete(response);
     return;
   }
 
   btn.disabled = true;
-  msg.innerText = "正在提交，请稍候...";
+  btn.innerText = "正在提交...";
+  msg.innerText = "正在提交，请不要关闭页面。";
+  msg.className = "submit-msg";
 
   try {
     const res = await fetch(SUBMIT_API, {
@@ -225,15 +302,22 @@ async function submitResponses() {
 
     if (!res.ok) {
       msg.innerText = data.error || "提交失败，请稍后重试。";
+      msg.className = "submit-msg error";
       btn.disabled = false;
+      btn.innerText = "提交问卷";
       return;
     }
 
     msg.innerText = "提交成功，感谢参与！";
+    msg.className = "submit-msg success";
+    btn.innerText = "已提交";
+    disableAllInputs();
   } catch (err) {
     console.error(err);
     msg.innerText = "提交失败：无法连接服务器。";
+    msg.className = "submit-msg error";
     btn.disabled = false;
+    btn.innerText = "提交问卷";
   }
 }
 
@@ -286,6 +370,120 @@ function validateResponse(response) {
   return "";
 }
 
+function scrollToFirstIncomplete(response) {
+  for (const trial of response.trials) {
+    for (const label of ["A", "B", "C"]) {
+      const r = trial.ratings[label];
+
+      if (!r.regulation_fit) {
+        focusElement(`select[name="t${trial.trial_index}_${label}_regulation_fit"]`);
+        return;
+      }
+
+      if (!r.helpfulness) {
+        focusElement(`select[name="t${trial.trial_index}_${label}_helpfulness"]`);
+        return;
+      }
+
+      if (!r.satisfaction) {
+        focusElement(`select[name="t${trial.trial_index}_${label}_satisfaction"]`);
+        return;
+      }
+    }
+
+    if (!trial.preference) {
+      focusElement(`input[name="t${trial.trial_index}_preference"]`);
+      return;
+    }
+  }
+}
+
+function focusElement(selector) {
+  const el = document.querySelector(selector);
+
+  if (!el) {
+    return;
+  }
+
+  const trial = el.closest(".trial");
+
+  if (trial) {
+    trial.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  } else {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }
+
+  setTimeout(() => {
+    try {
+      el.focus();
+    } catch (err) {
+      // ignore
+    }
+  }, 300);
+}
+
+function updateProgress() {
+  if (!currentUser) {
+    return;
+  }
+
+  const total =
+    currentUser.trials.length *
+    (
+      3 * 3 + // A/B/C × 3 个评分
+      1       // 每轮 preference
+    );
+
+  let done = 0;
+
+  for (const trial of currentUser.trials) {
+    for (const label of ["A", "B", "C"]) {
+      for (const field of ["regulation_fit", "helpfulness", "satisfaction"]) {
+        const value = getSelectValue(`t${trial.trial_index}_${label}_${field}`);
+        if (value) {
+          done += 1;
+        }
+      }
+    }
+
+    const preference = getRadioValue(`t${trial.trial_index}_preference`);
+    if (preference) {
+      done += 1;
+    }
+  }
+
+  const percent = Math.round((done / total) * 100);
+
+  const text = document.getElementById("progress-text");
+  const fill = document.getElementById("progress-fill");
+  const msg = document.getElementById("submit-msg");
+
+  if (text) {
+    text.innerText = `${percent}%（${done}/${total}）`;
+  }
+
+  if (fill) {
+    fill.style.width = `${percent}%`;
+  }
+
+  if (msg && percent === 100 && !msg.classList.contains("success")) {
+    msg.innerText = "所有评分已完成，可以提交问卷。";
+    msg.className = "submit-msg ready";
+  }
+}
+
+function disableAllInputs() {
+  document.querySelectorAll("select, input, button").forEach(el => {
+    el.disabled = true;
+  });
+}
+
 function getSelectValue(name) {
   const el = document.querySelector(`select[name="${name}"]`);
   return el ? el.value : "";
@@ -294,6 +492,17 @@ function getSelectValue(name) {
 function getRadioValue(name) {
   const el = document.querySelector(`input[name="${name}"]:checked`);
   return el ? el.value : "";
+}
+
+function strategyText(strategy) {
+  const s = String(strategy || "").toLowerCase();
+
+  if (s === "maintain") return "保持情绪";
+  if (s === "calm") return "平静下来";
+  if (s === "comfort") return "获得安慰";
+  if (s === "energize") return "振作起来";
+
+  return strategy || "情绪调节";
 }
 
 function escapeHtml(text) {
