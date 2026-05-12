@@ -3,6 +3,8 @@ const START_API = "/api/start";
 const SUBMIT_API = "/api/submit";
 
 let currentUser = null;
+const audioBlobCache = new Map();
+let activeAudio = null;
 
 async function main() {
   const params = new URLSearchParams(window.location.search);
@@ -113,8 +115,8 @@ function renderPage(user) {
       每轮最后还需要选择你最喜欢的一组推荐。
     </p>
     <p>
-      建议佩戴耳机，在安静环境下完成。预计耗时约 8–12 分钟。
-      数据匿名，仅用于学术研究。
+      建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。点击每段音频的“加载并播放”后，
+      系统会先完整加载该段短音频，再开始播放，以减少播放中卡顿。
     </p>
   `;
   app.appendChild(intro);
@@ -178,6 +180,8 @@ function renderPage(user) {
 
   document.getElementById("submit-btn").addEventListener("click", submitResponses);
 
+  bindAudioButtons();
+
   app.addEventListener("change", updateProgress);
   updateProgress();
 }
@@ -225,11 +229,94 @@ function renderAudio(item) {
   }
 
   return `
-    <audio controls preload="none">
-      <source src="${escapeAttribute(src)}">
-      你的浏览器不支持音频播放。
-    </audio>
+    <div class="audio-box" data-src="${escapeAttribute(src)}">
+      <button type="button" class="audio-load-btn">加载并播放</button>
+      <span class="audio-status">点击后会先加载完整音频，播放时更稳定。</span>
+      <audio controls preload="none" class="study-audio"></audio>
+    </div>
   `;
+}
+
+function bindAudioButtons() {
+  document.querySelectorAll(".audio-load-btn").forEach(btn => {
+    btn.addEventListener("click", () => loadAndPlayAudio(btn));
+  });
+}
+
+async function loadAndPlayAudio(btn) {
+  const box = btn.closest(".audio-box");
+  const src = box.dataset.src;
+  const status = box.querySelector(".audio-status");
+  const audio = box.querySelector("audio");
+
+  if (!src) {
+    status.innerText = "音频链接为空。";
+    status.className = "audio-status error";
+    return;
+  }
+
+  try {
+    btn.disabled = true;
+    btn.innerText = "正在加载...";
+    status.innerText = "正在下载完整音频，请稍候。";
+    status.className = "audio-status";
+
+    if (activeAudio && activeAudio !== audio) {
+      activeAudio.pause();
+    }
+
+    document.querySelectorAll("audio").forEach(a => {
+      if (a !== audio) {
+        a.pause();
+      }
+    });
+
+    let blobUrl = audioBlobCache.get(src);
+
+    if (!blobUrl) {
+      const res = await fetch(src, {
+        method: "GET",
+        mode: "cors",
+        cache: "force-cache"
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+
+      const blob = await res.blob();
+
+      if (!blob || blob.size === 0) {
+        throw new Error("Empty audio blob");
+      }
+
+      blobUrl = URL.createObjectURL(blob);
+      audioBlobCache.set(src, blobUrl);
+    }
+
+    audio.src = blobUrl;
+    audio.load();
+    audio.currentTime = 0;
+
+    btn.disabled = false;
+    btn.innerText = "重新播放";
+    status.innerText = "已加载完成。";
+    status.className = "audio-status success";
+
+    await audio.play();
+    activeAudio = audio;
+
+  } catch (err) {
+    console.error(err);
+
+    btn.disabled = false;
+    btn.innerText = "加载失败，重试";
+    status.innerText = "音频加载失败。请检查网络，或刷新页面后重试。";
+    status.className = "audio-status error";
+
+    audio.src = src;
+    audio.load();
+  }
 }
 
 function renderRating(trialIndex, methodLabel, field, text) {
@@ -436,8 +523,8 @@ function updateProgress() {
   const total =
     currentUser.trials.length *
     (
-      3 * 3 + // A/B/C × 3 个评分
-      1       // 每轮 preference
+      3 * 3 +
+      1
     );
 
   let done = 0;

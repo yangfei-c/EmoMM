@@ -401,3 +401,51 @@ audio {
     width: 100%;
   }
 }
+.audio-box {
+  margin: 8px 0 14px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.audio-load-btn {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1677ff;
+  color: #ffffff;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.audio-load-btn:hover {
+  background: #0958d9;
+}
+
+.audio-load-btn:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+
+.audio-status {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.audio-status.success {
+  color: #237804;
+}
+
+.audio-status.error {
+  color: #d4380d;
+  font-weight: 700;
+}
+
+.study-audio {
+  width: 100%;
+  max-width: 360px;
+}
