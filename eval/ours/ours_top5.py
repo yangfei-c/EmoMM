@@ -18,7 +18,6 @@ from core.scoring import compute_scores, topk_indices
 
 
 QUERY_JSON = ROOT / "eval" / "queries_zh16.json"
-POOL_JSON = ROOT / "eval" / "candidate_pool.json"
 OUT_CSV = ROOT / "eval" / "ours" / "ours_top5.csv"
 
 TOP_K = 5
@@ -37,29 +36,18 @@ def get_query_id(q):
 
 def main():
     queries = json.loads(QUERY_JSON.read_text(encoding="utf-8"))
-    pool = json.loads(POOL_JSON.read_text(encoding="utf-8"))
 
-    all_tracks = load_tracks()
-    track_by_id = {str(t["song_id"]): t for t in all_tracks}
+    tracks = load_tracks()
+    tracks = [
+        t for t in tracks
+        if t.get("va") is not None and t.get("tag26") is not None
+    ]
 
-    tracks = []
-
-    for item in pool:
-        song_id = str(item["song_id"])
-        if song_id not in track_by_id:
-            raise KeyError(f"candidate_pool 中的 song_id 不在 load_tracks(): {song_id}")
-
-        track = dict(track_by_id[song_id])
-        track["song_path"] = item.get("song_path", track.get("song_path", ""))
-        track["display_tags"] = item.get("display_tags", track.get("display_tags", []))
-        track["va"] = item.get("va", track.get("va", []))
-        tracks.append(track)
-
-    if not tracks:
-        raise RuntimeError("候选池为空。")
+    print(f"全量音乐数量: {len(tracks)}")
 
     z_matrix = np.asarray([t["va"] for t in tracks], dtype=np.float32)
     y_matrix = np.asarray([t["tag26"] for t in tracks], dtype=np.float32)
+
     prototypes = compute_tag_prototypes(tracks)
 
     rows = []
@@ -104,7 +92,7 @@ def main():
                 "strategy": q.get("strategy", ""),
                 "display_tags": "|".join(map(str, track.get("display_tags", []))),
                 "va": json.dumps(track.get("va", []), ensure_ascii=False),
-                "audio_path": str(track.get("song_path", "")),
+                "audio_path": str(track.get("song_path") or track.get("audio_path") or ""),
             })
 
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
@@ -113,26 +101,15 @@ def main():
         writer = csv.DictWriter(
             f,
             fieldnames=[
-                "method",
-                "query_id",
-                "rank",
-                "song_id",
-                "score",
-                "text",
-                "strategy",
-                "display_tags",
-                "va",
-                "audio_path",
+                "method", "query_id", "rank", "song_id", "score",
+                "text", "strategy", "display_tags", "va", "audio_path"
             ],
         )
         writer.writeheader()
         writer.writerows(rows)
 
-    print("Ours Top-5 生成完成")
-    print(f"候选池: {POOL_JSON}")
-    print(f"输出文件: {OUT_CSV}")
-    print(f"query 数量: {len(queries)}")
-    print(f"候选歌曲数量: {len(tracks)}")
+    print("Ours full-library Top-5 生成完成")
+    print(f"输出: {OUT_CSV}")
     print(f"输出行数: {len(rows)}")
 
 

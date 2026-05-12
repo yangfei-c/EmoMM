@@ -2,6 +2,7 @@
 
 import csv
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -9,9 +10,12 @@ from msclap import CLAP
 
 
 ROOT = Path(r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec")
+sys.path.insert(0, str(ROOT / "src"))
+
+from core.music_repository import load_tracks
+
 
 QUERY_JSON = ROOT / "eval" / "queries_zh16.json"
-POOL_JSON = ROOT / "eval" / "candidate_pool.json"
 
 CLAP_DIR = Path(r"D:\AAAA_audio_dataset\eval\clap")
 AUDIO_EMB = CLAP_DIR / "audio_embd.npz"
@@ -20,7 +24,6 @@ TEXT_EMB = CLAP_DIR / "text_embd.npz"
 OUT_CSV = ROOT / "eval" / "clap" / "clap_top5.csv"
 
 TOP_K = 5
-BATCH_SIZE = 16
 
 
 def to_numpy(x):
@@ -39,50 +42,85 @@ def get_query_id(q):
 
 
 def main():
-    CLAP_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+    if not AUDIO_EMB.exists():
+        raise FileNotFoundError(f"找不到 CLAP audio embedding: {AUDIO_EMB}")
 
     queries = json.loads(QUERY_JSON.read_text(encoding="utf-8"))
-    pool = json.loads(POOL_JSON.read_text(encoding="utf-8"))
 
-    pool_info = {str(x["song_id"]): x for x in pool}
+    all_tracks = load_tracks()
+    track_by_id = {str(t["song_id"]): t for t in all_tracks}
+
+    audio_data = np.load(AUDIO_EMB, allow_pickle=True)
+
+    song_ids = [str(x) for x in audio_data["song_ids"]]
+    audio_paths = [str(x) for x in audio_data["audio_paths"]]
+    audio_emb = audio_data["audio_emb"].astype(np.float32)
+
+    print(f"读取 CLAP audio embedding: {AUDIO_EMB}")
+    print(f"音频 embedding 数量: {len(song_ids)}")
 
     query_ids = [get_query_id(q) for q in queries]
     query_texts = [q["text"] for q in queries]
 
-    song_ids = [str(x["song_id"]) for x in pool]
-    audio_paths = [str(x["song_path"]) for x in pool]
-
-    print(f"query 数量: {len(query_texts)}")
-    print(f"候选歌曲数量: {len(audio_paths)}")
-
     model = CLAP(version="2023", use_cuda=True)
 
-    if AUDIO_EMB.exists():
-        data = np.load(AUDIO_EMB, allow_pickle=True)
-        song_ids = [str(x) for x in data["song_ids"]]
-        audio_paths = [str(x) for x in data["audio_paths"]]
-        audio_emb = data["audio_emb"].astype(np.float32)
-        print(f"读取 audio embedding: {AUDIO_EMB}")
+    if TEXT_EMB.exists():
+        text_data = np.load(TEXT_EMB, allow_pickle=True)
+        old_query_ids = [str(x) for x in text_data["query_ids"]]
+
+        if old_query_ids == query_ids:
+            text_emb = text_data["text_emb"].astype(np.float32)
+            print(f"读取已有 text embedding: {TEXT_EMB}")
+        else:
+            text_emb = build_text_emb(model, query_ids, query_texts)
     else:
-        audio_emb_list = []
+        text_emb = build_text_emb(model, query_ids, query_texts)
 
-        for i in range(0, len(audio_paths), BATCH_SIZE):
-            batch = audio_paths[i:i + BATCH_SIZE]
-            emb = model.get_audio_embeddings(batch)
-            audio_emb_list.append(to_numpy(emb).astype(np.float32))
-            print(f"audio embedding: {min(i + BATCH_SIZE, len(audio_paths))}/{len(audio_paths)}")
+    scores = norm(audio_emb) @ norm(text_emb).T
 
-        audio_emb = np.concatenate(audio_emb_list, axis=0)
+    rows = []
 
-        np.savez(
-            AUDIO_EMB,
-            song_ids=np.array(song_ids),
-            audio_paths=np.array(audio_paths),
-            audio_emb=audio_emb,
+    for qi, q in enumerate(queries):
+        top_idx = np.argsort(-scores[:, qi])[:TOP_K]
+
+        for rank, idx in enumerate(top_idx, start=1):
+            idx = int(idx)
+
+            song_id = song_ids[idx]
+            track = track_by_id.get(song_id, {})
+
+            rows.append({
+                "method": "clap",
+                "query_id": query_ids[qi],
+                "rank": rank,
+                "song_id": song_id,
+                "score": round(float(scores[idx, qi]), 6),
+                "text": q["text"],
+                "strategy": q.get("strategy", ""),
+                "display_tags": "|".join(map(str, track.get("display_tags", []))),
+                "va": json.dumps(track.get("va", []), ensure_ascii=False),
+                "audio_path": audio_paths[idx],
+            })
+
+    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+
+    with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=[
+                "method", "query_id", "rank", "song_id", "score",
+                "text", "strategy", "display_tags", "va", "audio_path"
+            ],
         )
-        print(f"保存 audio embedding: {AUDIO_EMB}")
+        writer.writeheader()
+        writer.writerows(rows)
 
+    print("CLAP full-library Top-5 生成完成")
+    print(f"输出: {OUT_CSV}")
+    print(f"输出行数: {len(rows)}")
+
+
+def build_text_emb(model, query_ids, query_texts):
     text_emb_list = []
 
     for i, text in enumerate(query_texts):
@@ -98,53 +136,10 @@ def main():
         query_texts=np.array(query_texts),
         text_emb=text_emb,
     )
+
     print(f"保存 text embedding: {TEXT_EMB}")
 
-    scores = norm(audio_emb) @ norm(text_emb).T
-
-    rows = []
-
-    for qi, q in enumerate(queries):
-        top_idx = np.argsort(-scores[:, qi])[:TOP_K]
-
-        for rank, idx in enumerate(top_idx, start=1):
-            song_id = song_ids[int(idx)]
-            info = pool_info.get(song_id, {})
-
-            rows.append({
-                "method": "clap",
-                "query_id": query_ids[qi],
-                "rank": rank,
-                "song_id": song_id,
-                "score": round(float(scores[int(idx), qi]), 6),
-                "text": q["text"],
-                "strategy": q.get("strategy", ""),
-                "display_tags": "|".join(map(str, info.get("display_tags", []))),
-                "va": json.dumps(info.get("va", []), ensure_ascii=False),
-                "audio_path": audio_paths[int(idx)],
-            })
-
-    with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=[
-                "method",
-                "query_id",
-                "rank",
-                "song_id",
-                "score",
-                "text",
-                "strategy",
-                "display_tags",
-                "va",
-                "audio_path",
-            ],
-        )
-        writer.writeheader()
-        writer.writerows(rows)
-
-    print(f"完成: {OUT_CSV}")
-    print(f"输出行数: {len(rows)}")
+    return text_emb
 
 
 if __name__ == "__main__":
