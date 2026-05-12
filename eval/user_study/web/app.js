@@ -3,8 +3,13 @@ const START_API = "/api/start";
 const SUBMIT_API = "/api/submit";
 
 let currentUser = null;
+
 const audioBlobCache = new Map();
+const audioPreloadPromises = new Map();
 let activeAudio = null;
+
+const AUDIO_PRELOAD_CONCURRENCY = 4;
+let audioPreloadStarted = false;
 
 async function main() {
   const params = new URLSearchParams(window.location.search);
@@ -20,6 +25,7 @@ async function main() {
 
 async function autoAssignToken() {
   const app = document.getElementById("app");
+
   app.innerHTML = `
     <div class="loading-card">
       <h2>正在分配实验任务</h2>
@@ -51,6 +57,7 @@ async function autoAssignToken() {
     window.location.href = `${window.location.origin}${window.location.pathname}?token=${token}`;
   } catch (err) {
     console.error(err);
+
     app.innerHTML = `
       <div class="error-card">
         <h2>无法连接服务器</h2>
@@ -87,6 +94,7 @@ async function loadUserByToken(token) {
     renderPage(currentUser);
   } catch (err) {
     console.error(err);
+
     app.innerHTML = `
       <div class="error-card">
         <h2>加载实验材料失败</h2>
@@ -115,8 +123,8 @@ function renderPage(user) {
       每轮最后还需要选择你最喜欢的一组推荐。
     </p>
     <p>
-      建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。点击每段音频的“加载并播放”后，
-      系统会先完整加载该段短音频，再开始播放，以减少播放中卡顿。
+      建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。页面打开后会自动在后台准备音频，
+      音频准备完成后播放会更稳定。
     </p>
   `;
   app.appendChild(intro);
@@ -180,7 +188,7 @@ function renderPage(user) {
 
   document.getElementById("submit-btn").addEventListener("click", submitResponses);
 
-  bindAudioButtons();
+  startAutoPreloadAllAudio();
 
   app.addEventListener("change", updateProgress);
   updateProgress();
@@ -229,57 +237,132 @@ function renderAudio(item) {
   }
 
   return `
-    <div class="audio-box" data-src="${escapeAttribute(src)}">
-      <button type="button" class="audio-load-btn">加载并播放</button>
-      <span class="audio-status">点击后会先加载完整音频，播放时更稳定。</span>
+    <div class="audio-box is-pending" data-src="${escapeAttribute(src)}">
+      <span class="audio-status">音频等待自动加载...</span>
       <audio controls preload="none" class="study-audio"></audio>
     </div>
   `;
 }
 
-function bindAudioButtons() {
-  document.querySelectorAll(".audio-load-btn").forEach(btn => {
-    btn.addEventListener("click", () => loadAndPlayAudio(btn));
+function startAutoPreloadAllAudio() {
+  if (audioPreloadStarted) {
+    return;
+  }
+
+  audioPreloadStarted = true;
+
+  const boxes = Array.from(document.querySelectorAll(".audio-box"));
+
+  if (boxes.length === 0) {
+    return;
+  }
+
+  updateAudioPreloadSummary(0, boxes.length, false);
+
+  let nextIndex = 0;
+  let doneCount = 0;
+
+  async function worker() {
+    while (nextIndex < boxes.length) {
+      const box = boxes[nextIndex];
+      nextIndex += 1;
+
+      await preloadOneAudioBox(box);
+
+      doneCount += 1;
+      updateAudioPreloadSummary(doneCount, boxes.length, doneCount === boxes.length);
+    }
+  }
+
+  const workerCount = Math.min(AUDIO_PRELOAD_CONCURRENCY, boxes.length);
+  const workers = [];
+
+  for (let i = 0; i < workerCount; i += 1) {
+    workers.push(worker());
+  }
+
+  Promise.all(workers).then(() => {
+    updateAudioPreloadSummary(doneCount, boxes.length, true);
   });
 }
 
-async function loadAndPlayAudio(btn) {
-  const box = btn.closest(".audio-box");
+async function preloadOneAudioBox(box) {
   const src = box.dataset.src;
   const status = box.querySelector(".audio-status");
   const audio = box.querySelector("audio");
 
   if (!src) {
+    box.className = "audio-box is-error";
     status.innerText = "音频链接为空。";
-    status.className = "audio-status error";
     return;
   }
 
   try {
-    btn.disabled = true;
-    btn.innerText = "正在加载...";
-    status.innerText = "正在下载完整音频，请稍候。";
-    status.className = "audio-status";
+    box.className = "audio-box is-loading";
+    status.innerText = "正在自动加载音频...";
 
-    if (activeAudio && activeAudio !== audio) {
-      activeAudio.pause();
-    }
+    const blobUrl = await getAudioBlobUrl(src);
 
-    document.querySelectorAll("audio").forEach(a => {
-      if (a !== audio) {
-        a.pause();
+    audio.src = blobUrl;
+    audio.load();
+
+    audio.addEventListener("play", () => {
+      if (activeAudio && activeAudio !== audio) {
+        activeAudio.pause();
       }
-    });
 
-    let blobUrl = audioBlobCache.get(src);
-
-    if (!blobUrl) {
-      const res = await fetch(src, {
-        method: "GET",
-        mode: "cors",
-        cache: "force-cache"
+      document.querySelectorAll("audio").forEach(a => {
+        if (a !== audio) {
+          a.pause();
+        }
       });
 
+      activeAudio = audio;
+    });
+
+    box.className = "audio-box is-ready";
+    status.innerText = "音频已加载，可直接播放。";
+  } catch (err) {
+    console.error(err);
+
+    // 兜底：如果 CORS / fetch 失败，退回普通 URL 播放
+    audio.src = src;
+    audio.load();
+
+    audio.addEventListener("play", () => {
+      if (activeAudio && activeAudio !== audio) {
+        activeAudio.pause();
+      }
+
+      document.querySelectorAll("audio").forEach(a => {
+        if (a !== audio) {
+          a.pause();
+        }
+      });
+
+      activeAudio = audio;
+    });
+
+    box.className = "audio-box is-error";
+    status.innerText = "自动加载失败，播放器将尝试直接在线播放。";
+  }
+}
+
+async function getAudioBlobUrl(src) {
+  if (audioBlobCache.has(src)) {
+    return audioBlobCache.get(src);
+  }
+
+  if (audioPreloadPromises.has(src)) {
+    return await audioPreloadPromises.get(src);
+  }
+
+  const promise = fetch(src, {
+    method: "GET",
+    mode: "cors",
+    cache: "force-cache"
+  })
+    .then(async res => {
       if (!res.ok) {
         throw new Error(`HTTP ${res.status}`);
       }
@@ -290,33 +373,50 @@ async function loadAndPlayAudio(btn) {
         throw new Error("Empty audio blob");
       }
 
-      blobUrl = URL.createObjectURL(blob);
+      const blobUrl = URL.createObjectURL(blob);
       audioBlobCache.set(src, blobUrl);
+      return blobUrl;
+    })
+    .finally(() => {
+      audioPreloadPromises.delete(src);
+    });
+
+  audioPreloadPromises.set(src, promise);
+  return await promise;
+}
+
+function updateAudioPreloadSummary(done, total, finished = false) {
+  let card = document.getElementById("audio-preload-summary");
+
+  if (!card) {
+    const app = document.getElementById("app");
+    const firstTrial = document.querySelector(".trial");
+
+    card = document.createElement("div");
+    card.id = "audio-preload-summary";
+    card.className = "audio-preload-summary";
+
+    if (firstTrial) {
+      app.insertBefore(card, firstTrial);
+    } else {
+      app.appendChild(card);
     }
-
-    audio.src = blobUrl;
-    audio.load();
-    audio.currentTime = 0;
-
-    btn.disabled = false;
-    btn.innerText = "重新播放";
-    status.innerText = "已加载完成。";
-    status.className = "audio-status success";
-
-    await audio.play();
-    activeAudio = audio;
-
-  } catch (err) {
-    console.error(err);
-
-    btn.disabled = false;
-    btn.innerText = "加载失败，重试";
-    status.innerText = "音频加载失败。请检查网络，或刷新页面后重试。";
-    status.className = "audio-status error";
-
-    audio.src = src;
-    audio.load();
   }
+
+  if (finished) {
+    card.innerHTML = `
+      <strong>音频加载完成</strong>
+      <span>所有 ${total} 段音频已准备好，播放时会更稳定。</span>
+    `;
+    card.className = "audio-preload-summary is-ready";
+    return;
+  }
+
+  card.innerHTML = `
+    <strong>正在准备音频</strong>
+    <span>${done}/${total} 段已加载。你可以先阅读说明，音频会在后台自动准备。</span>
+  `;
+  card.className = "audio-preload-summary";
 }
 
 function renderRating(trialIndex, methodLabel, field, text) {
@@ -569,6 +669,10 @@ function disableAllInputs() {
   document.querySelectorAll("select, input, button").forEach(el => {
     el.disabled = true;
   });
+
+  document.querySelectorAll("audio").forEach(audio => {
+    audio.controls = false;
+  });
 }
 
 function getSelectValue(name) {
@@ -604,5 +708,15 @@ function escapeHtml(text) {
 function escapeAttribute(text) {
   return escapeHtml(text);
 }
+
+window.addEventListener("beforeunload", () => {
+  for (const blobUrl of audioBlobCache.values()) {
+    try {
+      URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      // ignore
+    }
+  }
+});
 
 main();

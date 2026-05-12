@@ -104,6 +104,34 @@ audio {
   transition: width 0.25s ease;
 }
 
+.audio-preload-summary {
+  margin: 16px 0 24px 0;
+  padding: 14px 18px;
+  border: 1px solid #cfe3ff;
+  border-radius: 14px;
+  background: #f8fbff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.audio-preload-summary strong {
+  color: #0b4ea2;
+  font-size: 17px;
+}
+
+.audio-preload-summary.is-ready {
+  border-color: #b7eb8f;
+  background: #f6ffed;
+}
+
+.audio-preload-summary.is-ready strong {
+  color: #237804;
+}
+
 .trial {
   padding: 26px;
   margin-bottom: 28px;
@@ -184,6 +212,44 @@ audio {
 .placeholder {
   color: #888;
   font-size: 15px;
+}
+
+.audio-box {
+  margin: 8px 0 14px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.audio-status {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.audio-box.is-loading .audio-status {
+  color: #0958d9;
+}
+
+.audio-box.is-ready .audio-status {
+  color: #237804;
+}
+
+.audio-box.is-error .audio-status {
+  color: #d4380d;
+  font-weight: 700;
+}
+
+.audio-box.is-pending .study-audio,
+.audio-box.is-loading .study-audio {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.study-audio {
+  width: 100%;
+  max-width: 360px;
 }
 
 .ratings {
@@ -352,6 +418,10 @@ audio {
   audio {
     max-width: 100%;
   }
+
+  .study-audio {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
@@ -378,6 +448,11 @@ audio {
     flex-direction: column;
   }
 
+  .audio-preload-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .rating-row {
     grid-template-columns: 1fr;
   }
@@ -400,52 +475,4 @@ audio {
   .primary-submit {
     width: 100%;
   }
-}
-.audio-box {
-  margin: 8px 0 14px 0;
-  padding: 10px;
-  border-radius: 10px;
-  background: #f7f7f7;
-}
-
-.audio-load-btn {
-  font-size: 15px;
-  font-weight: 700;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 8px;
-  background: #1677ff;
-  color: #ffffff;
-  cursor: pointer;
-  margin-bottom: 8px;
-}
-
-.audio-load-btn:hover {
-  background: #0958d9;
-}
-
-.audio-load-btn:disabled {
-  background: #bfbfbf;
-  cursor: not-allowed;
-}
-
-.audio-status {
-  display: block;
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 8px;
-}
-
-.audio-status.success {
-  color: #237804;
-}
-
-.audio-status.error {
-  color: #d4380d;
-  font-weight: 700;
-}
-
-.study-audio {
-  width: 100%;
-  max-width: 360px;
 }
