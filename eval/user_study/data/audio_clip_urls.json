@@ -600,5 +600,439 @@
     "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1420690.mp3",
     "spaces_key": "user_study/audio/track_1420690.mp3",
     "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1420690.mp3"
+  },
+  "track_0001161": {
+    "song_id": "track_0001161",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\61\\1161.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0001161.mp3",
+    "spaces_key": "user_study/audio/track_0001161.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0001161.mp3"
+  },
+  "track_0023196": {
+    "song_id": "track_0023196",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\96\\23196.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0023196.mp3",
+    "spaces_key": "user_study/audio/track_0023196.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3"
+  },
+  "track_0094722": {
+    "song_id": "track_0094722",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\22\\94722.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0094722.mp3",
+    "spaces_key": "user_study/audio/track_0094722.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0094722.mp3"
+  },
+  "track_0128880": {
+    "song_id": "track_0128880",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\80\\128880.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0128880.mp3",
+    "spaces_key": "user_study/audio/track_0128880.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3"
+  },
+  "track_0153578": {
+    "song_id": "track_0153578",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\78\\153578.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0153578.mp3",
+    "spaces_key": "user_study/audio/track_0153578.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3"
+  },
+  "track_0181660": {
+    "song_id": "track_0181660",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\60\\181660.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0181660.mp3",
+    "spaces_key": "user_study/audio/track_0181660.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0181660.mp3"
+  },
+  "track_0202741": {
+    "song_id": "track_0202741",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\41\\202741.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0202741.mp3",
+    "spaces_key": "user_study/audio/track_0202741.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0202741.mp3"
+  },
+  "track_0246926": {
+    "song_id": "track_0246926",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\26\\246926.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0246926.mp3",
+    "spaces_key": "user_study/audio/track_0246926.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0246926.mp3"
+  },
+  "track_0259817": {
+    "song_id": "track_0259817",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\17\\259817.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0259817.mp3",
+    "spaces_key": "user_study/audio/track_0259817.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259817.mp3"
+  },
+  "track_0259873": {
+    "song_id": "track_0259873",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\73\\259873.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0259873.mp3",
+    "spaces_key": "user_study/audio/track_0259873.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3"
+  },
+  "track_0259884": {
+    "song_id": "track_0259884",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\84\\259884.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0259884.mp3",
+    "spaces_key": "user_study/audio/track_0259884.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259884.mp3"
+  },
+  "track_0324838": {
+    "song_id": "track_0324838",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\38\\324838.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0324838.mp3",
+    "spaces_key": "user_study/audio/track_0324838.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0324838.mp3"
+  },
+  "track_0352693": {
+    "song_id": "track_0352693",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\93\\352693.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0352693.mp3",
+    "spaces_key": "user_study/audio/track_0352693.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0352693.mp3"
+  },
+  "track_0398183": {
+    "song_id": "track_0398183",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\83\\398183.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0398183.mp3",
+    "spaces_key": "user_study/audio/track_0398183.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398183.mp3"
+  },
+  "track_0398190": {
+    "song_id": "track_0398190",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\90\\398190.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0398190.mp3",
+    "spaces_key": "user_study/audio/track_0398190.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398190.mp3"
+  },
+  "track_0410467": {
+    "song_id": "track_0410467",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\67\\410467.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0410467.mp3",
+    "spaces_key": "user_study/audio/track_0410467.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3"
+  },
+  "track_0453977": {
+    "song_id": "track_0453977",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\77\\453977.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0453977.mp3",
+    "spaces_key": "user_study/audio/track_0453977.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0453977.mp3"
+  },
+  "track_0477316": {
+    "song_id": "track_0477316",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\16\\477316.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0477316.mp3",
+    "spaces_key": "user_study/audio/track_0477316.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0477316.mp3"
+  },
+  "track_0480540": {
+    "song_id": "track_0480540",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\40\\480540.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0480540.mp3",
+    "spaces_key": "user_study/audio/track_0480540.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0480540.mp3"
+  },
+  "track_0492313": {
+    "song_id": "track_0492313",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\13\\492313.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0492313.mp3",
+    "spaces_key": "user_study/audio/track_0492313.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0492313.mp3"
+  },
+  "track_0601130": {
+    "song_id": "track_0601130",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\30\\601130.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0601130.mp3",
+    "spaces_key": "user_study/audio/track_0601130.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3"
+  },
+  "track_0614516": {
+    "song_id": "track_0614516",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\16\\614516.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0614516.mp3",
+    "spaces_key": "user_study/audio/track_0614516.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0614516.mp3"
+  },
+  "track_0646803": {
+    "song_id": "track_0646803",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\03\\646803.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0646803.mp3",
+    "spaces_key": "user_study/audio/track_0646803.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0646803.mp3"
+  },
+  "track_0753095": {
+    "song_id": "track_0753095",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\95\\753095.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0753095.mp3",
+    "spaces_key": "user_study/audio/track_0753095.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0753095.mp3"
+  },
+  "track_0847261": {
+    "song_id": "track_0847261",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\61\\847261.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0847261.mp3",
+    "spaces_key": "user_study/audio/track_0847261.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0847261.mp3"
+  },
+  "track_0858720": {
+    "song_id": "track_0858720",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\20\\858720.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0858720.mp3",
+    "spaces_key": "user_study/audio/track_0858720.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0858720.mp3"
+  },
+  "track_0877646": {
+    "song_id": "track_0877646",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\46\\877646.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0877646.mp3",
+    "spaces_key": "user_study/audio/track_0877646.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0877646.mp3"
+  },
+  "track_0913287": {
+    "song_id": "track_0913287",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\87\\913287.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0913287.mp3",
+    "spaces_key": "user_study/audio/track_0913287.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0913287.mp3"
+  },
+  "track_0957451": {
+    "song_id": "track_0957451",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\51\\957451.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0957451.mp3",
+    "spaces_key": "user_study/audio/track_0957451.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0957451.mp3"
+  },
+  "track_0979836": {
+    "song_id": "track_0979836",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\36\\979836.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_0979836.mp3",
+    "spaces_key": "user_study/audio/track_0979836.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0979836.mp3"
+  },
+  "track_1009673": {
+    "song_id": "track_1009673",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\73\\1009673.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1009673.mp3",
+    "spaces_key": "user_study/audio/track_1009673.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1009673.mp3"
+  },
+  "track_1029960": {
+    "song_id": "track_1029960",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\60\\1029960.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1029960.mp3",
+    "spaces_key": "user_study/audio/track_1029960.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1029960.mp3"
+  },
+  "track_1079804": {
+    "song_id": "track_1079804",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\04\\1079804.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1079804.mp3",
+    "spaces_key": "user_study/audio/track_1079804.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1079804.mp3"
+  },
+  "track_1083536": {
+    "song_id": "track_1083536",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\36\\1083536.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1083536.mp3",
+    "spaces_key": "user_study/audio/track_1083536.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1083536.mp3"
+  },
+  "track_1102692": {
+    "song_id": "track_1102692",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\92\\1102692.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1102692.mp3",
+    "spaces_key": "user_study/audio/track_1102692.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1102692.mp3"
+  },
+  "track_1133073": {
+    "song_id": "track_1133073",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\73\\1133073.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1133073.mp3",
+    "spaces_key": "user_study/audio/track_1133073.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133073.mp3"
+  },
+  "track_1133076": {
+    "song_id": "track_1133076",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\76\\1133076.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1133076.mp3",
+    "spaces_key": "user_study/audio/track_1133076.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133076.mp3"
+  },
+  "track_1139450": {
+    "song_id": "track_1139450",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\50\\1139450.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1139450.mp3",
+    "spaces_key": "user_study/audio/track_1139450.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1139450.mp3"
+  },
+  "track_1154997": {
+    "song_id": "track_1154997",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\97\\1154997.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1154997.mp3",
+    "spaces_key": "user_study/audio/track_1154997.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1154997.mp3"
+  },
+  "track_1174820": {
+    "song_id": "track_1174820",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\20\\1174820.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1174820.mp3",
+    "spaces_key": "user_study/audio/track_1174820.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1174820.mp3"
+  },
+  "track_1187722": {
+    "song_id": "track_1187722",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\22\\1187722.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1187722.mp3",
+    "spaces_key": "user_study/audio/track_1187722.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1187722.mp3"
+  },
+  "track_1191331": {
+    "song_id": "track_1191331",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\31\\1191331.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1191331.mp3",
+    "spaces_key": "user_study/audio/track_1191331.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1191331.mp3"
+  },
+  "track_1195903": {
+    "song_id": "track_1195903",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\03\\1195903.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1195903.mp3",
+    "spaces_key": "user_study/audio/track_1195903.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1195903.mp3"
+  },
+  "track_1202915": {
+    "song_id": "track_1202915",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\15\\1202915.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1202915.mp3",
+    "spaces_key": "user_study/audio/track_1202915.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1202915.mp3"
+  },
+  "track_1233539": {
+    "song_id": "track_1233539",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\39\\1233539.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1233539.mp3",
+    "spaces_key": "user_study/audio/track_1233539.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1233539.mp3"
+  },
+  "track_1249563": {
+    "song_id": "track_1249563",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\63\\1249563.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1249563.mp3",
+    "spaces_key": "user_study/audio/track_1249563.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1249563.mp3"
+  },
+  "track_1275970": {
+    "song_id": "track_1275970",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\70\\1275970.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1275970.mp3",
+    "spaces_key": "user_study/audio/track_1275970.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1275970.mp3"
+  },
+  "track_1284330": {
+    "song_id": "track_1284330",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\30\\1284330.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1284330.mp3",
+    "spaces_key": "user_study/audio/track_1284330.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3"
+  },
+  "track_1326538": {
+    "song_id": "track_1326538",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\38\\1326538.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1326538.mp3",
+    "spaces_key": "user_study/audio/track_1326538.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326538.mp3"
+  },
+  "track_1326552": {
+    "song_id": "track_1326552",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\52\\1326552.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1326552.mp3",
+    "spaces_key": "user_study/audio/track_1326552.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326552.mp3"
+  },
+  "track_1333179": {
+    "song_id": "track_1333179",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\79\\1333179.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1333179.mp3",
+    "spaces_key": "user_study/audio/track_1333179.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1333179.mp3"
+  },
+  "track_1333359": {
+    "song_id": "track_1333359",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\59\\1333359.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1333359.mp3",
+    "spaces_key": "user_study/audio/track_1333359.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1333359.mp3"
+  },
+  "track_1333618": {
+    "song_id": "track_1333618",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\18\\1333618.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1333618.mp3",
+    "spaces_key": "user_study/audio/track_1333618.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1333618.mp3"
+  },
+  "track_1347099": {
+    "song_id": "track_1347099",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\99\\1347099.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1347099.mp3",
+    "spaces_key": "user_study/audio/track_1347099.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1347099.mp3"
+  },
+  "track_1349591": {
+    "song_id": "track_1349591",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\91\\1349591.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1349591.mp3",
+    "spaces_key": "user_study/audio/track_1349591.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3"
+  },
+  "track_1353344": {
+    "song_id": "track_1353344",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\44\\1353344.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1353344.mp3",
+    "spaces_key": "user_study/audio/track_1353344.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1353344.mp3"
+  },
+  "track_1353974": {
+    "song_id": "track_1353974",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\74\\1353974.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1353974.mp3",
+    "spaces_key": "user_study/audio/track_1353974.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1353974.mp3"
+  },
+  "track_1357455": {
+    "song_id": "track_1357455",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\55\\1357455.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1357455.mp3",
+    "spaces_key": "user_study/audio/track_1357455.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1357455.mp3"
+  },
+  "track_1363731": {
+    "song_id": "track_1363731",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\31\\1363731.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1363731.mp3",
+    "spaces_key": "user_study/audio/track_1363731.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1363731.mp3"
+  },
+  "track_1414177": {
+    "song_id": "track_1414177",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\77\\1414177.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1414177.mp3",
+    "spaces_key": "user_study/audio/track_1414177.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1414177.mp3"
+  },
+  "track_1415613": {
+    "song_id": "track_1415613",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\13\\1415613.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1415613.mp3",
+    "spaces_key": "user_study/audio/track_1415613.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1415613.mp3"
+  },
+  "track_1420422": {
+    "song_id": "track_1420422",
+    "audio_path": "D:\\AAAA_audio_dataset\\mtg-jamendo\\audio\\22\\1420422.mp3",
+    "clip_path": "D:\\AAAA_audio_dataset\\eval\\user_study\\clips\\track_1420422.mp3",
+    "spaces_key": "user_study/audio/track_1420422.mp3",
+    "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1420422.mp3"
   }
 }

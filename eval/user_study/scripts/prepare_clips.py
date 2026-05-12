@@ -19,13 +19,12 @@ OUT_DIR = Path(r"D:\AAAA_audio_dataset\eval\user_study\clips")
 MANIFEST_CSV = ROOT / "eval" / "user_study" / "data" / "clips_manifest.csv"
 URL_JSON = ROOT / "eval" / "user_study" / "data" / "audio_clip_urls.json"
 
-TOP_K = 3
+# 这里改成 5，因为后面 materials.json 会用 rank4/rank5 替换重复歌曲
+TOP_K_FOR_UPLOAD = 5
 
-# 统一裁剪设置
 START_SECONDS = 30
 DURATION_SECONDS = 15
 
-# Spaces 上传路径
 SPACES_PREFIX = "user_study/audio"
 
 
@@ -41,7 +40,7 @@ def read_topk_rows(csv_path, method):
         for row in reader:
             rank = int(row["rank"])
 
-            if rank > TOP_K:
+            if rank > TOP_K_FOR_UPLOAD:
                 continue
 
             song_id = str(row["song_id"]).strip()
@@ -71,7 +70,6 @@ def collect_unique_clips():
     all_rows.extend(read_topk_rows(CLAP_CSV, "clap"))
     all_rows.extend(read_topk_rows(CLAMP3_CSV, "clamp3"))
 
-    # song_id 去重；同一首歌只裁剪/上传一次
     clip_map = {}
 
     for row in all_rows:
@@ -91,7 +89,7 @@ def collect_unique_clips():
         })
 
     print("=" * 80)
-    print(f"Top-3 总引用数量: {len(all_rows)}")
+    print(f"Top-{TOP_K_FOR_UPLOAD} 总引用数量: {len(all_rows)}")
     print(f"唯一音频数量: {len(clip_map)}")
 
     return clip_map
@@ -136,7 +134,6 @@ def clip_one(song_id, audio_path):
     try:
         run_ffmpeg(src, dst, START_SECONDS)
     except subprocess.CalledProcessError:
-        # 如果音频太短，从 0 秒重新裁剪
         print(f"[重试] {song_id}: 30 秒处裁剪失败，改从 0 秒开始")
         run_ffmpeg(src, dst, 0)
 
@@ -187,6 +184,15 @@ def upload_one(s3, local_path, song_id):
     return object_key, url
 
 
+def load_existing_url_map():
+    if URL_JSON.exists():
+        try:
+            return json.loads(URL_JSON.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
 def save_manifest(clip_map, url_map):
     MANIFEST_CSV.parent.mkdir(parents=True, exist_ok=True)
 
@@ -205,6 +211,9 @@ def save_manifest(clip_map, url_map):
         writer.writeheader()
 
         for song_id, info in sorted(clip_map.items()):
+            if song_id not in url_map:
+                continue
+
             u = url_map[song_id]
 
             writer.writerow({
@@ -229,16 +238,19 @@ def save_manifest(clip_map, url_map):
 
 def main():
     clip_map = collect_unique_clips()
-
     s3 = get_spaces_client()
 
-    url_map = {}
+    url_map = load_existing_url_map()
     failed = []
 
     for idx, (song_id, info) in enumerate(sorted(clip_map.items()), start=1):
         print(f"[{idx}/{len(clip_map)}] 处理 {song_id}")
 
         try:
+            if song_id in url_map and url_map[song_id].get("audio_url"):
+                print(f"  已存在 audio_url，跳过上传: {song_id}")
+                continue
+
             clip_path = clip_one(song_id, info["audio_path"])
             spaces_key, audio_url = upload_one(s3, clip_path, song_id)
 
@@ -262,7 +274,7 @@ def main():
     save_manifest(clip_map, url_map)
 
     print("=" * 80)
-    print(f"成功数量: {len(url_map)}")
+    print(f"audio_url 总数量: {len(url_map)}")
     print(f"失败数量: {len(failed)}")
 
     if failed:
@@ -274,7 +286,7 @@ def main():
         print(f"失败记录: {fail_path}")
         raise RuntimeError("存在裁剪或上传失败，请先处理失败项。")
 
-    print("全部 clips 裁剪并上传完成。")
+    print("全部 Top-5 clips 裁剪并上传完成。")
 
 
 if __name__ == "__main__":

@@ -140,14 +140,6 @@
           "method": "clamp3",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0762509",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0762509.mp3",
-              "score": "0.271599",
-              "display_tags": "electronic|bass|dark",
-              "va": "[0.2592572271823883, 0.30017566680908203]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0038398",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0038398.mp3",
@@ -162,6 +154,14 @@
               "score": "0.268611",
               "display_tags": "rock|bass|happy",
               "va": "[0.008441838435828686, 0.19277530908584595]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1379111",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1379111.mp3",
+              "score": "0.267168",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.2585705518722534, 0.17037145793437958]"
             }
           ]
         },
@@ -169,28 +169,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1363731",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1363731.mp3",
+              "score": "0.443607",
+              "display_tags": "electronic|synthesizer|love",
+              "va": "[-0.35336437821388245, 0.001742148888297379]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.436368",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.470232",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.465964",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.450858",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -210,28 +210,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.507938",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -414,28 +414,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -459,12 +459,12 @@
               "va": "[-0.023057611659169197, -0.23890481889247894]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1029956",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1029956.mp3",
-              "score": "0.50581",
-              "display_tags": "classical|piano|relaxing",
-              "va": "[0.033284857869148254, -0.1895022839307785]"
+              "rank": 4,
+              "song_id": "track_0259817",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259817.mp3",
+              "score": "0.497483",
+              "display_tags": "classical|piano|film",
+              "va": "[0.0018330586608499289, -0.1972782164812088]"
             }
           ]
         },
@@ -513,28 +513,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -550,20 +550,20 @@
               "va": "[0.0174183901399374, -0.31987833976745605]"
             },
             {
-              "rank": 2,
-              "song_id": "track_0309861",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0309861.mp3",
-              "score": "0.286844",
-              "display_tags": "ambient|synthesizer|relaxing",
-              "va": "[-0.17331856489181519, -0.5015766024589539]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0398192",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398192.mp3",
               "score": "0.28665",
               "display_tags": "pop|piano|relaxing",
               "va": "[-0.05082247406244278, -0.36657923460006714]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1083536",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1083536.mp3",
+              "score": "0.284468",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[-0.07085910439491272, -0.40443915128707886]"
             }
           ]
         },
@@ -717,28 +717,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.501286",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.482065",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462058",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.43661",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.501286",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -874,28 +874,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.460028",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.452099",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.492768",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.464772",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46433",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -1078,28 +1078,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -1148,6 +1148,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 3,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.431329",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -1162,14 +1170,6 @@
               "score": "0.441032",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1345461",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
-              "score": "0.431329",
-              "display_tags": "rock|bass|energetic",
-              "va": "[0.07859589904546738, -0.10068445652723312]"
             }
           ]
         },
@@ -1352,28 +1352,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.45114",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.450976",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.47102",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45757",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.455197",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -1451,6 +1451,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 1,
               "song_id": "track_1189646",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
@@ -1465,14 +1473,6 @@
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -1655,28 +1655,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -1762,20 +1762,20 @@
               "va": "[0.0174183901399374, -0.31987833976745605]"
             },
             {
-              "rank": 2,
-              "song_id": "track_0309861",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0309861.mp3",
-              "score": "0.286844",
-              "display_tags": "ambient|synthesizer|relaxing",
-              "va": "[-0.17331856489181519, -0.5015766024589539]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0398192",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398192.mp3",
               "score": "0.28665",
               "display_tags": "pop|piano|relaxing",
               "va": "[-0.05082247406244278, -0.36657923460006714]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1083536",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1083536.mp3",
+              "score": "0.284468",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[-0.07085910439491272, -0.40443915128707886]"
             }
           ]
         },
@@ -1783,28 +1783,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -1987,14 +1987,6 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.47102",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
@@ -2003,12 +1995,20 @@
               "va": "[-0.3605061173439026, -0.06635486334562302]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.455197",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.45114",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.450976",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
             }
           ]
         },
@@ -2232,28 +2232,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -2331,28 +2331,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.449658",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
             }
           ]
         },
@@ -2535,28 +2535,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.481992",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46969",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1344843",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
               "score": "0.449273",
               "display_tags": "electronic|bass|happy",
               "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.433649",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.481992",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -2692,28 +2692,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.496805",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.441032",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1345461",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
               "score": "0.431329",
               "display_tags": "rock|bass|energetic",
               "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.428974",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.496805",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -2896,28 +2896,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.450976",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.446587",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.489873",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.457144",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.456809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -2966,28 +2966,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.459536",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.445773",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.491326",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.470794",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.46045",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -3170,28 +3170,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -3256,12 +3256,12 @@
               "va": "[0.033284857869148254, -0.1895022839307785]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.452381",
+              "rank": 4,
+              "song_id": "track_1133073",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133073.mp3",
+              "score": "0.44521",
               "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
+              "va": "[0.07087936997413635, -0.18757283687591553]"
             }
           ]
         },
@@ -3269,42 +3269,34 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.45114",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.450976",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.47102",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45757",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.455197",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
         "C": {
           "method": "clamp3",
           "items": [
-            {
-              "rank": 1,
-              "song_id": "track_0667858",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0667858.mp3",
-              "score": "0.310757",
-              "display_tags": "ambient|piano|relaxing",
-              "va": "[-0.09164237976074219, -0.16863228380680084]"
-            },
             {
               "rank": 2,
               "song_id": "track_1299817",
@@ -3320,6 +3312,14 @@
               "score": "0.300401",
               "display_tags": "ambient|synthesizer|relaxing",
               "va": "[-0.21990008652210236, -0.6780228614807129]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0614516",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0614516.mp3",
+              "score": "0.297903",
+              "display_tags": "ambient|piano|relaxing",
+              "va": "[-0.417408287525177, -0.6264738440513611]"
             }
           ]
         },
@@ -3473,28 +3473,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.462606",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.447885",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0010558",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
+              "score": "0.462606",
+              "display_tags": "electronic|synthesizer|dark",
+              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -3580,20 +3580,20 @@
               "va": "[0.38182833790779114, 0.5264416337013245]"
             },
             {
-              "rank": 2,
-              "song_id": "track_1326527",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326527.mp3",
-              "score": "0.260805",
-              "display_tags": "pop|bass|love",
-              "va": "[0.36029306054115295, 0.372919499874115]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0485056",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0485056.mp3",
               "score": "0.245426",
               "display_tags": "rock|bass|energetic",
               "va": "[0.33496224880218506, 0.6424292325973511]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1414177",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1414177.mp3",
+              "score": "0.244784",
+              "display_tags": "electronic|bass|dream",
+              "va": "[0.18358170986175537, 0.4368753433227539]"
             }
           ]
         },
@@ -3601,28 +3601,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.449658",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
             }
           ]
         },
@@ -3813,20 +3813,20 @@
               "va": "[0.104204922914505, -0.39510077238082886]"
             },
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 2,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -3846,28 +3846,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.507938",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -4050,14 +4050,6 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.489873",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
@@ -4066,12 +4058,20 @@
               "va": "[-0.3605061173439026, -0.06635486334562302]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.456809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.450976",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.446587",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
             }
           ]
         },
@@ -4149,6 +4149,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.442732",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -4163,14 +4171,6 @@
               "score": "0.4712",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45415",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -4361,20 +4361,20 @@
               "va": "[0.104204922914505, -0.39510077238082886]"
             },
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 2,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -4510,28 +4510,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.496805",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.441032",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1345461",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
               "score": "0.431329",
               "display_tags": "rock|bass|energetic",
               "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.428974",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.42552",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
             }
           ]
         },
@@ -4714,28 +4714,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.442732",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.442318",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493505",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.4712",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45415",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -4784,28 +4784,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.481992",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46969",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1344843",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
               "score": "0.449273",
               "display_tags": "electronic|bass|happy",
               "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.433649",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.481992",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -4988,28 +4988,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.425907",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0477316",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0477316.mp3",
+              "score": "0.422541",
+              "display_tags": "soundtrack|strings|film",
+              "va": "[0.006244043819606304, 0.027723433449864388]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.476396",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.449769",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.444527",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -5087,28 +5087,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.459121",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.456741",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.506328",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.472809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.460928",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -5291,28 +5291,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -5361,14 +5361,6 @@
           "method": "ours",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_1302677",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1302677.mp3",
-              "score": "0.545265",
-              "display_tags": "pop|bass|happy",
-              "va": "[0.06599277257919312, 0.10357346385717392]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0518469",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0518469.mp3",
@@ -5383,6 +5375,14 @@
               "score": "0.532888",
               "display_tags": "pop|bass|happy",
               "va": "[0.13141639530658722, 0.01435091532766819]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1009673",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1009673.mp3",
+              "score": "0.532824",
+              "display_tags": "pop|bass|happy",
+              "va": "[0.09545306861400604, -0.010617606341838837]"
             }
           ]
         },
@@ -5406,12 +5406,12 @@
               "va": "[0.2585705518722534, 0.17037145793437958]"
             },
             {
-              "rank": 3,
-              "song_id": "track_0762509",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0762509.mp3",
-              "score": "0.273657",
-              "display_tags": "electronic|bass|dark",
-              "va": "[0.2592572271823883, 0.30017566680908203]"
+              "rank": 4,
+              "song_id": "track_1233539",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1233539.mp3",
+              "score": "0.27121",
+              "display_tags": "rock|drums|energetic",
+              "va": "[0.2771824896335602, 0.5286391377449036]"
             }
           ]
         },
@@ -5419,28 +5419,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.442732",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.442318",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493505",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.4712",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45415",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -5581,12 +5581,12 @@
               "va": "[0.020089779049158096, -0.35127976536750793]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.517248",
-              "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
+              "rank": 4,
+              "song_id": "track_1133076",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133076.mp3",
+              "score": "0.513354",
+              "display_tags": "classical|piano|film",
+              "va": "[0.05007031932473183, -0.350495308637619]"
             }
           ]
         },
@@ -5623,28 +5623,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -5664,28 +5664,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.450976",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.446587",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.489873",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.457144",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.456809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -5868,28 +5868,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1363731",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1363731.mp3",
+              "score": "0.443607",
+              "display_tags": "electronic|synthesizer|love",
+              "va": "[-0.35336437821388245, 0.001742148888297379]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.436368",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.470232",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.465964",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.450858",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -5967,28 +5967,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.459121",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.456741",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.506328",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.472809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.460928",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -6171,28 +6171,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.425907",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0477316",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0477316.mp3",
+              "score": "0.422541",
+              "display_tags": "soundtrack|strings|film",
+              "va": "[0.006244043819606304, 0.027723433449864388]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.476396",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.449769",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.444527",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -6286,26 +6286,18 @@
               "va": "[0.2585705518722534, 0.17037145793437958]"
             },
             {
-              "rank": 3,
-              "song_id": "track_0762509",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0762509.mp3",
-              "score": "0.273657",
-              "display_tags": "electronic|bass|dark",
-              "va": "[0.2592572271823883, 0.30017566680908203]"
+              "rank": 4,
+              "song_id": "track_1233539",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1233539.mp3",
+              "score": "0.27121",
+              "display_tags": "rock|drums|energetic",
+              "va": "[0.2771824896335602, 0.5286391377449036]"
             }
           ]
         },
         "B": {
           "method": "ours",
           "items": [
-            {
-              "rank": 1,
-              "song_id": "track_1302677",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1302677.mp3",
-              "score": "0.545265",
-              "display_tags": "pop|bass|happy",
-              "va": "[0.06599277257919312, 0.10357346385717392]"
-            },
             {
               "rank": 2,
               "song_id": "track_0518469",
@@ -6321,12 +6313,28 @@
               "score": "0.532888",
               "display_tags": "pop|bass|happy",
               "va": "[0.13141639530658722, 0.01435091532766819]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_1009673",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1009673.mp3",
+              "score": "0.532824",
+              "display_tags": "pop|bass|happy",
+              "va": "[0.09545306861400604, -0.010617606341838837]"
             }
           ]
         },
         "C": {
           "method": "clap",
           "items": [
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.442318",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
             {
               "rank": 1,
               "song_id": "track_0395265",
@@ -6342,14 +6350,6 @@
               "score": "0.4712",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45415",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -6532,28 +6532,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -6602,28 +6602,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.45114",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.450976",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.47102",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45757",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.455197",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -6639,20 +6639,20 @@
               "va": "[0.17794644832611084, -0.1510232537984848]"
             },
             {
-              "rank": 2,
-              "song_id": "track_1029956",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1029956.mp3",
-              "score": "0.458024",
+              "rank": 4,
+              "song_id": "track_1133073",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133073.mp3",
+              "score": "0.44521",
               "display_tags": "classical|piano|relaxing",
-              "va": "[0.033284857869148254, -0.1895022839307785]"
+              "va": "[0.07087936997413635, -0.18757283687591553]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.452381",
+              "rank": 5,
+              "song_id": "track_0753095",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0753095.mp3",
+              "score": "0.443375",
               "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
+              "va": "[0.03373219445347786, -0.22015754878520966]"
             }
           ]
         },
@@ -6814,20 +6814,20 @@
               "va": "[0.104204922914505, -0.39510077238082886]"
             },
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 2,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -6905,28 +6905,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.459536",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.445773",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.491326",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.470794",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.46045",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -7109,28 +7109,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.496805",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.441032",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1345461",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
               "score": "0.431329",
               "display_tags": "rock|bass|energetic",
               "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.42552",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.496805",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -7216,34 +7216,26 @@
               "va": "[-0.00943090207874775, -0.12720495462417603]"
             },
             {
-              "rank": 2,
-              "song_id": "track_1326527",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326527.mp3",
-              "score": "0.289005",
-              "display_tags": "pop|bass|love",
-              "va": "[0.36029306054115295, 0.372919499874115]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1326529",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326529.mp3",
               "score": "0.285736",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[0.0732264593243599, -0.05446181073784828]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0398182",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398182.mp3",
+              "score": "0.281872",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.0174183901399374, -0.31987833976745605]"
             }
           ]
         },
         "C": {
           "method": "clap",
           "items": [
-            {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.481992",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
             {
               "rank": 2,
               "song_id": "track_0010558",
@@ -7259,6 +7251,14 @@
               "score": "0.449273",
               "display_tags": "electronic|bass|happy",
               "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.481992",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -7441,28 +7441,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.454162",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.43661",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.501286",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.482065",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.462058",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -7482,28 +7482,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -7686,28 +7686,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.459536",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.445773",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.491326",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.470794",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.46045",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -7785,6 +7785,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.454162",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -7799,14 +7807,6 @@
               "score": "0.482065",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.462058",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -7989,28 +7989,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.459121",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.456741",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.506328",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.472809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.460928",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -8146,28 +8146,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.450976",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.446587",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.489873",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.457144",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.456809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -8350,28 +8350,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.460028",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.452099",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.492768",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.464772",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46433",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -8428,20 +8428,20 @@
               "va": "[0.104204922914505, -0.39510077238082886]"
             },
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 2,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -8624,28 +8624,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.449658",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
             }
           ]
         },
@@ -8723,6 +8723,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 5,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.445773",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -8737,14 +8745,6 @@
               "score": "0.470794",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.46045",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -8752,28 +8752,28 @@
           "method": "clamp3",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1357455",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1357455.mp3",
+              "score": "0.279721",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.2596277892589569, -0.16599911451339722]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0498814",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0498814.mp3",
+              "score": "0.279447",
+              "display_tags": "electronic|guitar|relaxing",
+              "va": "[0.21581482887268066, 0.14153198897838593]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0667858",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0667858.mp3",
               "score": "0.286378",
               "display_tags": "ambient|piano|relaxing",
               "va": "[-0.09164237976074219, -0.16863228380680084]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1122128",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1122128.mp3",
-              "score": "0.283955",
-              "display_tags": "electronic|piano|relaxing",
-              "va": "[-0.2635520398616791, 0.002758484799414873]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0593013",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0593013.mp3",
-              "score": "0.280015",
-              "display_tags": "electronic|synthesizer|relaxing",
-              "va": "[-0.12219604849815369, -0.09882979840040207]"
             }
           ]
         },
@@ -8898,14 +8898,6 @@
           "method": "ours",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0432295",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0432295.mp3",
-              "score": "0.519949",
-              "display_tags": "classical|piano|film",
-              "va": "[-0.05075947195291519, -0.08736377209424973]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0594842",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0594842.mp3",
@@ -8920,6 +8912,14 @@
               "score": "0.512926",
               "display_tags": "classical|piano|film",
               "va": "[-0.0439356304705143, -0.03602944687008858]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0352693",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0352693.mp3",
+              "score": "0.512557",
+              "display_tags": "classical|piano|relaxing",
+              "va": "[-0.1216469258069992, 0.026099303737282753]"
             }
           ]
         },
@@ -8927,28 +8927,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.481992",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46969",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1344843",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
               "score": "0.449273",
               "display_tags": "electronic|bass|happy",
               "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.433649",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.481992",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -8964,20 +8964,20 @@
               "va": "[-0.00943090207874775, -0.12720495462417603]"
             },
             {
-              "rank": 2,
-              "song_id": "track_1326527",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326527.mp3",
-              "score": "0.289005",
-              "display_tags": "pop|bass|love",
-              "va": "[0.36029306054115295, 0.372919499874115]"
+              "rank": 4,
+              "song_id": "track_0398182",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0398182.mp3",
+              "score": "0.281872",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.0174183901399374, -0.31987833976745605]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1326529",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326529.mp3",
-              "score": "0.285736",
-              "display_tags": "electronic|synthesizer|relaxing",
-              "va": "[0.0732264593243599, -0.05446181073784828]"
+              "rank": 5,
+              "song_id": "track_1326552",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1326552.mp3",
+              "score": "0.2767",
+              "display_tags": "pop|bass|relaxing",
+              "va": "[0.06617356091737747, -0.10516991466283798]"
             }
           ]
         },
@@ -9055,28 +9055,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.496805",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.441032",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1345461",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
               "score": "0.431329",
               "display_tags": "rock|bass|energetic",
               "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.428974",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.496805",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -9259,28 +9259,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.459121",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.456741",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.506328",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.472809",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.460928",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -9300,28 +9300,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -9345,12 +9345,12 @@
               "va": "[0.020089779049158096, -0.35127976536750793]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.517248",
-              "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
+              "rank": 4,
+              "song_id": "track_1133076",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133076.mp3",
+              "score": "0.513354",
+              "display_tags": "classical|piano|film",
+              "va": "[0.05007031932473183, -0.350495308637619]"
             }
           ]
         },
@@ -9504,28 +9504,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.491326",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.470794",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.46045",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.459536",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1345461",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
+              "score": "0.445773",
+              "display_tags": "rock|bass|energetic",
+              "va": "[0.07859589904546738, -0.10068445652723312]"
             }
           ]
         },
@@ -9603,28 +9603,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -9807,14 +9807,6 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.481992",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
               "rank": 2,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
@@ -9829,6 +9821,14 @@
               "score": "0.449273",
               "display_tags": "electronic|bass|happy",
               "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.433649",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
             }
           ]
         },
@@ -9964,6 +9964,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.459536",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -9978,14 +9986,6 @@
               "score": "0.470794",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.46045",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -10168,28 +10168,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.440351",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.437881",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.493648",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.477667",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.457929",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -10238,42 +10238,34 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
         "C": {
           "method": "ours",
           "items": [
-            {
-              "rank": 1,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.512741",
-              "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
-            },
             {
               "rank": 2,
               "song_id": "track_1416708",
@@ -10289,6 +10281,14 @@
               "score": "0.50581",
               "display_tags": "classical|piano|relaxing",
               "va": "[0.033284857869148254, -0.1895022839307785]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0259817",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259817.mp3",
+              "score": "0.497483",
+              "display_tags": "classical|piano|film",
+              "va": "[0.0018330586608499289, -0.1972782164812088]"
             }
           ]
         },
@@ -10442,28 +10442,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.507938",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.467996",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_0939274",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
               "score": "0.467395",
               "display_tags": "electronic|synthesizer|relaxing",
               "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 4,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.454217",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.449658",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
             }
           ]
         },
@@ -10541,28 +10541,28 @@
           "method": "clap",
           "items": [
             {
-              "rank": 1,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.496805",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.441032",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
               "rank": 3,
               "song_id": "track_1345461",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1345461.mp3",
               "score": "0.431329",
               "display_tags": "rock|bass|energetic",
               "va": "[0.07859589904546738, -0.10068445652723312]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0128880",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0128880.mp3",
+              "score": "0.42552",
+              "display_tags": "hiphop|bass|dark",
+              "va": "[-0.4003738760948181, -0.0028921097982674837]"
+            },
+            {
+              "rank": 1,
+              "song_id": "track_0395265",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
+              "score": "0.496805",
+              "display_tags": "pop|bass|love",
+              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -10745,28 +10745,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.460028",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.452099",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.492768",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.464772",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46433",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -10790,12 +10790,12 @@
               "va": "[0.13050957024097443, 0.2648465931415558]"
             },
             {
-              "rank": 3,
-              "song_id": "track_0762509",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0762509.mp3",
-              "score": "0.270377",
-              "display_tags": "electronic|bass|dark",
-              "va": "[0.2592572271823883, 0.30017566680908203]"
+              "rank": 4,
+              "song_id": "track_1415613",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1415613.mp3",
+              "score": "0.26758",
+              "display_tags": "electronic|synthesizer|dream",
+              "va": "[0.39416590332984924, 0.4961499869823456]"
             }
           ]
         },
@@ -10873,6 +10873,14 @@
           "method": "clap",
           "items": [
             {
+              "rank": 5,
+              "song_id": "track_0601130",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0601130.mp3",
+              "score": "0.456741",
+              "display_tags": "pop|guitar|love",
+              "va": "[-0.08154038339853287, -0.0262835081666708]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
@@ -10887,14 +10895,6 @@
               "score": "0.472809",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.460928",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -11035,12 +11035,12 @@
               "va": "[0.033284857869148254, -0.1895022839307785]"
             },
             {
-              "rank": 3,
-              "song_id": "track_1416707",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1416707.mp3",
-              "score": "0.452381",
+              "rank": 4,
+              "song_id": "track_1133073",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1133073.mp3",
+              "score": "0.44521",
               "display_tags": "classical|piano|relaxing",
-              "va": "[0.0034091731067746878, -0.24561631679534912]"
+              "va": "[0.07087936997413635, -0.18757283687591553]"
             }
           ]
         },
@@ -11077,28 +11077,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1189646",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1189646.mp3",
+              "score": "0.45114",
+              "display_tags": "electronic|piano|relaxing",
+              "va": "[0.104204922914505, -0.39510077238082886]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.450976",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.47102",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.45757",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.455197",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -11118,28 +11118,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -11322,28 +11322,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_1344843",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1344843.mp3",
+              "score": "0.427482",
+              "display_tags": "electronic|bass|happy",
+              "va": "[0.5062199234962463, 0.259407103061676]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0153578",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0153578.mp3",
+              "score": "0.427261",
+              "display_tags": "classical|strings|film",
+              "va": "[0.0007505061803385615, -0.1992594599723816]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0010558",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
               "score": "0.462606",
               "display_tags": "electronic|synthesizer|dark",
               "va": "[-0.3605061173439026, -0.06635486334562302]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.462171",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.447885",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
             }
           ]
         },
@@ -11429,20 +11429,20 @@
               "va": "[0.104204922914505, -0.39510077238082886]"
             },
             {
+              "rank": 5,
+              "song_id": "track_1284330",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1284330.mp3",
+              "score": "0.449718",
+              "display_tags": "electronic|bass|relaxing",
+              "va": "[-0.12366294860839844, 0.015652693808078766]"
+            },
+            {
               "rank": 2,
               "song_id": "track_1127706",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
               "score": "0.466016",
               "display_tags": "electronic|bass|relaxing",
               "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0395265",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
-              "score": "0.455105",
-              "display_tags": "pop|bass|love",
-              "va": "[-0.2671632766723633, -0.30661579966545105]"
             }
           ]
         },
@@ -11625,28 +11625,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0259873",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0259873.mp3",
+              "score": "0.415767",
+              "display_tags": "classical|piano|film",
+              "va": "[0.1837611198425293, 0.26487547159194946]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0410467",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0410467.mp3",
+              "score": "0.415456",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.008567624725401402, -0.11995779722929001]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.445846",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.433751",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.423766",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -11782,28 +11782,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.425907",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0477316",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0477316.mp3",
+              "score": "0.422541",
+              "display_tags": "soundtrack|strings|film",
+              "va": "[0.006244043819606304, 0.027723433449864388]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.476396",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.449769",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.444527",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -11986,28 +11986,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0023196",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0023196.mp3",
+              "score": "0.460028",
+              "display_tags": "ambient|voice|relaxing",
+              "va": "[-0.5434157848358154, -0.7404648065567017]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_1349591",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1349591.mp3",
+              "score": "0.452099",
+              "display_tags": "pop|voice|relaxing",
+              "va": "[0.029860567301511765, -0.15775327384471893]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.492768",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.464772",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.46433",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
@@ -12056,28 +12056,28 @@
           "method": "clap",
           "items": [
             {
+              "rank": 4,
+              "song_id": "track_0939274",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0939274.mp3",
+              "score": "0.425907",
+              "display_tags": "electronic|synthesizer|relaxing",
+              "va": "[-0.48224836587905884, -0.521605908870697]"
+            },
+            {
+              "rank": 5,
+              "song_id": "track_0477316",
+              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0477316.mp3",
+              "score": "0.422541",
+              "display_tags": "soundtrack|strings|film",
+              "va": "[0.006244043819606304, 0.027723433449864388]"
+            },
+            {
               "rank": 1,
               "song_id": "track_0395265",
               "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0395265.mp3",
               "score": "0.476396",
               "display_tags": "pop|bass|love",
               "va": "[-0.2671632766723633, -0.30661579966545105]"
-            },
-            {
-              "rank": 2,
-              "song_id": "track_1127706",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_1127706.mp3",
-              "score": "0.449769",
-              "display_tags": "electronic|bass|relaxing",
-              "va": "[-0.017704743891954422, -0.1539313644170761]"
-            },
-            {
-              "rank": 3,
-              "song_id": "track_0010558",
-              "audio_url": "https://emmrmusic.sfo3.digitaloceanspaces.com/user_study/audio/track_0010558.mp3",
-              "score": "0.444527",
-              "display_tags": "electronic|synthesizer|dark",
-              "va": "[-0.3605061173439026, -0.06635486334562302]"
             }
           ]
         },
