@@ -18,28 +18,41 @@ from core.music_repository import load_tracks
 # Paths
 # =========================
 
+# 你的截图目录：
+# D:\AAAA_audio_dataset\eval\clamp3
 OUT_ROOT = Path(r"D:\AAAA_audio_dataset\eval\clamp3")
 
-# 旧的 1000 首结果
-OLD_MERT_DIR = OUT_ROOT / "mert"
+# 已经生成好的 MERT 特征目录
+# 里面应该是 track_xxxxxx.npy
+MERT_DIR = OUT_ROOT / "mert"
 
-# 全量结果
-MERT_DIR = OUT_ROOT / "mert_all"
-EMBD_DIR = OUT_ROOT / "audio_embd_all"
+# 准备输出 CLaMP3 audio embedding 的目录
+EMBD_DIR = OUT_ROOT / "audio_embd"
 
-# 全量临时音频目录
-TMP_AUDIO_DIR = OUT_ROOT / "_audio_tmp_all"
+# 如果后续还有缺失 MERT，需要临时放音频
+TMP_AUDIO_DIR = OUT_ROOT / "_audio_tmp"
 
-# CLaMP3 官方目录
+# CLaMP3 项目目录
 CLAMP3_ROOT = ROOT / "tools" / "basline" / "clamp3"
+
+# MERT 提取脚本：只在发现 MERT 不完整时才会用
 EXTRACT_MERT = CLAMP3_ROOT / "preprocessing" / "audio" / "extract_mert.py"
-CLAMP3_EMBD = CLAMP3_ROOT / "clamp3_embd.py"
+
+# 关键修改：不要再调用 clamp3_embd.py
+# 已有 MERT .npy 后，应该直接调用 code/extract_clamp3.py
+CLAMP3_CODE_DIR = CLAMP3_ROOT / "code"
+EXTRACT_CLAMP3 = CLAMP3_CODE_DIR / "extract_clamp3.py"
 
 MODEL_PATH = "m-a-p/MERT-v1-95M"
 
-# 每批处理数量。
-# 1000 比较稳，太大可能临时目录太多文件，太小会频繁重新加载模型。
+# 每批处理数量；只有补 MERT 时才用
 BATCH_SIZE = 1000
+
+# 你现在 MERT 已经全好了，所以默认不强制重跑 MERT
+RUN_MERT_IF_MISSING = True
+
+# 如果 audio_embd 已经和 mert 数量一致，是否跳过 CLaMP3 embedding
+SKIP_EMBD_IF_COMPLETE = True
 
 
 # =========================
@@ -70,10 +83,6 @@ def count_npy(folder: Path) -> int:
 
 
 def clear_tmp_audio_dir():
-    """
-    每个 batch 开始前清空临时目录。
-    这样 _audio_tmp_all 不会一直累积，也不会重复处理旧批次。
-    """
     if TMP_AUDIO_DIR.exists():
         shutil.rmtree(TMP_AUDIO_DIR)
 
@@ -83,14 +92,7 @@ def clear_tmp_audio_dir():
 def link_or_copy_audio(src: Path, dst: Path):
     """
     不移动原始音频。
-
-    优先硬链接：
-    - 不额外占用一份音频空间
-    - 原始文件不移动
-
-    如果硬链接失败：
-    - 用 copy2 复制一份到临时目录
-    - 原始文件仍然不动
+    优先硬链接；失败则复制。
     """
     if dst.exists():
         return
@@ -99,6 +101,20 @@ def link_or_copy_audio(src: Path, dst: Path):
         os.link(src, dst)
     except Exception:
         shutil.copy2(src, dst)
+
+
+def check_required_files():
+    if not CLAMP3_ROOT.exists():
+        raise FileNotFoundError(f"找不到 CLaMP3 根目录: {CLAMP3_ROOT}")
+
+    if not EXTRACT_MERT.exists():
+        raise FileNotFoundError(f"找不到 extract_mert.py: {EXTRACT_MERT}")
+
+    if not CLAMP3_CODE_DIR.exists():
+        raise FileNotFoundError(f"找不到 CLaMP3 code 目录: {CLAMP3_CODE_DIR}")
+
+    if not EXTRACT_CLAMP3.exists():
+        raise FileNotFoundError(f"找不到 extract_clamp3.py: {EXTRACT_CLAMP3}")
 
 
 # =========================
@@ -134,46 +150,15 @@ def collect_audio_items():
     return items
 
 
-def copy_old_mert_if_exists():
-    """
-    把旧的 1000 首 MERT 复制到 mert_all。
-    如果已经复制过，就跳过。
-    """
-    if not OLD_MERT_DIR.exists():
-        print(f"旧 MERT 目录不存在，跳过复用: {OLD_MERT_DIR}")
-        return
-
-    MERT_DIR.mkdir(parents=True, exist_ok=True)
-
-    copied = 0
-    skipped = 0
-
-    for p in OLD_MERT_DIR.rglob("*.npy"):
-        dst = MERT_DIR / p.name
-
-        if dst.exists() and dst.stat().st_size > 0:
-            skipped += 1
-            continue
-
-        try:
-            shutil.copy2(p, dst)
-            copied += 1
-        except Exception as e:
-            print(f"[复制旧 MERT 失败] {p}")
-            print(repr(e))
-
-    print(f"旧 MERT 复用完成: copied={copied}, skipped={skipped}")
-
-
 # =========================
 # MERT extraction
 # =========================
 
 def prepare_batch_audio(batch):
     """
-    准备当前 batch 的临时音频。
+    只有当 MERT 缺失时才会使用。
     CLaMP3 的 extract_mert.py 是按文件夹处理的，
-    所以每次把一批音频放到 _audio_tmp_all。
+    所以每次把一批音频放到临时目录。
     """
     clear_tmp_audio_dir()
 
@@ -196,9 +181,6 @@ def prepare_batch_audio(batch):
 
 
 def run_extract_mert_on_tmp():
-    if not EXTRACT_MERT.exists():
-        raise FileNotFoundError(f"找不到 extract_mert.py: {EXTRACT_MERT}")
-
     MERT_DIR.mkdir(parents=True, exist_ok=True)
 
     cmd = [
@@ -219,10 +201,12 @@ def run_extract_mert_on_tmp():
     subprocess.run(cmd, cwd=str(CLAMP3_ROOT), check=True)
 
 
-def build_all_mert():
+def build_all_mert_if_needed():
+    """
+    如果 MERT 已经全部存在，直接跳过。
+    如果缺少一部分，才补跑缺失的。
+    """
     MERT_DIR.mkdir(parents=True, exist_ok=True)
-
-    copy_old_mert_if_exists()
 
     items = collect_audio_items()
 
@@ -241,8 +225,14 @@ def build_all_mert():
     print(f"待生成 MERT 数量: {len(pending)}")
 
     if not pending:
-        print("MERT 已全部完成。")
+        print("MERT 已全部完成，跳过 MERT 提取。")
         return
+
+    if not RUN_MERT_IF_MISSING:
+        raise RuntimeError(
+            f"MERT 不完整，缺失 {len(pending)} 个；"
+            f"但 RUN_MERT_IF_MISSING=False，所以停止。"
+        )
 
     total_batches = (len(pending) + BATCH_SIZE - 1) // BATCH_SIZE
 
@@ -285,28 +275,56 @@ def build_all_mert():
 # CLaMP3 embedding
 # =========================
 
-def build_clamp3_embd():
-    if not CLAMP3_EMBD.exists():
-        raise FileNotFoundError(f"找不到 clamp3_embd.py: {CLAMP3_EMBD}")
-
+def build_clamp3_embd_from_mert():
+    """
+    关键修改：
+    已经有 MERT .npy 后，不再调用 clamp3_embd.py。
+    直接进入 tools/basline/clamp3/code 下调用 extract_clamp3.py。
+    """
     if not MERT_DIR.exists():
         raise FileNotFoundError(f"找不到 MERT 目录: {MERT_DIR}")
 
+    mert_count = count_npy(MERT_DIR)
+    embd_count = count_npy(EMBD_DIR)
+
+    print("=" * 80)
+    print(f"MERT_DIR: {MERT_DIR}")
+    print(f"EMBD_DIR: {EMBD_DIR}")
+    print(f"MERT 文件数量: {mert_count}")
+    print(f"已有 CLaMP3 embedding 文件数量: {embd_count}")
+
+    if mert_count == 0:
+        raise RuntimeError(f"MERT_DIR 中没有 .npy 文件: {MERT_DIR}")
+
+    if SKIP_EMBD_IF_COMPLETE and embd_count >= mert_count:
+        print("CLaMP3 audio embedding 数量已经不少于 MERT 数量，跳过生成。")
+        return
+
     EMBD_DIR.mkdir(parents=True, exist_ok=True)
 
+    # 官方推荐是 accelerate launch extract_clamp3.py ... --get_global
+    # 用 python -m accelerate.commands.launch 比直接写 accelerate 更稳，
+    # 可以保证使用当前 Anaconda env 里的 accelerate。
     cmd = [
         sys.executable,
-        str(CLAMP3_EMBD),
+        "-m",
+        "accelerate.commands.launch",
+        "extract_clamp3.py",
         str(MERT_DIR),
         str(EMBD_DIR),
         "--get_global",
     ]
 
     print("=" * 80)
-    print("开始生成 CLaMP3 audio embedding:")
+    print("开始从 MERT 生成 CLaMP3 audio embedding:")
     print(" ".join(cmd))
+    print(f"工作目录: {CLAMP3_CODE_DIR}")
 
-    subprocess.run(cmd, cwd=str(CLAMP3_ROOT), check=True)
+    subprocess.run(
+        cmd,
+        cwd=str(CLAMP3_CODE_DIR),
+        check=True
+    )
 
     print("=" * 80)
     print(f"完成 CLaMP3 embedding: {EMBD_DIR}")
@@ -321,13 +339,15 @@ def main():
     print("CLaMP3 全量构建开始")
     print(f"项目根目录: {ROOT}")
     print(f"CLaMP3 根目录: {CLAMP3_ROOT}")
-    print(f"旧 MERT 目录: {OLD_MERT_DIR}")
-    print(f"全量 MERT 目录: {MERT_DIR}")
-    print(f"全量 embedding 目录: {EMBD_DIR}")
+    print(f"CLaMP3 code 目录: {CLAMP3_CODE_DIR}")
+    print(f"MERT 目录: {MERT_DIR}")
+    print(f"audio embedding 目录: {EMBD_DIR}")
     print(f"临时音频目录: {TMP_AUDIO_DIR}")
 
-    build_all_mert()
-    build_clamp3_embd()
+    check_required_files()
+
+    build_all_mert_if_needed()
+    build_clamp3_embd_from_mert()
 
     print("CLaMP3 全量构建完成")
 
