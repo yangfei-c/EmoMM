@@ -13,9 +13,9 @@ OURS_CSV = ROOT / "eval" / "ours" / "ours_top5.csv"
 CLAP_CSV = ROOT / "eval" / "clap" / "clap_top5.csv"
 CLAMP3_CSV = ROOT / "eval" / "clamp3" / "clamp3_top5.csv"
 
-AUDIO_URL_JSON = ROOT / "eval" / "user_study" / "data" / "audio_clip_urls.json"
+AUDIO_URL_JSON = ROOT /"eval"/"user_study" / "data" / "audio_clip_urls.json"
 
-OUT_JSON = ROOT / "eval" / "user_study" / "web" / "data" / "materials.json"
+OUT_JSON = ROOT /"eval"/ "user_study" / "web" / "data" / "materials.json"
 
 TOP_K = 3
 
