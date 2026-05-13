@@ -116,16 +116,17 @@ function renderPage(user) {
     <h2>研究说明</h2>
     <p>
       本研究用于评估不同音乐推荐方法在<strong>情绪调节</strong>场景下的效果。
-      你将看到 <strong>3 个情绪场景</strong>。每一轮包含方法 A、方法 B、方法 C 三组推荐，
-      每组有 <strong>3 段约 15 秒音乐</strong>。
+      你将看到 <strong>3 个情绪场景</strong>。每一轮包含方法 A、方法 B、方法 C，
+      每个方法提供 <strong>1 段约 15 秒音乐</strong>。
     </p>
     <p>
-      请根据每一轮的情绪场景，分别试听三组推荐，并从 1–7 分评价：
+      请根据每一轮的<strong>当前状态</strong>和<strong>调节目标</strong>，分别试听三首音乐，
+      并从 1–7 分评价：
       <strong>1 表示非常不同意，7 表示非常同意</strong>。
-      每轮最后还需要选择你最喜欢的一组推荐。
+      每轮最后还需要选择你最愿意用于本次情绪调节的一首音乐。
     </p>
     <p>
-      建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。页面打开后会自动在后台准备音频，
+      建议使用 Wi-Fi 或稳定网络，并佩戴耳机完成。页面打开后会自动在后台准备音频。
       若个别播放器显示加载失败，请刷新页面或换浏览器打开。
     </p>
   `;
@@ -151,25 +152,25 @@ function renderPage(user) {
     div.innerHTML = `
       <div class="trial-header">
         <h2>第 ${trial.trial_index} 轮</h2>
-        <span class="strategy-badge">${strategyText(trial.strategy)}</span>
+        <span class="strategy-badge">调节目标：${escapeHtml(getStrategyDisplay(trial))}</span>
       </div>
 
-      <p class="query">${escapeHtml(trial.query_text)}</p>
+      ${renderTrialContext(trial)}
 
       <p class="trial-hint">
-        请想象你正处于上述情绪场景中。分别试听方法 A、方法 B、方法 C 的三组音乐，
-        然后评价哪一组更适合帮助你达到目标情绪。
+        请想象你正处于上述情绪状态中。分别试听方法 A、方法 B、方法 C 的推荐音乐，
+        然后判断每首音乐是否适合帮助你从当前情绪调节到目标状态。
       </p>
 
       <div class="methods">
-        ${renderMethod(trial.trial_index, "A", trial.A)}
-        ${renderMethod(trial.trial_index, "B", trial.B)}
-        ${renderMethod(trial.trial_index, "C", trial.C)}
+        ${renderMethod(trial, "A", trial.A)}
+        ${renderMethod(trial, "B", trial.B)}
+        ${renderMethod(trial, "C", trial.C)}
       </div>
 
       <div class="preference-box">
-        <h3>本轮你最喜欢哪一组推荐？</h3>
-        <p class="preference-hint">请综合三首音乐的整体感觉进行选择。</p>
+        <h3>${escapeHtml(getPreferencePrompt(trial))}</h3>
+        <p class="preference-hint">请在方法 A、方法 B、方法 C 中选择一个。</p>
         ${renderPreference(trial.trial_index)}
       </div>
     `;
@@ -182,7 +183,7 @@ function renderPage(user) {
   submitBox.innerHTML = `
     <div class="submit-left">
       <div class="submit-title">完成所有评分后提交问卷</div>
-      <div id="submit-msg" class="submit-msg">请确认每一轮 A/B/C 三组评分和偏好选择都已完成。</div>
+      <div id="submit-msg" class="submit-msg">请确认每一轮 A/B/C 三首音乐的评分和偏好选择都已完成。</div>
     </div>
     <button id="submit-btn" class="primary-submit">提交问卷</button>
   `;
@@ -196,7 +197,33 @@ function renderPage(user) {
   updateProgress();
 }
 
-function renderMethod(trialIndex, label, data) {
+function renderTrialContext(trial) {
+  const currentState = trial.current_state || trial.query_text || "";
+  const regulationGoal = trial.regulation_goal || "";
+  const fullText = trial.query_text || "";
+
+  if (currentState || regulationGoal) {
+    return `
+      <div class="query-block">
+        <div class="query-section">
+          <strong>当前状态：</strong>
+          <p class="query">${escapeHtml(currentState)}</p>
+        </div>
+        <div class="query-section">
+          <strong>调节目标：</strong>
+          <p class="query">${escapeHtml(regulationGoal || fullText)}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  return `<p class="query">${escapeHtml(fullText)}</p>`;
+}
+
+function renderMethod(trial, label, data) {
+  const ratingFields = getRatingFields(trial);
+  const ratingPrompts = getRatingPrompts(trial);
+
   return `
     <div class="method-card">
       <h3>方法 ${label}</h3>
@@ -206,9 +233,10 @@ function renderMethod(trialIndex, label, data) {
       </div>
 
       <div class="ratings">
-        ${renderRating(trialIndex, label, "regulation_fit", "这组推荐符合我想要的情绪调节方向")}
-        ${renderRating(trialIndex, label, "helpfulness", "这组推荐能帮助我调节当前情绪")}
-        ${renderRating(trialIndex, label, "satisfaction", "我对这组推荐整体满意")}
+        ${ratingFields.map(field => {
+          const prompt = ratingPrompts[field] || defaultRatingPrompt(field);
+          return renderRating(trial.trial_index, label, field, prompt);
+        }).join("")}
       </div>
     </div>
   `;
@@ -216,18 +244,18 @@ function renderMethod(trialIndex, label, data) {
 
 function renderSongs(items) {
   if (!items || items.length === 0) {
-    return `<p class="placeholder">推荐歌曲稍后填入。</p>`;
+    return `<p class="placeholder">暂无推荐音乐。</p>`;
   }
 
   return `
-    <ol class="song-list">
-      ${items.map((item, i) => `
-        <li>
-          <p class="song-title">歌曲 ${i + 1}</p>
-          ${renderAudio(item)}
-        </li>
+    <div class="song-list single-song">
+      ${items.map(() => `
+        <div class="song-item">
+          <p class="song-title">推荐音乐</p>
+          ${renderAudio(items[0])}
+        </div>
       `).join("")}
-    </ol>
+    </div>
   `;
 }
 
@@ -307,12 +335,10 @@ async function preloadOneAudioBox(box) {
     box.className = "audio-box is-loading";
     status.innerText = "正在准备音频...";
 
-    // 直接让 audio 使用 CDN mp3 URL，避免微信/iOS 内置浏览器对 blob 音频不兼容
     audio.src = src;
     audio.preload = "auto";
     audio.load();
 
-    // fetch 只用于预热浏览器缓存，不再把 blob URL 交给 audio 播放
     await warmAudioCache(src);
 
     if (audio.readyState >= 3) {
@@ -325,7 +351,6 @@ async function preloadOneAudioBox(box) {
   } catch (err) {
     console.error(err);
 
-    // 即使 fetch 失败，仍保留原始 URL 播放
     audio.src = src;
     audio.preload = "auto";
     audio.load();
@@ -354,7 +379,6 @@ async function warmAudioCache(src) {
         throw new Error(`HTTP ${res.status}`);
       }
 
-      // 读取完整 body，才算真正预热缓存
       const buffer = await res.arrayBuffer();
 
       if (!buffer || buffer.byteLength === 0) {
@@ -478,7 +502,7 @@ function renderRating(trialIndex, methodLabel, field, text) {
 
   return `
     <label class="rating-row">
-      <span>${text}</span>
+      <span>${escapeHtml(text)}</span>
       <select name="${name}" required>
         <option value="">请选择</option>
         <option value="1">1 - 非常不同意</option>
@@ -567,24 +591,31 @@ function collectResponse() {
     token: currentUser.token,
     participant_index: currentUser.participant_index,
     submitted_at: new Date().toISOString(),
+    version: "v2_single_song_single_rating",
     trials: []
   };
 
   for (const trial of currentUser.trials) {
+    const ratingFields = getRatingFields(trial);
+
     const trialResult = {
       trial_index: trial.trial_index,
       query_id: trial.query_id,
       strategy: trial.strategy,
+      strategy_zh: trial.strategy_zh || "",
+      current_state: trial.current_state || "",
+      regulation_goal: trial.regulation_goal || "",
       preference: getRadioValue(`t${trial.trial_index}_preference`),
       ratings: {}
     };
 
     for (const label of ["A", "B", "C"]) {
-      trialResult.ratings[label] = {
-        regulation_fit: getSelectValue(`t${trial.trial_index}_${label}_regulation_fit`),
-        helpfulness: getSelectValue(`t${trial.trial_index}_${label}_helpfulness`),
-        satisfaction: getSelectValue(`t${trial.trial_index}_${label}_satisfaction`)
-      };
+      trialResult.ratings[label] = {};
+
+      for (const field of ratingFields) {
+        trialResult.ratings[label][field] =
+          getSelectValue(`t${trial.trial_index}_${label}_${field}`);
+      }
     }
 
     response.trials.push(trialResult);
@@ -595,16 +626,21 @@ function collectResponse() {
 
 function validateResponse(response) {
   for (const trial of response.trials) {
-    for (const label of ["A", "B", "C"]) {
-      const r = trial.ratings[label];
+    const materialTrial = currentUser.trials.find(x => x.trial_index === trial.trial_index);
+    const ratingFields = getRatingFields(materialTrial || {});
 
-      if (!r.regulation_fit || !r.helpfulness || !r.satisfaction) {
-        return `请完成第 ${trial.trial_index} 轮方法 ${label} 的所有评分。`;
+    for (const label of ["A", "B", "C"]) {
+      const r = trial.ratings[label] || {};
+
+      for (const field of ratingFields) {
+        if (!r[field]) {
+          return `请完成第 ${trial.trial_index} 轮方法 ${label} 的评分。`;
+        }
       }
     }
 
     if (!trial.preference) {
-      return `请选择第 ${trial.trial_index} 轮最喜欢的方法。`;
+      return `请选择第 ${trial.trial_index} 轮最适合的音乐。`;
     }
   }
 
@@ -613,22 +649,17 @@ function validateResponse(response) {
 
 function scrollToFirstIncomplete(response) {
   for (const trial of response.trials) {
+    const materialTrial = currentUser.trials.find(x => x.trial_index === trial.trial_index);
+    const ratingFields = getRatingFields(materialTrial || {});
+
     for (const label of ["A", "B", "C"]) {
-      const r = trial.ratings[label];
+      const r = trial.ratings[label] || {};
 
-      if (!r.regulation_fit) {
-        focusElement(`select[name="t${trial.trial_index}_${label}_regulation_fit"]`);
-        return;
-      }
-
-      if (!r.helpfulness) {
-        focusElement(`select[name="t${trial.trial_index}_${label}_helpfulness"]`);
-        return;
-      }
-
-      if (!r.satisfaction) {
-        focusElement(`select[name="t${trial.trial_index}_${label}_satisfaction"]`);
-        return;
+      for (const field of ratingFields) {
+        if (!r[field]) {
+          focusElement(`select[name="t${trial.trial_index}_${label}_${field}"]`);
+          return;
+        }
       }
     }
 
@@ -674,18 +705,17 @@ function updateProgress() {
     return;
   }
 
-  const total =
-    currentUser.trials.length *
-    (
-      3 * 3 +
-      1
-    );
-
+  let total = 0;
   let done = 0;
 
   for (const trial of currentUser.trials) {
+    const ratingFields = getRatingFields(trial);
+
+    total += 3 * ratingFields.length;
+    total += 1;
+
     for (const label of ["A", "B", "C"]) {
-      for (const field of ["regulation_fit", "helpfulness", "satisfaction"]) {
+      for (const field of ratingFields) {
         const value = getSelectValue(`t${trial.trial_index}_${label}_${field}`);
         if (value) {
           done += 1;
@@ -699,7 +729,7 @@ function updateProgress() {
     }
   }
 
-  const percent = Math.round((done / total) * 100);
+  const percent = total > 0 ? Math.round((done / total) * 100) : 0;
 
   const text = document.getElementById("progress-text");
   const fill = document.getElementById("progress-fill");
@@ -739,10 +769,48 @@ function getRadioValue(name) {
   return el ? el.value : "";
 }
 
+function getRatingFields(trial) {
+  if (trial && Array.isArray(trial.rating_fields) && trial.rating_fields.length > 0) {
+    return trial.rating_fields;
+  }
+
+  return ["regulation_suitability"];
+}
+
+function getRatingPrompts(trial) {
+  if (trial && trial.rating_prompts && typeof trial.rating_prompts === "object") {
+    return trial.rating_prompts;
+  }
+
+  return {
+    regulation_suitability: "这首音乐适合帮助我从当前情绪调节到目标状态。"
+  };
+}
+
+function defaultRatingPrompt(field) {
+  if (field === "regulation_suitability") {
+    return "这首音乐适合帮助我从当前情绪调节到目标状态。";
+  }
+
+  return "请对这首音乐进行评分。";
+}
+
+function getPreferencePrompt(trial) {
+  return trial.preference_prompt || "本轮三首音乐中，我最愿意选择哪一首来帮助自己完成情绪调节？";
+}
+
+function getStrategyDisplay(trial) {
+  if (trial.strategy_zh) {
+    return trial.strategy_zh;
+  }
+
+  return strategyText(trial.strategy);
+}
+
 function strategyText(strategy) {
   const s = String(strategy || "").toLowerCase();
 
-  if (s === "maintain") return "保持情绪";
+  if (s === "maintain") return "保持当前状态";
   if (s === "calm") return "平静下来";
   if (s === "comfort") return "获得安慰";
   if (s === "energize") return "振作起来";
@@ -751,7 +819,7 @@ function strategyText(strategy) {
 }
 
 function escapeHtml(text) {
-  return String(text)
+  return String(text || "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
