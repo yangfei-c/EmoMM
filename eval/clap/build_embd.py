@@ -1,14 +1,11 @@
-# -*- coding: utf-8 -*-
-
 import sys
 from pathlib import Path
-
 import numpy as np
 from msclap import CLAP
 
 
-ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / "src"))
+root_dir = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(root_dir / "src"))
 
 from core.music_repository import load_tracks
 
