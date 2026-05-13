@@ -1,37 +1,56 @@
 # -*- coding: utf-8 -*-
 
 import json
-import os
 import re
 import threading
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import boto3
+from botocore.client import Config
 from botocore.exceptions import ClientError
 from flask import Flask, request, jsonify
 
 
-app = Flask(__name__)
+# =============================================================================
+# 固定配置区：不从环境变量读取
+# =============================================================================
 
 BASE_DIR = Path(__file__).resolve().parent
 TOKEN_JSON = BASE_DIR / "data" / "token_assignments.json"
 
-SPACES_KEY = os.environ["DO_SPACES_KEY"]
-SPACES_SECRET = os.environ["DO_SPACES_SECRET"]
-SPACES_REGION = os.environ.get("DO_SPACES_REGION", "sfo3")
-SPACES_BUCKET = os.environ.get("DO_SPACES_BUCKET", "emmrmusic")
-SPACES_ENDPOINT = os.environ.get(
-    "DO_SPACES_ENDPOINT",
-    f"https://{SPACES_REGION}.digitaloceanspaces.com"
-)
+# DigitalOcean Spaces 配置
+# 你在本地/服务器部署前，把下面两个占位符替换成自己的 Spaces Access Key / Secret。
+# 注意：不要使用 DigitalOcean API Token；这里必须是 Spaces Access Key。
+SPACES_KEY = "DO801HBPLEHUEQZFKVXV"
+SPACES_SECRET = "wqIPqYRPHVkHkjVcYV4XHvfyZCbXQvSHj7wKTx9HIZc"
+
+SPACES_REGION = "sfo3"
+SPACES_BUCKET = "emmrmusic"
+SPACES_ENDPOINT = "https://sfo3.digitaloceanspaces.com"
 
 # 用户打开后临时保留 token 的时间。
 # 超过这个时间还没有提交，就认为 abandoned，可以重新分配。
-ASSIGN_TTL_MINUTES = int(os.environ.get("ASSIGN_TTL_MINUTES", "5"))
+ASSIGN_TTL_MINUTES = 5
 
 ASSIGNED_PREFIX = "user_study/assigned/"
 RESPONSES_PREFIX = "user_study/responses/"
+
+# 新版问卷配置
+SURVEY_VERSION = "v2_single_song_single_rating"
+REQUIRED_RATING_FIELDS = ["regulation_suitability"]
+VALID_METHOD_LABELS = ["A", "B", "C"]
+
+# 本地直接 python server.py 运行时使用。
+# DigitalOcean 用 gunicorn 启动时不会走 app.run，因此这里固定 8080 没问题。
+LOCAL_PORT = 8080
+
+
+# =============================================================================
+# Flask / S3 初始化
+# =============================================================================
+
+app = Flask(__name__)
 
 s3 = boto3.client(
     "s3",
@@ -39,14 +58,23 @@ s3 = boto3.client(
     endpoint_url=SPACES_ENDPOINT,
     aws_access_key_id=SPACES_KEY,
     aws_secret_access_key=SPACES_SECRET,
+    config=Config(signature_version="s3v4"),
 )
 
 allocation_lock = threading.Lock()
 
 
+# =============================================================================
+# Routes
+# =============================================================================
+
 @app.get("/")
 def health():
-    return jsonify({"status": "ok"})
+    return jsonify({
+        "status": "ok",
+        "survey_version": SURVEY_VERSION,
+        "token_file_exists": TOKEN_JSON.exists(),
+    })
 
 
 @app.post("/start")
@@ -55,10 +83,10 @@ def start():
     """
     用户打开总入口时调用。
 
-    正确逻辑：
-    1. responses 里已有该 token => 说明这个 token 已经正式完成，不能再分配
-    2. assigned 里已有该 token 且未过期 => 说明有人正在做，暂时不能分配
-    3. assigned 里已有该 token 但已过期且没有 response => 删除 assigned，释放该 token
+    逻辑：
+    1. responses 里已有该 token：说明已经正式完成，不能再分配
+    2. assigned 里已有该 token 且未过期：说明有人正在做，暂时不能分配
+    3. assigned 里已有该 token 但已过期且没有 response：删除 assigned，释放该 token
     4. 找到可用 token 后写入 assigned marker，返回给前端
     """
     with allocation_lock:
@@ -68,7 +96,6 @@ def start():
         for user in assignments:
             token = user["token"]
 
-            # 已经提交过 response 的 token，永久不再分配
             if token in completed_tokens:
                 continue
 
@@ -76,10 +103,8 @@ def start():
 
             if marker is not None:
                 if is_assigned_marker_expired(marker):
-                    # 打开过但长期没提交，释放这个 token
                     delete_assigned_marker(token)
                 else:
-                    # 正在被别人使用中，暂时跳过
                     continue
 
             marker_data = {
@@ -87,8 +112,9 @@ def start():
                 "participant_index": user.get("participant_index", ""),
                 "assigned_at": now_iso(),
                 "expires_after_minutes": ASSIGN_TTL_MINUTES,
+                "survey_version": SURVEY_VERSION,
                 "user_agent": request.headers.get("User-Agent", ""),
-                "ip": get_client_ip()
+                "ip": get_client_ip(),
             }
 
             put_json_private(assigned_key(token), marker_data)
@@ -96,7 +122,8 @@ def start():
             return jsonify({
                 "ok": True,
                 "token": token,
-                "participant_index": user.get("participant_index", "")
+                "participant_index": user.get("participant_index", ""),
+                "survey_version": SURVEY_VERSION,
             })
 
     return jsonify({
@@ -122,7 +149,6 @@ def submit():
 
     token = data["token"]
 
-    # 防止同一个 token 重复提交
     completed_tokens = list_completed_tokens()
     if token in completed_tokens:
         return jsonify({
@@ -132,17 +158,30 @@ def submit():
     now = now_compact()
 
     data["received_at"] = now_iso()
+    data["server_survey_version"] = SURVEY_VERSION
     data["user_agent"] = request.headers.get("User-Agent", "")
     data["ip"] = get_client_ip()
 
     object_key = f"{RESPONSES_PREFIX}{token}_{now}.json"
     put_json_private(object_key, data)
 
+    # 提交成功后清理 assigned marker。
+    # 即使清理失败，也不影响 response 已保存。
+    try:
+        delete_assigned_marker(token)
+    except Exception:
+        pass
+
     return jsonify({
         "ok": True,
-        "saved_to": object_key
+        "saved_to": object_key,
+        "survey_version": SURVEY_VERSION,
     })
 
+
+# =============================================================================
+# Assignment helpers
+# =============================================================================
 
 def load_assignments():
     if not TOKEN_JSON.exists():
@@ -163,7 +202,7 @@ def list_completed_tokens():
     response 文件名格式：
     user_study/responses/P011_UH53KJ7N_20260510T143000Z.json
 
-    注意 token 本身含有下划线，所以不能简单 split("_")。
+    注意 token 本身可能含有下划线，所以不能简单 split("_")。
     """
     completed = set()
 
@@ -178,12 +217,12 @@ def list_completed_tokens():
                 continue
 
             filename = key.replace(RESPONSES_PREFIX, "", 1)
-            m = pattern.match(filename)
+            match = pattern.match(filename)
 
-            if not m:
+            if not match:
                 continue
 
-            token = m.group(1)
+            token = match.group(1)
             completed.add(token)
 
     return completed
@@ -194,10 +233,6 @@ def assigned_key(token):
 
 
 def get_assigned_marker(token):
-    """
-    如果 assigned marker 存在，读取 JSON。
-    不存在则返回 None。
-    """
     key = assigned_key(token)
 
     try:
@@ -245,6 +280,10 @@ def delete_assigned_marker(token):
         raise
 
 
+# =============================================================================
+# Spaces helpers
+# =============================================================================
+
 def put_json_private(key, data):
     body = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
 
@@ -253,24 +292,40 @@ def put_json_private(key, data):
         Key=key,
         Body=body,
         ContentType="application/json; charset=utf-8",
-        ACL="private"
+        ACL="private",
     )
 
 
+# =============================================================================
+# Response validation
+# =============================================================================
+
 def validate_response(data):
+    """
+    新版问卷校验：
+
+    每个 trial:
+    - preference 必须是 A/B/C
+    - ratings 必须包含 A/B/C
+    - 每个方法只要求一个字段：
+      regulation_suitability
+    - 分数必须是 1 到 7
+    """
     if not data.get("token"):
         return "Missing token"
 
     if "participant_index" not in data:
         return "Missing participant_index"
 
-    if "trials" not in data or not isinstance(data["trials"], list):
+    trials = data.get("trials")
+
+    if not isinstance(trials, list):
         return "Missing trials"
 
-    if len(data["trials"]) == 0:
+    if len(trials) == 0:
         return "Empty trials"
 
-    for trial in data["trials"]:
+    for trial in trials:
         if not trial.get("trial_index"):
             return "Missing trial_index"
 
@@ -280,36 +335,56 @@ def validate_response(data):
         if not trial.get("strategy"):
             return "Missing strategy"
 
-        if not trial.get("preference"):
+        preference = trial.get("preference")
+
+        if not preference:
             return "Missing preference"
 
-        if trial["preference"] not in ["A", "B", "C"]:
+        if preference not in VALID_METHOD_LABELS:
             return "Invalid preference"
 
-        ratings = trial.get("ratings", {})
+        ratings = trial.get("ratings")
 
-        for label in ["A", "B", "C"]:
+        if not isinstance(ratings, dict):
+            return "Invalid ratings"
+
+        for label in VALID_METHOD_LABELS:
             if label not in ratings:
                 return f"Missing ratings for method {label}"
 
-            r = ratings[label]
+            method_ratings = ratings[label]
 
-            for field in ["regulation_fit", "helpfulness", "satisfaction"]:
-                value = r.get(field)
+            if not isinstance(method_ratings, dict):
+                return f"Invalid ratings for method {label}"
+
+            for field in REQUIRED_RATING_FIELDS:
+                value = method_ratings.get(field)
 
                 if value in [None, ""]:
                     return f"Missing {field} for method {label}"
 
-                try:
-                    score = int(value)
-                except ValueError:
-                    return f"Invalid score: {field}"
-
-                if score < 1 or score > 7:
-                    return f"Score out of range: {field}"
+                score_error = validate_score_1_to_7(value, field)
+                if score_error:
+                    return score_error
 
     return ""
 
+
+def validate_score_1_to_7(value, field):
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        return f"Invalid score: {field}"
+
+    if score < 1 or score > 7:
+        return f"Score out of range: {field}"
+
+    return ""
+
+
+# =============================================================================
+# Misc helpers
+# =============================================================================
 
 def get_client_ip():
     forwarded = request.headers.get("X-Forwarded-For", "")
@@ -329,5 +404,4 @@ def now_compact():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "8080"))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=LOCAL_PORT)
