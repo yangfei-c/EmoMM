@@ -14,3 +14,6 @@ __pycache__/
 # External baselines and scratch tools
 /tools/
 
+# User study generated/intermediate files
+eval/user_study/downloaded_responses/
+/eval/user_study/data/
