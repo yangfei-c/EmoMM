@@ -15,6 +15,10 @@ let activeAudio = null;
 const audioBlobUrls = new Map();
 const audioPreloadPromises = new Map();
 
+// 隐藏时间记录：用户看不到，只随提交结果写入 JSON
+const pageStartedAt = new Date().toISOString();
+const pageStartedMs = Date.now();
+
 main();
 
 async function main() {
@@ -506,11 +510,21 @@ function onAudioPlay(e) {
 }
 
 function collectResponse() {
+  const submitClickedAt = new Date().toISOString();
+  const submitClickedMs = Date.now();
+
   return {
     token: currentUser.token,
     participant_index: currentUser.participant_index,
-    submitted_at: new Date().toISOString(),
+    submitted_at: submitClickedAt,
     version: "v2_single_song_single_rating",
+
+    timing: {
+      page_started_at: pageStartedAt,
+      submit_clicked_at: submitClickedAt,
+      total_duration_seconds: secondsBetween(pageStartedMs, submitClickedMs)
+    },
+
     trials: currentUser.trials.map(trial => ({
       trial_index: trial.trial_index,
       query_id: trial.query_id,
@@ -648,6 +662,14 @@ function releaseBlobUrls() {
   });
 
   audioBlobUrls.clear();
+}
+
+function secondsBetween(startMs, endMs) {
+  return round2((endMs - startMs) / 1000);
+}
+
+function round2(x) {
+  return Math.round(Number(x || 0) * 100) / 100;
 }
 
 function getSelectValue(name) {
