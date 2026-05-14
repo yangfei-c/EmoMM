@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import json
 import os
 import re
 import shutil
@@ -43,6 +43,12 @@ EXTRACT_MERT = CLAMP3_ROOT / "preprocessing" / "audio" / "extract_mert.py"
 CLAMP3_CODE_DIR = CLAMP3_ROOT / "code"
 EXTRACT_CLAMP3 = CLAMP3_CODE_DIR / "extract_clamp3.py"
 
+QUERY_JSON = ROOT / "eval" / "queries_zh16.json"
+QUERY_TXT_DIR = OUT_ROOT / "query_txt"
+QUERY_EMBD_DIR = OUT_ROOT / "query_embd"
+
+CLEAR_OLD_QUERY = True
+
 MODEL_PATH = "m-a-p/MERT-v1-95M"
 
 # 每批处理数量；只有补 MERT 时才用
@@ -82,6 +88,25 @@ def count_npy(folder: Path) -> int:
     return sum(1 for _ in folder.rglob("*.npy"))
 
 
+def load_queries():
+    return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
+
+
+def qid(q):
+    return str(q.get("query_id") or q.get("id"))
+
+
+def query_text(q):
+    text = str(q.get("text") or "").strip()
+    if text:
+        return text
+
+    text = f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
+    if not text:
+        raise ValueError(f"{qid(q)} 缺少 text")
+    return text
+
+
 def clear_tmp_audio_dir():
     if TMP_AUDIO_DIR.exists():
         shutil.rmtree(TMP_AUDIO_DIR)
@@ -115,6 +140,53 @@ def check_required_files():
 
     if not EXTRACT_CLAMP3.exists():
         raise FileNotFoundError(f"找不到 extract_clamp3.py: {EXTRACT_CLAMP3}")
+
+
+def reset_dir(path: Path):
+    if CLEAR_OLD_QUERY and path.exists():
+        shutil.rmtree(path)
+    path.mkdir(parents=True, exist_ok=True)
+
+
+def write_query_txt(queries):
+    reset_dir(QUERY_TXT_DIR)
+
+    for q in queries:
+        (QUERY_TXT_DIR / f"{qid(q)}.txt").write_text(query_text(q), encoding="utf-8")
+
+    print(f"完成 query txt: {QUERY_TXT_DIR}")
+    print(f"txt 数量: {len(list(QUERY_TXT_DIR.glob('*.txt')))}")
+
+
+def build_query_embd():
+    queries = load_queries()
+
+    write_query_txt(queries)
+    reset_dir(QUERY_EMBD_DIR)
+
+    cmd = [
+        sys.executable,
+        "-m",
+        "accelerate.commands.launch",
+        "extract_clamp3.py",
+        str(QUERY_TXT_DIR),
+        str(QUERY_EMBD_DIR),
+        "--get_global",
+    ]
+
+    print("开始生成 CLaMP3 query embedding:")
+    print(" ".join(cmd))
+
+    subprocess.run(cmd, cwd=str(CLAMP3_CODE_DIR), check=True)
+
+    expected = len(queries)
+    actual = len(list(QUERY_EMBD_DIR.glob("*.npy")))
+
+    print(f"完成 query embedding: {QUERY_EMBD_DIR}")
+    print(f"embedding 数量: {actual}")
+
+    if actual != expected:
+        raise RuntimeError(f"query embedding 数量不对: {actual} != {expected}")
 
 
 # =========================
@@ -346,6 +418,7 @@ def main():
 
     check_required_files()
 
+    build_query_embd()
     build_all_mert_if_needed()
     build_clamp3_embd_from_mert()
 

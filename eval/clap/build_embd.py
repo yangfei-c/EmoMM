@@ -1,8 +1,8 @@
 import sys
 from pathlib import Path
+import json
 import numpy as np
 from msclap import CLAP
-
 
 root_dir = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(root_dir / "src"))
@@ -12,8 +12,10 @@ from core.music_repository import load_tracks
 
 OUT_DIR = Path(r"D:\AAAA_audio_dataset\eval\clap")
 OUT_NPZ = OUT_DIR / "audio_embd.npz"
+TEXT_NPZ = OUT_DIR / "text_embd.npz"
+QUERY_JSON = root_dir / "eval" / "queries_zh16.json"
 
-SAVE_EVERY = 100
+save_every = 100
 
 
 def to_numpy(x):
@@ -49,6 +51,71 @@ def save_npz(song_ids, audio_paths, audio_emb):
     )
 
 
+def load_queries():
+    return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
+
+
+def q_id(q):
+    return str(q.get("query_id") or q.get("id"))
+
+
+def query_text(q):
+    text = str(q.get("text") or "").strip()
+    if text:
+        return text
+
+    text = f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
+    if not text:
+        raise ValueError(f"{q_id(q)} 缺少 text")
+    return text
+
+
+def need_rebuild_text(query_ids, query_texts):
+    if not TEXT_NPZ.exists():
+        return True
+
+    data = np.load(TEXT_NPZ, allow_pickle=True)
+
+    if "query_ids" not in data or "query_texts" not in data or "text_emb" not in data:
+        return True
+
+    old_ids = [str(x) for x in data["query_ids"]]
+    old_texts = [str(x) for x in data["query_texts"]]
+
+    return old_ids != query_ids or old_texts != query_texts
+
+
+def build_text_emb(model, query_ids, query_texts):
+    vecs = []
+
+    for i, text in enumerate(query_texts, start=1):
+        emb = model.get_text_embeddings([text])
+        vecs.append(to_numpy(emb).astype(np.float32))
+        print(f"text embedding: {i}/{len(query_texts)}")
+
+    text_emb = np.concatenate(vecs, axis=0)
+
+    TEXT_NPZ.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        TEXT_NPZ,
+        query_ids=np.asarray(query_ids, dtype=object),
+        query_texts=np.asarray(query_texts, dtype=object),
+        text_emb=text_emb,
+    )
+
+
+def ensure_text_emb(model):
+    queries = load_queries()
+    query_ids = [q_id(q) for q in queries]
+    query_texts = [query_text(q) for q in queries]
+
+    if need_rebuild_text(query_ids, query_texts):
+        print("开始构建文本 embedding...")
+        build_text_emb(model, query_ids, query_texts)
+    else:
+        print("文本 embedding 已存在且匹配，跳过构建。")
+
+
 def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -72,6 +139,8 @@ def main():
 
     model = CLAP(version="2023", use_cuda=True)
 
+    ensure_text_emb(model)
+
     for idx, (song_id, audio_path) in enumerate(items, start=1):
         if song_id in done:
             continue
@@ -94,7 +163,7 @@ def main():
             print(repr(e))
             continue
 
-        if len(song_ids) % SAVE_EVERY == 0:
+        if len(song_ids) % save_every == 0:
             save_npz(song_ids, audio_paths, audio_emb)
             print(f"已保存: {len(song_ids)}/{len(items)}")
 

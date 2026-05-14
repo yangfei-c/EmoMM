@@ -1,13 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import csv
 import json
 import sys
 from pathlib import Path
-
 import numpy as np
-from msclap import CLAP
-
 
 ROOT = Path(r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec")
 sys.path.insert(0, str(ROOT / "src"))
@@ -31,17 +26,10 @@ def norm(x):
     return x / np.maximum(np.linalg.norm(x, axis=1, keepdims=True), 1e-8)
 
 
-def to_numpy(x):
-    if hasattr(x, "detach"):
-        return x.detach().cpu().numpy()
-    return np.asarray(x)
-
-
 def load_queries():
     return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
 
-
-def qid(q):
+def q_id(q):
     return str(q.get("query_id") or q.get("id"))
 
 
@@ -52,53 +40,20 @@ def query_text(q):
 
     text = f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
     if not text:
-        raise ValueError(f"{qid(q)} 缺少 text")
+        raise ValueError(f"{q_id(q)} 缺少 text")
     return text
 
 
-def need_rebuild_text_emb(query_ids, query_texts):
+def load_text_emb():
     if not TEXT_EMB.exists():
-        return True
+        raise FileNotFoundError(TEXT_EMB)
 
     data = np.load(TEXT_EMB, allow_pickle=True)
 
-    if "query_ids" not in data or "query_texts" not in data or "text_emb" not in data:
-        return True
+    if "text_emb" not in data:
+        raise ValueError(f"{TEXT_EMB} 缺少 text_emb")
 
-    old_ids = [str(x) for x in data["query_ids"]]
-    old_texts = [str(x) for x in data["query_texts"]]
-
-    return old_ids != query_ids or old_texts != query_texts
-
-
-def build_text_emb(model, query_ids, query_texts):
-    vecs = []
-
-    for i, text in enumerate(query_texts, start=1):
-        emb = model.get_text_embeddings([text])
-        vecs.append(to_numpy(emb).astype(np.float32))
-        print(f"text embedding: {i}/{len(query_texts)}")
-
-    text_emb = np.concatenate(vecs, axis=0)
-
-    TEXT_EMB.parent.mkdir(parents=True, exist_ok=True)
-    np.savez(
-        TEXT_EMB,
-        query_ids=np.array(query_ids),
-        query_texts=np.array(query_texts),
-        text_emb=text_emb,
-    )
-
-    return text_emb
-
-
-def load_or_build_text_emb(query_ids, query_texts):
-    model = CLAP(version="2023", use_cuda=True)
-
-    if need_rebuild_text_emb(query_ids, query_texts):
-        return build_text_emb(model, query_ids, query_texts)
-
-    return np.load(TEXT_EMB, allow_pickle=True)["text_emb"].astype(np.float32)
+    return data["text_emb"].astype(np.float32)
 
 
 def load_audio_emb():
@@ -121,7 +76,7 @@ def load_track_meta():
 def make_row(q, song_id, audio_path, score, rank, track):
     return {
         "method": "clap",
-        "query_id": qid(q),
+        "query_id": q_id(q),
         "rank": rank,
         "song_id": song_id,
         "score": round(float(score), 6),
@@ -157,11 +112,9 @@ def write_csv(rows):
 
 def main():
     queries = load_queries()
-    query_ids = [qid(q) for q in queries]
-    query_texts = [query_text(q) for q in queries]
 
     audio = load_audio_emb()
-    text_emb = load_or_build_text_emb(query_ids, query_texts)
+    text_emb = load_text_emb()
     tracks = load_track_meta()
 
     scores = norm(audio["audio_emb"]) @ norm(text_emb).T

@@ -1,32 +1,32 @@
 [
   {
-    "token": "P001_XMQ53651",
+    "token": "P001_CHFERXTK",
     "participant_index": 1,
-    "url": "http://127.0.0.1:8000/index.html?token=P001_XMQ53651",
+    "url": "http://127.0.0.1:8000/index.html?token=P001_CHFERXTK",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q16",
-        "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q09",
+        "query_id": "q13",
         "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q01",
+        "query_id": "q05",
         "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
         "method_A": "clap",
         "method_B": "ours",
         "method_C": "clamp3"
@@ -34,101 +34,101 @@
     ]
   },
   {
-    "token": "P002_9CSU3G26",
+    "token": "P002_SBY2W0WN",
     "participant_index": 2,
-    "url": "http://127.0.0.1:8000/index.html?token=P002_9CSU3G26",
+    "url": "http://127.0.0.1:8000/index.html?token=P002_SBY2W0WN",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q02",
+        "query_id": "q14",
         "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "ours",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clap",
         "method_B": "clamp3",
-        "method_C": "clap"
+        "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q03",
-        "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "clap",
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clamp3",
         "method_B": "ours",
-        "method_C": "clamp3"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "clap",
-        "method_B": "clamp3",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
         "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P003_Q2L14ER5",
+    "token": "P003_9VOTV75L",
     "participant_index": 3,
-    "url": "http://127.0.0.1:8000/index.html?token=P003_Q2L14ER5",
+    "url": "http://127.0.0.1:8000/index.html?token=P003_9VOTV75L",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
-        "method_A": "clap",
-        "method_B": "ours",
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q13",
-        "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
-        "method_A": "clap",
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
         "method_B": "clamp3",
-        "method_C": "ours"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q16",
-        "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
-        "method_A": "clamp3",
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clap",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P004_XGM0J2AF",
+    "token": "P004_5BUKEZU7",
     "participant_index": 4,
-    "url": "http://127.0.0.1:8000/index.html?token=P004_XGM0J2AF",
+    "url": "http://127.0.0.1:8000/index.html?token=P004_5BUKEZU7",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"
@@ -136,101 +136,101 @@
     ]
   },
   {
-    "token": "P005_A28FMPHC",
+    "token": "P005_W1OXEGED",
     "participant_index": 5,
-    "url": "http://127.0.0.1:8000/index.html?token=P005_A28FMPHC",
+    "url": "http://127.0.0.1:8000/index.html?token=P005_W1OXEGED",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q10",
-        "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q07",
-        "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
-        "method_A": "ours",
-        "method_B": "clap",
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clap",
+        "method_B": "ours",
         "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P006_8RWJAU5I",
+    "token": "P006_AO0CVT7O",
     "participant_index": 6,
-    "url": "http://127.0.0.1:8000/index.html?token=P006_8RWJAU5I",
+    "url": "http://127.0.0.1:8000/index.html?token=P006_AO0CVT7O",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q04",
-        "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
-        "method_A": "clamp3",
-        "method_B": "clap",
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q03",
-        "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P007_8O4I6SF0",
+    "token": "P007_RWNQUPQD",
     "participant_index": 7,
-    "url": "http://127.0.0.1:8000/index.html?token=P007_8O4I6SF0",
+    "url": "http://127.0.0.1:8000/index.html?token=P007_RWNQUPQD",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q01",
-        "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q07",
-        "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
         "method_A": "clap",
         "method_B": "ours",
         "method_C": "clamp3"
@@ -238,101 +238,101 @@
     ]
   },
   {
-    "token": "P008_KIT60YJ7",
+    "token": "P008_VF6XAMD5",
     "participant_index": 8,
-    "url": "http://127.0.0.1:8000/index.html?token=P008_KIT60YJ7",
+    "url": "http://127.0.0.1:8000/index.html?token=P008_VF6XAMD5",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
-        "method_A": "ours",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
         "method_B": "clamp3",
-        "method_C": "clap"
+        "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "clap",
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clamp3",
         "method_B": "ours",
-        "method_C": "clamp3"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q01",
-        "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
-        "method_A": "clap",
-        "method_B": "clamp3",
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
         "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P009_MYAGYEDW",
+    "token": "P009_335SAMJV",
     "participant_index": 9,
-    "url": "http://127.0.0.1:8000/index.html?token=P009_MYAGYEDW",
+    "url": "http://127.0.0.1:8000/index.html?token=P009_335SAMJV",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "clap",
-        "method_B": "ours",
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "ours",
+        "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q11",
+        "query_id": "q03",
         "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
-        "method_A": "clap",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
         "method_B": "clamp3",
-        "method_C": "ours"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q05",
+        "query_id": "q09",
         "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "clamp3",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clap",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P010_WBB64UT2",
+    "token": "P010_WJFCOT3Z",
     "participant_index": 10,
-    "url": "http://127.0.0.1:8000/index.html?token=P010_WBB64UT2",
+    "url": "http://127.0.0.1:8000/index.html?token=P010_WJFCOT3Z",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q13",
+        "query_id": "q05",
         "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q10",
-        "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q02",
-        "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"
@@ -340,101 +340,101 @@
     ]
   },
   {
-    "token": "P011_UH53KJ7N",
+    "token": "P011_QXGVOCTK",
     "participant_index": 11,
-    "url": "http://127.0.0.1:8000/index.html?token=P011_UH53KJ7N",
+    "url": "http://127.0.0.1:8000/index.html?token=P011_QXGVOCTK",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q07",
-        "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
-        "method_A": "ours",
-        "method_B": "clap",
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "ours",
         "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P012_1V3OE9ZC",
+    "token": "P012_78H9DM4O",
     "participant_index": 12,
-    "url": "http://127.0.0.1:8000/index.html?token=P012_1V3OE9ZC",
+    "url": "http://127.0.0.1:8000/index.html?token=P012_78H9DM4O",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
-        "method_A": "clamp3",
-        "method_B": "clap",
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q03",
-        "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q01",
-        "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P013_MLC8D2M4",
+    "token": "P013_U0MVX4N6",
     "participant_index": 13,
-    "url": "http://127.0.0.1:8000/index.html?token=P013_MLC8D2M4",
+    "url": "http://127.0.0.1:8000/index.html?token=P013_U0MVX4N6",
     "trials": [
       {
         "trial_index": 1,
         "query_id": "q13",
         "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q01",
+        "query_id": "q09",
         "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
         "method_A": "clap",
         "method_B": "ours",
         "method_C": "clamp3"
@@ -442,101 +442,101 @@
     ]
   },
   {
-    "token": "P014_BI7N7IKL",
+    "token": "P014_TURZOQES",
     "participant_index": 14,
-    "url": "http://127.0.0.1:8000/index.html?token=P014_BI7N7IKL",
+    "url": "http://127.0.0.1:8000/index.html?token=P014_TURZOQES",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "ours",
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clap",
         "method_B": "clamp3",
-        "method_C": "clap"
+        "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q10",
-        "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
-        "method_A": "clap",
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clamp3",
         "method_B": "ours",
-        "method_C": "clamp3"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
-        "method_A": "clap",
-        "method_B": "clamp3",
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
         "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P015_YR180FYT",
+    "token": "P015_X6789SX2",
     "participant_index": 15,
-    "url": "http://127.0.0.1:8000/index.html?token=P015_YR180FYT",
+    "url": "http://127.0.0.1:8000/index.html?token=P015_X6789SX2",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
-        "method_A": "clap",
-        "method_B": "ours",
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
-        "method_A": "clap",
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
         "method_B": "clamp3",
-        "method_C": "ours"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "clamp3",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P016_LWLQ350S",
+    "token": "P016_28RMSK8K",
     "participant_index": 16,
-    "url": "http://127.0.0.1:8000/index.html?token=P016_LWLQ350S",
+    "url": "http://127.0.0.1:8000/index.html?token=P016_28RMSK8K",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q06",
+        "query_id": "q02",
         "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"
@@ -544,101 +544,101 @@
     ]
   },
   {
-    "token": "P017_3LU742H7",
+    "token": "P017_N0SNUOVC",
     "participant_index": 17,
-    "url": "http://127.0.0.1:8000/index.html?token=P017_3LU742H7",
+    "url": "http://127.0.0.1:8000/index.html?token=P017_N0SNUOVC",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q03",
-        "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q04",
-        "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
-        "method_A": "ours",
-        "method_B": "clap",
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clap",
+        "method_B": "ours",
         "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P018_7RGNOAF3",
+    "token": "P018_7NVLTFML",
     "participant_index": 18,
-    "url": "http://127.0.0.1:8000/index.html?token=P018_7RGNOAF3",
+    "url": "http://127.0.0.1:8000/index.html?token=P018_7NVLTFML",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q16",
-        "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
-        "method_A": "clamp3",
-        "method_B": "clap",
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clap",
+        "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P019_V08LBWKW",
+    "token": "P019_KW0WUUZ1",
     "participant_index": 19,
-    "url": "http://127.0.0.1:8000/index.html?token=P019_V08LBWKW",
+    "url": "http://127.0.0.1:8000/index.html?token=P019_KW0WUUZ1",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q07",
+        "query_id": "q03",
         "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q10",
+        "query_id": "q14",
         "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
         "method_A": "clap",
         "method_B": "ours",
         "method_C": "clamp3"
@@ -646,92 +646,228 @@
     ]
   },
   {
-    "token": "P020_98NHR9NS",
+    "token": "P020_SABJQXE4",
     "participant_index": 20,
-    "url": "http://127.0.0.1:8000/index.html?token=P020_98NHR9NS",
+    "url": "http://127.0.0.1:8000/index.html?token=P020_SABJQXE4",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q10",
-        "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
-        "method_A": "ours",
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
         "method_B": "clamp3",
-        "method_C": "clap"
+        "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
-        "method_A": "clap",
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
         "method_B": "ours",
-        "method_C": "clamp3"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q04",
-        "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
-        "method_A": "clap",
-        "method_B": "clamp3",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
         "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P021_R9IGQG1K",
+    "token": "P021_FZELM61M",
     "participant_index": 21,
-    "url": "http://127.0.0.1:8000/index.html?token=P021_R9IGQG1K",
+    "url": "http://127.0.0.1:8000/index.html?token=P021_FZELM61M",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q16",
+        "query_id": "q12",
         "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
-        "method_A": "clap",
-        "method_B": "ours",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "clap",
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
         "method_B": "clamp3",
-        "method_C": "ours"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q12",
-        "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
-        "method_A": "clamp3",
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P022_GDWLG6UR",
+    "token": "P022_MU25PAXA",
     "participant_index": 22,
-    "url": "http://127.0.0.1:8000/index.html?token=P022_GDWLG6UR",
+    "url": "http://127.0.0.1:8000/index.html?token=P022_MU25PAXA",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q04",
+        "query_id": "q08",
         "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P023_YG9MUEYX",
+    "participant_index": 23,
+    "url": "http://127.0.0.1:8000/index.html?token=P023_YG9MUEYX",
+    "trials": [
+      {
+        "trial_index": 1,
         "query_id": "q03",
         "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P024_TCF3BRGQ",
+    "participant_index": 24,
+    "url": "http://127.0.0.1:8000/index.html?token=P024_TCF3BRGQ",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P025_8LRGNCV1",
+    "participant_index": 25,
+    "url": "http://127.0.0.1:8000/index.html?token=P025_8LRGNCV1",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P026_TD1EEOM5",
+    "participant_index": 26,
+    "url": "http://127.0.0.1:8000/index.html?token=P026_TD1EEOM5",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
@@ -740,7 +876,7 @@
         "trial_index": 3,
         "query_id": "q07",
         "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"
@@ -748,407 +884,203 @@
     ]
   },
   {
-    "token": "P023_ESUKQQEA",
-    "participant_index": 23,
-    "url": "http://127.0.0.1:8000/index.html?token=P023_ESUKQQEA",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q13",
-        "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q02",
-        "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
-      }
-    ]
-  },
-  {
-    "token": "P024_0Q0ADGPB",
-    "participant_index": 24,
-    "url": "http://127.0.0.1:8000/index.html?token=P024_0Q0ADGPB",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q01",
-        "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
-      }
-    ]
-  },
-  {
-    "token": "P025_THG9WU3C",
-    "participant_index": 25,
-    "url": "http://127.0.0.1:8000/index.html?token=P025_THG9WU3C",
+    "token": "P027_90FU9I5X",
+    "participant_index": 27,
+    "url": "http://127.0.0.1:8000/index.html?token=P027_90FU9I5X",
     "trials": [
       {
         "trial_index": 1,
         "query_id": "q12",
         "strategy": "energize",
-        "query_text": "你现在有些焦虑和紧张，但不想被这种情绪困住。你希望音乐能把这种能量转化成行动力。",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q13",
-        "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q03",
+        "query_id": "q15",
         "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      }
-    ]
-  },
-  {
-    "token": "P026_ZUN31HX6",
-    "participant_index": 26,
-    "url": "http://127.0.0.1:8000/index.html?token=P026_ZUN31HX6",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
       },
       {
-        "trial_index": 2,
-        "query_id": "q02",
-        "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      },
-      {
         "trial_index": 3,
-        "query_id": "q13",
-        "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
-        "method_A": "clap",
-        "method_B": "clamp3",
-        "method_C": "ours"
-      }
-    ]
-  },
-  {
-    "token": "P027_QYSWD1BS",
-    "participant_index": 27,
-    "url": "http://127.0.0.1:8000/index.html?token=P027_QYSWD1BS",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q04",
+        "query_id": "q16",
         "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
         "method_A": "clap",
-        "method_B": "clamp3",
-        "method_C": "ours"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q10",
-        "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
-        "method_A": "clamp3",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P028_VSHT0UB8",
+    "token": "P028_SGER9J4A",
     "participant_index": 28,
-    "url": "http://127.0.0.1:8000/index.html?token=P028_VSHT0UB8",
+    "url": "http://127.0.0.1:8000/index.html?token=P028_SGER9J4A",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q07",
-        "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q16",
-        "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q14",
-        "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
-      }
-    ]
-  },
-  {
-    "token": "P029_VM9DHKHH",
-    "participant_index": 29,
-    "url": "http://127.0.0.1:8000/index.html?token=P029_VM9DHKHH",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q01",
-        "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
-      },
-      {
-        "trial_index": 3,
         "query_id": "q02",
         "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "ours",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clamp3",
         "method_B": "clap",
-        "method_C": "clamp3"
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P030_CI7WTB1I",
-    "participant_index": 30,
-    "url": "http://127.0.0.1:8000/index.html?token=P030_CI7WTB1I",
+    "token": "P029_9LJNEG8R",
+    "participant_index": 29,
+    "url": "http://127.0.0.1:8000/index.html?token=P029_9LJNEG8R",
     "trials": [
       {
         "trial_index": 1,
         "query_id": "q10",
         "strategy": "calm",
-        "query_text": "你刚经历了一场不愉快的争论，现在心里烦躁、紧绷。你希望音乐能帮助你慢慢平静下来。",
-        "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
-        "trial_index": 3,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
+        "trial_index": 2,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P031_W0YYP0OI",
-    "participant_index": 31,
-    "url": "http://127.0.0.1:8000/index.html?token=P031_W0YYP0OI",
+    "token": "P030_4YVNISVP",
+    "participant_index": 30,
+    "url": "http://127.0.0.1:8000/index.html?token=P030_4YVNISVP",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q07",
-        "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
-        "method_A": "ours",
-        "method_B": "clap",
-        "method_C": "clamp3"
-      },
-      {
-        "trial_index": 2,
         "query_id": "q04",
         "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      }
-    ]
-  },
-  {
-    "token": "P032_L8B89ZQJ",
-    "participant_index": 32,
-    "url": "http://127.0.0.1:8000/index.html?token=P032_L8B89ZQJ",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q02",
-        "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
-        "method_A": "clap",
-        "method_B": "clamp3",
-        "method_C": "ours"
-      }
-    ]
-  },
-  {
-    "token": "P033_OBBR840Q",
-    "participant_index": 33,
-    "url": "http://127.0.0.1:8000/index.html?token=P033_OBBR840Q",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q11",
-        "strategy": "comfort",
-        "query_text": "你刚经历了让人委屈的事情，既生气又难过。你希望音乐能让你感到被理解和安慰。",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
-        "trial_index": 3,
-        "query_id": "q02",
+        "trial_index": 2,
+        "query_id": "q14",
         "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P034_UIFL9C6Q",
-    "participant_index": 34,
-    "url": "http://127.0.0.1:8000/index.html?token=P034_UIFL9C6Q",
+    "token": "P031_XZ8C9KNG",
+    "participant_index": 31,
+    "url": "http://127.0.0.1:8000/index.html?token=P031_XZ8C9KNG",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
-        "method_A": "clap",
-        "method_B": "clamp3",
-        "method_C": "ours"
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
       },
       {
         "trial_index": 2,
-        "query_id": "q06",
-        "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
-        "method_A": "clamp3",
-        "method_B": "ours",
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clamp3",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
         "query_id": "q03",
         "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P032_ZB4WT4SP",
+    "participant_index": 32,
+    "url": "http://127.0.0.1:8000/index.html?token=P032_ZB4WT4SP",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"
@@ -1156,83 +1088,1171 @@
     ]
   },
   {
-    "token": "P035_V7UDAP4D",
-    "participant_index": 35,
-    "url": "http://127.0.0.1:8000/index.html?token=P035_V7UDAP4D",
+    "token": "P033_782Z8IEI",
+    "participant_index": 33,
+    "url": "http://127.0.0.1:8000/index.html?token=P033_782Z8IEI",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P034_VYC11LRE",
+    "participant_index": 34,
+    "url": "http://127.0.0.1:8000/index.html?token=P034_VYC11LRE",
     "trials": [
       {
         "trial_index": 1,
         "query_id": "q02",
         "strategy": "calm",
-        "query_text": "你刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。你希望音乐能帮助你从激动中平稳下来。",
-        "method_A": "clamp3",
-        "method_B": "ours",
-        "method_C": "clap"
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
       },
       {
         "trial_index": 2,
         "query_id": "q01",
         "strategy": "maintain",
-        "query_text": "你和朋友聚会后仍然很开心，整个人很有劲。你希望音乐继续延续这种热烈的好心情。",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
         "method_A": "clamp3",
-        "method_B": "clap",
-        "method_C": "ours"
+        "method_B": "ours",
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q05",
-        "strategy": "maintain",
-        "query_text": "你现在心情平和、放松，正在独自休息。你希望音乐能保持这种舒适稳定的状态。",
-        "method_A": "ours",
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
         "method_B": "clap",
-        "method_C": "clamp3"
+        "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P036_O6JZXO9R",
-    "participant_index": 36,
-    "url": "http://127.0.0.1:8000/index.html?token=P036_O6JZXO9R",
+    "token": "P035_V5LLNUTX",
+    "participant_index": 35,
+    "url": "http://127.0.0.1:8000/index.html?token=P035_V5LLNUTX",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q09",
-        "strategy": "maintain",
-        "query_text": "你现在焦虑又烦乱，脑子停不下来。你希望音乐能贴近这种状态，让你先把情绪释放出来。",
-        "method_A": "clamp3",
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
         "method_B": "clap",
-        "method_C": "ours"
+        "method_C": "clamp3"
       },
       {
         "trial_index": 2,
         "query_id": "q16",
         "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P036_X7CM6LUW",
+    "participant_index": 36,
+    "url": "http://127.0.0.1:8000/index.html?token=P036_X7CM6LUW",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P037_NODV2SQA",
+    "participant_index": 37,
+    "url": "http://127.0.0.1:8000/index.html?token=P037_NODV2SQA",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
       },
       {
-        "trial_index": 3,
-        "query_id": "q04",
-        "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P037_VMXW3394",
-    "participant_index": 37,
-    "url": "http://127.0.0.1:8000/index.html?token=P037_VMXW3394",
+    "token": "P038_YAL0TVZH",
+    "participant_index": 38,
+    "url": "http://127.0.0.1:8000/index.html?token=P038_YAL0TVZH",
     "trials": [
       {
         "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
         "query_id": "q06",
         "strategy": "calm",
-        "query_text": "你处在轻松的状态中，但希望更沉静一些。你希望音乐能帮助你进入更安宁的氛围。",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P039_X90XGV60",
+    "participant_index": 39,
+    "url": "http://127.0.0.1:8000/index.html?token=P039_X90XGV60",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P040_Z8VNCXWN",
+    "participant_index": 40,
+    "url": "http://127.0.0.1:8000/index.html?token=P040_Z8VNCXWN",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P041_KCAS4CTG",
+    "participant_index": 41,
+    "url": "http://127.0.0.1:8000/index.html?token=P041_KCAS4CTG",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P042_MJ12593Q",
+    "participant_index": 42,
+    "url": "http://127.0.0.1:8000/index.html?token=P042_MJ12593Q",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P043_7WNMY6IA",
+    "participant_index": 43,
+    "url": "http://127.0.0.1:8000/index.html?token=P043_7WNMY6IA",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P044_4YZ8MHII",
+    "participant_index": 44,
+    "url": "http://127.0.0.1:8000/index.html?token=P044_4YZ8MHII",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P045_FE7QNV16",
+    "participant_index": 45,
+    "url": "http://127.0.0.1:8000/index.html?token=P045_FE7QNV16",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P046_K7D6K8U0",
+    "participant_index": 46,
+    "url": "http://127.0.0.1:8000/index.html?token=P046_K7D6K8U0",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P047_YXBIJV4S",
+    "participant_index": 47,
+    "url": "http://127.0.0.1:8000/index.html?token=P047_YXBIJV4S",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P048_EG9JTQA4",
+    "participant_index": 48,
+    "url": "http://127.0.0.1:8000/index.html?token=P048_EG9JTQA4",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P049_SJO49NIC",
+    "participant_index": 49,
+    "url": "http://127.0.0.1:8000/index.html?token=P049_SJO49NIC",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P050_2BGEVC8F",
+    "participant_index": 50,
+    "url": "http://127.0.0.1:8000/index.html?token=P050_2BGEVC8F",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P051_NBV3J4IC",
+    "participant_index": 51,
+    "url": "http://127.0.0.1:8000/index.html?token=P051_NBV3J4IC",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P052_22ZXA8H4",
+    "participant_index": 52,
+    "url": "http://127.0.0.1:8000/index.html?token=P052_22ZXA8H4",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P053_PIN43CX4",
+    "participant_index": 53,
+    "url": "http://127.0.0.1:8000/index.html?token=P053_PIN43CX4",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P054_2A2WHLSQ",
+    "participant_index": 54,
+    "url": "http://127.0.0.1:8000/index.html?token=P054_2A2WHLSQ",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P055_O4HNQW5W",
+    "participant_index": 55,
+    "url": "http://127.0.0.1:8000/index.html?token=P055_O4HNQW5W",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P056_TV19ABPA",
+    "participant_index": 56,
+    "url": "http://127.0.0.1:8000/index.html?token=P056_TV19ABPA",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P057_BNZTA6UW",
+    "participant_index": 57,
+    "url": "http://127.0.0.1:8000/index.html?token=P057_BNZTA6UW",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P058_3C513ILW",
+    "participant_index": 58,
+    "url": "http://127.0.0.1:8000/index.html?token=P058_3C513ILW",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P059_OF639UCB",
+    "participant_index": 59,
+    "url": "http://127.0.0.1:8000/index.html?token=P059_OF639UCB",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P060_4GVKXU9T",
+    "participant_index": 60,
+    "url": "http://127.0.0.1:8000/index.html?token=P060_4GVKXU9T",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P061_2OSO3XDE",
+    "participant_index": 61,
+    "url": "http://127.0.0.1:8000/index.html?token=P061_2OSO3XDE",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P062_MTA48943",
+    "participant_index": 62,
+    "url": "http://127.0.0.1:8000/index.html?token=P062_MTA48943",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P063_DY43169Z",
+    "participant_index": 63,
+    "url": "http://127.0.0.1:8000/index.html?token=P063_DY43169Z",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P064_73ND13IZ",
+    "participant_index": 64,
+    "url": "http://127.0.0.1:8000/index.html?token=P064_73ND13IZ",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P065_7FXBYN0N",
+    "participant_index": 65,
+    "url": "http://127.0.0.1:8000/index.html?token=P065_7FXBYN0N",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P066_YJPR8Z4X",
+    "participant_index": 66,
+    "url": "http://127.0.0.1:8000/index.html?token=P066_YJPR8Z4X",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P067_7E9VHI2R",
+    "participant_index": 67,
+    "url": "http://127.0.0.1:8000/index.html?token=P067_7E9VHI2R",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
         "method_A": "ours",
         "method_B": "clap",
         "method_C": "clamp3"
@@ -1241,118 +2261,1138 @@
         "trial_index": 2,
         "query_id": "q07",
         "strategy": "comfort",
-        "query_text": "你现在比较平静，但也想要一点温暖陪伴。你希望音乐能让你感到安心和被照顾。",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
         "method_A": "ours",
         "method_B": "clamp3",
         "method_C": "clap"
-      },
-      {
-        "trial_index": 3,
-        "query_id": "q15",
-        "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
-      }
-    ]
-  },
-  {
-    "token": "P038_TMK0J5AW",
-    "participant_index": 38,
-    "url": "http://127.0.0.1:8000/index.html?token=P038_TMK0J5AW",
-    "trials": [
-      {
-        "trial_index": 1,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "ours",
-        "method_B": "clamp3",
-        "method_C": "clap"
-      },
-      {
-        "trial_index": 2,
-        "query_id": "q03",
-        "strategy": "comfort",
-        "query_text": "你刚经历了一件开心的事，但内心也有些说不出的压力。你希望音乐能带来温柔、被理解的感觉。",
-        "method_A": "clap",
-        "method_B": "ours",
-        "method_C": "clamp3"
       },
       {
         "trial_index": 3,
         "query_id": "q14",
         "strategy": "calm",
-        "query_text": "你现在有些疲惫和沮丧，脑子也不太清楚。你希望音乐能让你安静下来。",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P068_HIYADQSU",
+    "participant_index": 68,
+    "url": "http://127.0.0.1:8000/index.html?token=P068_HIYADQSU",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
         "method_A": "clap",
         "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "clamp3",
+        "method_B": "clap",
         "method_C": "ours"
       }
     ]
   },
   {
-    "token": "P039_70CLFTX8",
-    "participant_index": 39,
-    "url": "http://127.0.0.1:8000/index.html?token=P039_70CLFTX8",
+    "token": "P069_6XKB7W8Y",
+    "participant_index": 69,
+    "url": "http://127.0.0.1:8000/index.html?token=P069_6XKB7W8Y",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P070_JSR1OSJ6",
+    "participant_index": 70,
+    "url": "http://127.0.0.1:8000/index.html?token=P070_JSR1OSJ6",
     "trials": [
       {
         "trial_index": 1,
         "query_id": "q13",
         "strategy": "maintain",
-        "query_text": "你现在有些低落，只想听一些贴合当前心情的音乐，不希望音乐突然改变你的状态。",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P071_GAOLA6ZV",
+    "participant_index": 71,
+    "url": "http://127.0.0.1:8000/index.html?token=P071_GAOLA6ZV",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
         "method_A": "clap",
         "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P072_8SVFR6TT",
+    "participant_index": 72,
+    "url": "http://127.0.0.1:8000/index.html?token=P072_8SVFR6TT",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P073_JI8PLIUB",
+    "participant_index": 73,
+    "url": "http://127.0.0.1:8000/index.html?token=P073_JI8PLIUB",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P074_11W5WSMW",
+    "participant_index": 74,
+    "url": "http://127.0.0.1:8000/index.html?token=P074_11W5WSMW",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P075_1VXD1GDL",
+    "participant_index": 75,
+    "url": "http://127.0.0.1:8000/index.html?token=P075_1VXD1GDL",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P076_HQLFLE7J",
+    "participant_index": 76,
+    "url": "http://127.0.0.1:8000/index.html?token=P076_HQLFLE7J",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P077_8NGEHFQ3",
+    "participant_index": 77,
+    "url": "http://127.0.0.1:8000/index.html?token=P077_8NGEHFQ3",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P078_2T5LUA2E",
+    "participant_index": 78,
+    "url": "http://127.0.0.1:8000/index.html?token=P078_2T5LUA2E",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q05",
+        "strategy": "maintain",
+        "query_text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P079_17KIAG46",
+    "participant_index": 79,
+    "url": "http://127.0.0.1:8000/index.html?token=P079_17KIAG46",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P080_Q5AUH7FE",
+    "participant_index": 80,
+    "url": "http://127.0.0.1:8000/index.html?token=P080_Q5AUH7FE",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P081_C9EBRRJ0",
+    "participant_index": 81,
+    "url": "http://127.0.0.1:8000/index.html?token=P081_C9EBRRJ0",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
+        "method_B": "clap",
         "method_C": "clamp3"
       },
       {
         "trial_index": 2,
         "query_id": "q15",
         "strategy": "comfort",
-        "query_text": "你今天有些孤独和难过，不太想说话。你希望音乐能给你一些被理解和安慰的感觉。",
-        "method_A": "clap",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "ours",
         "method_B": "clamp3",
-        "method_C": "ours"
+        "method_C": "clap"
       },
       {
         "trial_index": 3,
-        "query_id": "q08",
-        "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
-        "method_A": "clamp3",
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clap",
         "method_B": "ours",
-        "method_C": "clap"
+        "method_C": "clamp3"
       }
     ]
   },
   {
-    "token": "P040_QIGB8NTC",
-    "participant_index": 40,
-    "url": "http://127.0.0.1:8000/index.html?token=P040_QIGB8NTC",
+    "token": "P082_7AS2BBHS",
+    "participant_index": 82,
+    "url": "http://127.0.0.1:8000/index.html?token=P082_7AS2BBHS",
     "trials": [
       {
         "trial_index": 1,
-        "query_id": "q04",
-        "strategy": "energize",
-        "query_text": "你刚收到好消息，整个人很兴奋。你希望音乐能让这种积极情绪更强烈、更有冲劲。",
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
         "method_A": "clap",
         "method_B": "clamp3",
         "method_C": "ours"
       },
       {
         "trial_index": 2,
-        "query_id": "q16",
-        "strategy": "energize",
-        "query_text": "你刚下班，感到疲惫低落，提不起精神。你希望音乐能让你逐渐振作起来，更有活力。",
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
         "method_A": "clamp3",
         "method_B": "ours",
         "method_C": "clap"
       },
       {
         "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P083_K6BAHTO8",
+    "participant_index": 83,
+    "url": "http://127.0.0.1:8000/index.html?token=P083_K6BAHTO8",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P084_WA2QKWYN",
+    "participant_index": 84,
+    "url": "http://127.0.0.1:8000/index.html?token=P084_WA2QKWYN",
+    "trials": [
+      {
+        "trial_index": 1,
         "query_id": "q08",
         "strategy": "energize",
-        "query_text": "你现在心情平和，但有点缺少动力。你希望音乐能让你逐渐更有精神。",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P085_S4DDW1A3",
+    "participant_index": 85,
+    "url": "http://127.0.0.1:8000/index.html?token=P085_S4DDW1A3",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P086_5SOHTN7Y",
+    "participant_index": 86,
+    "url": "http://127.0.0.1:8000/index.html?token=P086_5SOHTN7Y",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q12",
+        "strategy": "energize",
+        "query_text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q11",
+        "strategy": "comfort",
+        "query_text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P087_WLZK950E",
+    "participant_index": 87,
+    "url": "http://127.0.0.1:8000/index.html?token=P087_WLZK950E",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P088_B0P5H2KT",
+    "participant_index": 88,
+    "url": "http://127.0.0.1:8000/index.html?token=P088_B0P5H2KT",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P089_6FQIC4O9",
+    "participant_index": 89,
+    "url": "http://127.0.0.1:8000/index.html?token=P089_6FQIC4O9",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P090_08AKZEMM",
+    "participant_index": 90,
+    "url": "http://127.0.0.1:8000/index.html?token=P090_08AKZEMM",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P091_9BZ0R4QP",
+    "participant_index": 91,
+    "url": "http://127.0.0.1:8000/index.html?token=P091_9BZ0R4QP",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P092_0NM2HEIS",
+    "participant_index": 92,
+    "url": "http://127.0.0.1:8000/index.html?token=P092_0NM2HEIS",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P093_FBO90N7P",
+    "participant_index": 93,
+    "url": "http://127.0.0.1:8000/index.html?token=P093_FBO90N7P",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q01",
+        "strategy": "maintain",
+        "query_text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P094_6A8QAEAZ",
+    "participant_index": 94,
+    "url": "http://127.0.0.1:8000/index.html?token=P094_6A8QAEAZ",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q06",
+        "strategy": "calm",
+        "query_text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P095_JQMO5ST9",
+    "participant_index": 95,
+    "url": "http://127.0.0.1:8000/index.html?token=P095_JQMO5ST9",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P096_FT86CYKL",
+    "participant_index": 96,
+    "url": "http://127.0.0.1:8000/index.html?token=P096_FT86CYKL",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q02",
+        "strategy": "calm",
+        "query_text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P097_S3IXXBWC",
+    "participant_index": 97,
+    "url": "http://127.0.0.1:8000/index.html?token=P097_S3IXXBWC",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q14",
+        "strategy": "calm",
+        "query_text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q15",
+        "strategy": "comfort",
+        "query_text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P098_9YELC6T6",
+    "participant_index": 98,
+    "url": "http://127.0.0.1:8000/index.html?token=P098_9YELC6T6",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q07",
+        "strategy": "comfort",
+        "query_text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q08",
+        "strategy": "energize",
+        "query_text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+        "method_A": "clamp3",
+        "method_B": "clap",
+        "method_C": "ours"
+      }
+    ]
+  },
+  {
+    "token": "P099_DBJ8RDDL",
+    "participant_index": 99,
+    "url": "http://127.0.0.1:8000/index.html?token=P099_DBJ8RDDL",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q13",
+        "strategy": "maintain",
+        "query_text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+        "method_A": "ours",
+        "method_B": "clap",
+        "method_C": "clamp3"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q04",
+        "strategy": "energize",
+        "query_text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
+        "method_A": "ours",
+        "method_B": "clamp3",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q16",
+        "strategy": "energize",
+        "query_text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
+        "method_A": "clap",
+        "method_B": "ours",
+        "method_C": "clamp3"
+      }
+    ]
+  },
+  {
+    "token": "P100_FFQZS1DQ",
+    "participant_index": 100,
+    "url": "http://127.0.0.1:8000/index.html?token=P100_FFQZS1DQ",
+    "trials": [
+      {
+        "trial_index": 1,
+        "query_id": "q09",
+        "strategy": "maintain",
+        "query_text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+        "method_A": "clap",
+        "method_B": "clamp3",
+        "method_C": "ours"
+      },
+      {
+        "trial_index": 2,
+        "query_id": "q10",
+        "strategy": "calm",
+        "query_text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
+        "method_A": "clamp3",
+        "method_B": "ours",
+        "method_C": "clap"
+      },
+      {
+        "trial_index": 3,
+        "query_id": "q03",
+        "strategy": "comfort",
+        "query_text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
         "method_A": "clamp3",
         "method_B": "clap",
         "method_C": "ours"

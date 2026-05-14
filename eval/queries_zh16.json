@@ -2,10 +2,10 @@
   {
     "query_id": "q01",
     "strategy": "maintain",
-    "strategy_zh": "保持好心情",
-    "current_state": "我和朋友聚会后仍然很开心，整个人很有劲。",
-    "regulation_goal": "我希望音乐能继续延续这种热烈的好心情。",
-    "text": "我和朋友聚会后仍然很开心，整个人很有劲。我希望音乐能继续延续这种热烈的好心情。",
+    "strategy_zh": "保持当前状态",
+    "current_state": "我和朋友聚会后还挺开心的，整个人都很有劲。",
+    "regulation_goal": "我想听点能延续这种好心情的音乐。",
+    "text": "我和朋友聚会后还挺开心的，整个人都很有劲。我想听点能延续这种好心情的音乐。",
     "strength": 0.5,
     "strategy_tags": [
       "auto"
@@ -15,9 +15,9 @@
     "query_id": "q02",
     "strategy": "calm",
     "strategy_zh": "平静下来",
-    "current_state": "我刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。",
-    "regulation_goal": "我希望音乐能帮助我从激动中平稳下来。",
-    "text": "我刚收到好消息，心情很兴奋，但现在需要慢慢安静下来。我希望音乐能帮助我从激动中平稳下来。",
+    "current_state": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。",
+    "regulation_goal": "我想听点音乐，让自己慢慢平稳下来。",
+    "text": "我刚收到一个好消息，现在有点兴奋，心跳也有点快。我想听点音乐，让自己慢慢平稳下来。",
     "strength": 0.5,
     "strategy_tags": [
       "ambient",
@@ -31,9 +31,9 @@
     "query_id": "q03",
     "strategy": "comfort",
     "strategy_zh": "获得安慰",
-    "current_state": "我刚经历了一件开心的事，但内心也有些说不出的压力。",
-    "regulation_goal": "我希望音乐能带来温柔、被理解的感觉。",
-    "text": "我刚经历了一件开心的事，但内心也有些说不出的压力。我希望音乐能带来温柔、被理解的感觉。",
+    "current_state": "我今天其实有点累，心里也有些说不出来的压力。",
+    "regulation_goal": "我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
+    "text": "我今天其实有点累，心里也有些说不出来的压力。我想听点温柔一点的音乐，让自己感觉被理解、被陪着。",
     "strength": 0.5,
     "strategy_tags": [
       "piano",
@@ -46,10 +46,10 @@
   {
     "query_id": "q04",
     "strategy": "energize",
-    "strategy_zh": "增强活力",
-    "current_state": "我刚收到好消息，整个人很兴奋。",
-    "regulation_goal": "我希望音乐能让这种积极情绪更强烈、更有冲劲。",
-    "text": "我刚收到好消息，整个人很兴奋。我希望音乐能让这种积极情绪更强烈、更有冲劲。",
+    "strategy_zh": "振作起来",
+    "current_state": "我现在心情不错，但还想让自己更有冲劲一点。",
+    "regulation_goal": "我想听点更带劲的音乐，把状态再往上提一提。",
+    "text": "我现在心情不错，但还想让自己更有冲劲一点。我想听点更带劲的音乐，把状态再往上提一提。",
     "strength": 0.5,
     "strategy_tags": [
       "energetic",
@@ -62,10 +62,10 @@
   {
     "query_id": "q05",
     "strategy": "maintain",
-    "strategy_zh": "保持放松",
-    "current_state": "我现在心情平和、放松，正在独自休息。",
-    "regulation_goal": "我希望音乐能保持这种舒适稳定的状态。",
-    "text": "我现在心情平和、放松，正在独自休息。我希望音乐能保持这种舒适稳定的状态。",
+    "strategy_zh": "保持当前状态",
+    "current_state": "我现在心情挺平和的，想一个人安安静静地休息一会儿。",
+    "regulation_goal": "我想听点不会打扰这种放松感的音乐。",
+    "text": "我现在心情挺平和的，想一个人安安静静地休息一会儿。我想听点不会打扰这种放松感的音乐。",
     "strength": 0.5,
     "strategy_tags": [
       "auto"
@@ -74,10 +74,10 @@
   {
     "query_id": "q06",
     "strategy": "calm",
-    "strategy_zh": "更加沉静",
-    "current_state": "我现在处在轻松的状态中，但还想更沉静一些。",
-    "regulation_goal": "我希望音乐能帮助我进入更安宁的氛围。",
-    "text": "我现在处在轻松的状态中，但还想更沉静一些。我希望音乐能帮助我进入更安宁的氛围。",
+    "strategy_zh": "平静下来",
+    "current_state": "我现在还算放松，但脑子里还是有些杂念。",
+    "regulation_goal": "我想听点安静一点的音乐，让自己更沉下来。",
+    "text": "我现在还算放松，但脑子里还是有些杂念。我想听点安静一点的音乐，让自己更沉下来。",
     "strength": 0.5,
     "strategy_tags": [
       "ambient",
@@ -90,10 +90,10 @@
   {
     "query_id": "q07",
     "strategy": "comfort",
-    "strategy_zh": "获得陪伴",
-    "current_state": "我现在比较平静，但也想要一点温暖陪伴。",
-    "regulation_goal": "我希望音乐能让我感到安心和被照顾。",
-    "text": "我现在比较平静，但也想要一点温暖陪伴。我希望音乐能让我感到安心和被照顾。",
+    "strategy_zh": "获得安慰",
+    "current_state": "我现在不算特别难过，但有点想被陪着。",
+    "regulation_goal": "我想听点温暖一点的音乐，让自己安心一些。",
+    "text": "我现在不算特别难过，但有点想被陪着。我想听点温暖一点的音乐，让自己安心一些。",
     "strength": 0.5,
     "strategy_tags": [
       "piano",
@@ -106,10 +106,10 @@
   {
     "query_id": "q08",
     "strategy": "energize",
-    "strategy_zh": "提升动力",
-    "current_state": "我现在心情平和，但有点缺少动力。",
-    "regulation_goal": "我希望音乐能让我逐渐更有精神。",
-    "text": "我现在心情平和，但有点缺少动力。我希望音乐能让我逐渐更有精神。",
+    "strategy_zh": "振作起来",
+    "current_state": "我现在心情还可以，但整个人有点懒懒的，提不起劲。",
+    "regulation_goal": "我想听点能让我慢慢有精神的音乐。",
+    "text": "我现在心情还可以，但整个人有点懒懒的，提不起劲。我想听点能让我慢慢有精神的音乐。",
     "strength": 0.5,
     "strategy_tags": [
       "energetic",
@@ -122,10 +122,10 @@
   {
     "query_id": "q09",
     "strategy": "maintain",
-    "strategy_zh": "释放当前情绪",
-    "current_state": "我现在焦虑又烦乱，脑子停不下来。",
-    "regulation_goal": "我希望音乐能贴近这种状态，让我先把情绪释放出来。",
-    "text": "我现在焦虑又烦乱，脑子停不下来。我希望音乐能贴近这种状态，让我先把情绪释放出来。",
+    "strategy_zh": "保持当前状态",
+    "current_state": "我现在有点焦虑又烦，脑子一直停不下来。",
+    "regulation_goal": "我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
+    "text": "我现在有点焦虑又烦，脑子一直停不下来。我想先听点贴近这种烦乱状态的音乐，不想一下子被拉到很平静。",
     "strength": 0.5,
     "strategy_tags": [
       "auto"
@@ -135,9 +135,9 @@
     "query_id": "q10",
     "strategy": "calm",
     "strategy_zh": "平静下来",
-    "current_state": "我刚经历了一场不愉快的争论，现在心里烦躁、紧绷。",
-    "regulation_goal": "我希望音乐能帮助我慢慢平静下来。",
-    "text": "我刚经历了一场不愉快的争论，现在心里烦躁、紧绷。我希望音乐能帮助我慢慢平静下来。",
+    "current_state": "我刚和别人吵完，心里还有点烦躁和紧绷。",
+    "regulation_goal": "我想听点音乐，让自己慢慢冷静下来。",
+    "text": "我刚和别人吵完，心里还有点烦躁和紧绷。我想听点音乐，让自己慢慢冷静下来。",
     "strength": 0.5,
     "strategy_tags": [
       "ambient",
@@ -151,9 +151,9 @@
     "query_id": "q11",
     "strategy": "comfort",
     "strategy_zh": "获得安慰",
-    "current_state": "我刚经历了让人委屈的事情，既生气又难过。",
-    "regulation_goal": "我希望音乐能让我感到被理解和安慰。",
-    "text": "我刚经历了让人委屈的事情，既生气又难过。我希望音乐能让我感到被理解和安慰。",
+    "current_state": "我今天遇到了一件挺委屈的事，心里又生气又难过。",
+    "regulation_goal": "我想听点能安慰我的音乐，让自己没那么难受。",
+    "text": "我今天遇到了一件挺委屈的事，心里又生气又难过。我想听点能安慰我的音乐，让自己没那么难受。",
     "strength": 0.5,
     "strategy_tags": [
       "piano",
@@ -166,10 +166,10 @@
   {
     "query_id": "q12",
     "strategy": "energize",
-    "strategy_zh": "转化行动力",
-    "current_state": "我现在有些焦虑和紧张，但不想被这种情绪困住。",
-    "regulation_goal": "我希望音乐能把这种能量转化成行动力。",
-    "text": "我现在有些焦虑和紧张，但不想被这种情绪困住。我希望音乐能把这种能量转化成行动力。",
+    "strategy_zh": "振作起来",
+    "current_state": "我现在有点紧张，也有点坐立不安。",
+    "regulation_goal": "我想听点能把这股劲带起来的音乐，让自己更有行动力。",
+    "text": "我现在有点紧张，也有点坐立不安。我想听点能把这股劲带起来的音乐，让自己更有行动力。",
     "strength": 0.5,
     "strategy_tags": [
       "energetic",
@@ -182,10 +182,10 @@
   {
     "query_id": "q13",
     "strategy": "maintain",
-    "strategy_zh": "贴合当前低落情绪",
-    "current_state": "我现在有些低落，只想听一些贴合当前心情的音乐。",
-    "regulation_goal": "我不希望音乐突然改变我的状态，只希望它能陪着我现在的情绪。",
-    "text": "我现在有些低落，只想听一些贴合当前心情的音乐。我不希望音乐突然改变我的状态，只希望它能陪着我现在的情绪。",
+    "strategy_zh": "保持当前状态",
+    "current_state": "我现在有点低落，只想听点和现在心情差不多的音乐。",
+    "regulation_goal": "我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
+    "text": "我现在有点低落，只想听点和现在心情差不多的音乐。我不想马上被鼓励起来，只想让音乐陪着我待一会儿。",
     "strength": 0.5,
     "strategy_tags": [
       "auto"
@@ -194,10 +194,10 @@
   {
     "query_id": "q14",
     "strategy": "calm",
-    "strategy_zh": "安静下来",
-    "current_state": "我现在有些疲惫和沮丧，脑子也不太清楚。",
-    "regulation_goal": "我希望音乐能让我安静下来。",
-    "text": "我现在有些疲惫和沮丧，脑子也不太清楚。我希望音乐能让我安静下来。",
+    "strategy_zh": "平静下来",
+    "current_state": "我现在有点累，也有点丧，脑子乱乱的。",
+    "regulation_goal": "我想听点安静的音乐，让自己慢慢缓下来。",
+    "text": "我现在有点累，也有点丧，脑子乱乱的。我想听点安静的音乐，让自己慢慢缓下来。",
     "strength": 0.5,
     "strategy_tags": [
       "ambient",
@@ -211,9 +211,9 @@
     "query_id": "q15",
     "strategy": "comfort",
     "strategy_zh": "获得安慰",
-    "current_state": "我今天有些孤独和难过，不太想说话。",
-    "regulation_goal": "我希望音乐能给我一些被理解和安慰的感觉。",
-    "text": "我今天有些孤独和难过，不太想说话。我希望音乐能给我一些被理解和安慰的感觉。",
+    "current_state": "我今天有点孤独，也有点难过，不太想说话。",
+    "regulation_goal": "我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
+    "text": "我今天有点孤独，也有点难过，不太想说话。我想听点能陪陪我的音乐，让自己感觉没那么孤单。",
     "strength": 0.5,
     "strategy_tags": [
       "piano",
@@ -227,9 +227,9 @@
     "query_id": "q16",
     "strategy": "energize",
     "strategy_zh": "振作起来",
-    "current_state": "我刚下班，感到疲惫低落，提不起精神。",
-    "regulation_goal": "我希望音乐能让我逐渐振作起来，更有活力。",
-    "text": "我刚下班，感到疲惫低落，提不起精神。我希望音乐能让我逐渐振作起来，更有活力。",
+    "current_state": "我刚下班，整个人很累，心情也有点低落。",
+    "regulation_goal": "我想听点能让我慢慢振作起来的音乐。",
+    "text": "我刚下班，整个人很累，心情也有点低落。我想听点能让我慢慢振作起来的音乐。",
     "strength": 0.5,
     "strategy_tags": [
       "energetic",

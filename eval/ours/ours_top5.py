@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-
 import csv
 import json
 import sys
 from pathlib import Path
-
 import numpy as np
 
 
@@ -35,10 +32,8 @@ TAG26 = [
 def load_queries():
     return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
 
-
 def qid(q):
     return str(q.get("query_id") or q.get("id"))
-
 
 def query_current_text(q):
     text = str(q.get("current_state") or "").strip()
@@ -46,13 +41,11 @@ def query_current_text(q):
         raise ValueError(f"{qid(q)} 缺少 current_state")
     return text
 
-
 def query_full_text(q):
     text = str(q.get("text") or "").strip()
     if text:
         return text
     return f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
-
 
 def query_strategy(q):
     s = str(q.get("strategy") or "").strip()
@@ -103,7 +96,6 @@ def row_from_track(q, track, rank, score, z_q, mu_q):
 
 def write_csv(rows):
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-
     fields = [
         "method", "query_id", "rank", "song_id", "score",
         "text", "current_state", "regulation_goal",
@@ -169,7 +161,6 @@ def main():
 
     print(f"完成 Ours Top-{TOP_K}: {OUT_CSV}")
     print(f"输出行数: {len(rows)}")
-
 
 if __name__ == "__main__":
     main()

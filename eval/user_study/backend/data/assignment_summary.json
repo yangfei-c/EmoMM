@@ -1,0 +1,44 @@
+{
+  "n_participants": 100,
+  "trials_per_user": 3,
+  "total_trials": 300,
+  "query_counts": {
+    "q01": 19,
+    "q02": 19,
+    "q03": 19,
+    "q04": 19,
+    "q05": 19,
+    "q06": 19,
+    "q07": 19,
+    "q08": 19,
+    "q09": 19,
+    "q10": 19,
+    "q11": 19,
+    "q12": 19,
+    "q13": 18,
+    "q14": 18,
+    "q15": 18,
+    "q16": 18
+  },
+  "strategy_counts": {
+    "calm": 75,
+    "comfort": 75,
+    "energize": 75,
+    "maintain": 75
+  },
+  "method_A_counts": {
+    "clamp3": 100,
+    "clap": 100,
+    "ours": 100
+  },
+  "method_B_counts": {
+    "clamp3": 100,
+    "clap": 100,
+    "ours": 100
+  },
+  "method_C_counts": {
+    "clamp3": 100,
+    "clap": 100,
+    "ours": 100
+  }
+}
