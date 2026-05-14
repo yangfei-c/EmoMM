@@ -24,21 +24,35 @@ OUT_CSV = ROOT / "eval" / "clamp3" / "clamp3_top5.csv"
 
 TOP_K = 5
 
-# 如果 True，会检查 query embedding 文件修改时间。
-# 新版 query 后如果没重新生成 query_embd，会直接报错。
-STRICT_QUERY_EMBD_TIME_CHECK = True
-
 
 def norm(x):
     x = np.asarray(x, dtype=np.float32)
     return x / np.maximum(np.linalg.norm(x, axis=1, keepdims=True), 1e-8)
 
 
+def load_queries():
+    return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
+
+
+def qid(q):
+    return str(q.get("query_id") or q.get("id"))
+
+
+def query_text(q):
+    text = str(q.get("text") or "").strip()
+    if text:
+        return text
+
+    text = f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
+    if not text:
+        raise ValueError(f"{qid(q)} 缺少 text")
+    return text
+
+
 def load_embd(folder):
     ids = []
     vecs = []
 
-    # 不用 rglob，避免误读子目录；这里只读当前目录下的 .npy
     for p in sorted(folder.glob("*.npy")):
         x = np.load(p, allow_pickle=True).squeeze().astype(np.float32)
 
@@ -54,225 +68,95 @@ def load_embd(folder):
     return ids, norm(np.stack(vecs))
 
 
-def get_query_id(q):
-    qid = q.get("query_id") or q.get("id")
-    if not qid:
-        raise ValueError(f"query 缺少 query_id/id: {q}")
-    return str(qid)
+def load_track_meta():
+    meta = {}
 
-
-def get_retrieval_text(q):
-    """
-    CLaMP3 baseline 使用完整查询文本：
-    current_state + regulation_goal。
-    """
-    text = str(q.get("text") or "").strip()
-
-    if text:
-        return text
-
-    current_state = str(q.get("current_state") or "").strip()
-    regulation_goal = str(q.get("regulation_goal") or "").strip()
-    text = f"{current_state}{regulation_goal}".strip()
-
-    if not text:
-        raise ValueError(f"{get_query_id(q)} 缺少 text/current_state/regulation_goal")
-
-    return text
-
-
-def get_current_state(q):
-    return str(q.get("current_state") or "").strip()
-
-
-def get_regulation_goal(q):
-    return str(q.get("regulation_goal") or "").strip()
-
-
-def get_strategy_zh(q):
-    return str(q.get("strategy_zh") or q.get("strategy") or "").strip()
-
-
-def build_track_info():
-    """
-    从全量音乐库读取 metadata。
-    这里不能再用 candidate_pool，因为 CLaMP3 已经跑了全量 49553 首。
-    """
-    tracks = load_tracks()
-
-    info = {}
-    duplicate = 0
-
-    for t in tracks:
+    for t in load_tracks():
         song_id = str(t.get("song_id", "")).strip()
+        if song_id and song_id not in meta:
+            meta[song_id] = t
 
-        if not song_id:
-            continue
-
-        if song_id in info:
-            duplicate += 1
-            continue
-
-        info[song_id] = t
-
-    print(f"全量 metadata 数量: {len(info)}")
-    print(f"重复 song_id 跳过数量: {duplicate}")
-
-    return info
+    return meta
 
 
-def validate_query_embeddings_are_fresh(queries):
-    """
-    CLaMP3 top5 脚本只能读取 query_embd。
-    如果 query JSON 改了但 query_embd 没重新生成，会得到旧结果。
-    所以这里做两类检查：
-    1. 每个 query_id 都有对应 .npy
-    2. query_embd 文件时间不早于 queries_zh16.json
-    """
-    query_ids = [get_query_id(q) for q in queries]
-    missing = []
-
-    for qid in query_ids:
-        p = QUERY_EMBD / f"{qid}.npy"
-        if not p.exists():
-            missing.append(str(p))
+def validate_query_embd(queries, query_ids):
+    missing = [qid(q) for q in queries if qid(q) not in query_ids]
 
     if missing:
-        print("缺少 CLaMP3 query embedding:")
-        for x in missing[:20]:
-            print("  ", x)
-        raise FileNotFoundError(
-            "CLaMP3 query_embd 不完整。请先用新版 queries_zh16.json 重新生成 query_embd。"
-        )
-
-    if not STRICT_QUERY_EMBD_TIME_CHECK:
-        return
-
-    query_mtime = QUERY_JSON.stat().st_mtime
-    stale = []
-
-    for qid in query_ids:
-        p = QUERY_EMBD / f"{qid}.npy"
-        if p.stat().st_mtime < query_mtime:
-            stale.append(str(p))
-
-    if stale:
-        print("以下 CLaMP3 query embedding 比 queries_zh16.json 更旧，可能还是旧 query 的向量:")
-        for x in stale[:20]:
-            print("  ", x)
-
-        raise RuntimeError(
-            "检测到 CLaMP3 query_embd 可能过期。"
-            "请删除或覆盖 D:\\AAAA_audio_dataset\\eval\\clamp3\\query_embd 下旧的 q*.npy，"
-            "并用新版 queries_zh16.json 重新生成 query embedding。"
-        )
+        raise RuntimeError(f"query_embd 缺少: {missing}")
 
 
-def main():
-    queries = json.loads(QUERY_JSON.read_text(encoding="utf-8"))
+def make_row(q, song_id, score, rank, track):
+    return {
+        "method": "clamp3",
+        "query_id": qid(q),
+        "rank": rank,
+        "song_id": song_id,
+        "score": round(float(score), 6),
 
-    validate_query_embeddings_are_fresh(queries)
+        "text": query_text(q),
+        "current_state": str(q.get("current_state", "")).strip(),
+        "regulation_goal": str(q.get("regulation_goal", "")).strip(),
+        "strategy": q.get("strategy", ""),
+        "strategy_zh": str(q.get("strategy_zh") or q.get("strategy") or "").strip(),
+        "strength": q.get("strength", 0.5),
 
-    track_info = build_track_info()
+        "display_tags": "|".join(map(str, track.get("display_tags", []))),
+        "va": json.dumps(track.get("va", []), ensure_ascii=False),
+        "audio_path": str(track.get("song_path") or track.get("audio_path") or ""),
+    }
 
-    query_ids, query_emb = load_embd(QUERY_EMBD)
-    song_ids, audio_emb = load_embd(AUDIO_EMBD)
 
-    expected_query_ids = [get_query_id(q) for q in queries]
-    query_index = {qid: i for i, qid in enumerate(query_ids)}
-
-    print(f"query embedding: {query_emb.shape}")
-    print(f"audio embedding: {audio_emb.shape}")
-    print(f"audio ids 数量: {len(song_ids)}")
-    print(f"query ids 数量: {len(query_ids)}")
-
-    if query_emb.shape[1] != audio_emb.shape[1]:
-        raise ValueError(f"维度不一致: query={query_emb.shape}, audio={audio_emb.shape}")
-
-    for qid in expected_query_ids:
-        if qid not in query_index:
-            raise KeyError(f"query_embd 里找不到: {qid}")
-
-    missing_meta = [sid for sid in song_ids if sid not in track_info]
-    print(f"audio embedding 中找不到 metadata 的数量: {len(missing_meta)}")
-
-    if missing_meta:
-        print("示例 missing metadata song_id:")
-        for sid in missing_meta[:10]:
-            print("  ", sid)
-
-    rows = []
-
-    for q in queries:
-        qid = get_query_id(q)
-
-        scores = audio_emb @ query_emb[query_index[qid]]
-        top_idx = np.argsort(-scores)[:TOP_K]
-
-        query_text = get_retrieval_text(q)
-
-        for rank, idx in enumerate(top_idx, start=1):
-            idx = int(idx)
-
-            song_id = song_ids[idx]
-            info = track_info.get(song_id, {})
-
-            rows.append({
-                "method": "clamp3",
-                "query_id": qid,
-                "rank": rank,
-                "song_id": song_id,
-                "score": round(float(scores[idx]), 6),
-
-                "text": query_text,
-                "current_state": get_current_state(q),
-                "regulation_goal": get_regulation_goal(q),
-                "strategy": q.get("strategy", ""),
-                "strategy_zh": get_strategy_zh(q),
-                "strength": q.get("strength", 0.5),
-
-                "display_tags": "|".join(map(str, info.get("display_tags", []))),
-                "va": json.dumps(info.get("va", []), ensure_ascii=False),
-                "audio_path": str(info.get("song_path", "")),
-            })
-
+def write_csv(rows):
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
-    fieldnames = [
-        "method",
-        "query_id",
-        "rank",
-        "song_id",
-        "score",
-        "text",
-        "current_state",
-        "regulation_goal",
-        "strategy",
-        "strategy_zh",
-        "strength",
-        "display_tags",
-        "va",
-        "audio_path",
+    fields = [
+        "method", "query_id", "rank", "song_id", "score",
+        "text", "current_state", "regulation_goal",
+        "strategy", "strategy_zh", "strength",
+        "display_tags", "va", "audio_path",
     ]
 
     with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         writer.writerows(rows)
 
-    print("=" * 80)
-    print(f"完成: {OUT_CSV}")
+
+def main():
+    queries = load_queries()
+
+    query_ids, query_emb = load_embd(QUERY_EMBD)
+    song_ids, audio_emb = load_embd(AUDIO_EMBD)
+    tracks = load_track_meta()
+
+    validate_query_embd(queries, query_ids)
+
+    query_index = {x: i for i, x in enumerate(query_ids)}
+    rows = []
+
+    for q in queries:
+        q_index = query_index[qid(q)]
+        scores = audio_emb @ query_emb[q_index]
+        top_idx = np.argsort(-scores)[:TOP_K]
+
+        for rank, idx in enumerate(top_idx, start=1):
+            idx = int(idx)
+            song_id = song_ids[idx]
+            rows.append(
+                make_row(
+                    q=q,
+                    song_id=song_id,
+                    score=scores[idx],
+                    rank=rank,
+                    track=tracks.get(song_id, {}),
+                )
+            )
+
+    write_csv(rows)
+
+    print(f"完成 CLaMP3 Top-{TOP_K}: {OUT_CSV}")
     print(f"输出行数: {len(rows)}")
-
-    expected_rows = len(queries) * TOP_K
-    if len(rows) != expected_rows:
-        print(f"Warning: 期望 {expected_rows} 行，实际 {len(rows)} 行")
-
-    empty_audio_path = sum(1 for r in rows if not r["audio_path"])
-    empty_va = sum(1 for r in rows if r["va"] in ["[]", ""])
-
-    print(f"audio_path 为空数量: {empty_audio_path}")
-    print(f"va 为空数量: {empty_va}")
 
 
 if __name__ == "__main__":

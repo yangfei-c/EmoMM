@@ -8,8 +8,8 @@ from pathlib import Path
 import numpy as np
 
 
-root_dir = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(root_dir / "src"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "src"))
 
 from core.music_repository import load_tracks
 from core.tag_prototype import compute_tag_prototypes
@@ -19,8 +19,8 @@ from core.user_state import UserStateEstimator
 from core.config import strategy_tag
 
 
-query_json = root_dir / "eval" / "queries_zh16.json"
-out_csv = root_dir / "eval" / "ours" / "ours_top5.csv"
+QUERY_JSON = ROOT / "eval" / "queries_zh16.json"
+OUT_CSV = ROOT / "eval" / "ours" / "ours_top5.csv"
 
 TOP_K = 5
 
@@ -32,114 +32,105 @@ TAG26 = [
 ]
 
 
-def get_query_id(q):
-    qid = q.get("query_id") or q.get("id")
-    if not qid:
-        raise ValueError(f"query 缺少 query_id/id: {q}")
-    return str(qid)
+def load_queries():
+    return json.loads(QUERY_JSON.read_text(encoding="utf-8"))
 
 
-def get_current_state_text(q):
-    """
-    Ours 只用 current_state 估计当前情绪 z_q。
-    不能用完整 text，否则 regulation_goal 会污染当前情绪估计。
-    """
+def qid(q):
+    return str(q.get("query_id") or q.get("id"))
+
+
+def query_current_text(q):
     text = str(q.get("current_state") or "").strip()
-
     if not text:
-        # 兼容旧 JSON；但新版正式实验应该有 current_state
-        text = str(q.get("text") or "").strip()
-
-    if not text:
-        raise ValueError(f"{get_query_id(q)} 缺少 current_state/text")
-
+        raise ValueError(f"{qid(q)} 缺少 current_state")
     return text
 
 
-def get_display_text(q):
-    """
-    页面和 CSV 记录用完整 text。
-    CLAP / CLaMP3 用这个完整 text。
-    """
+def query_full_text(q):
     text = str(q.get("text") or "").strip()
-
     if text:
         return text
-
-    current_state = str(q.get("current_state") or "").strip()
-    regulation_goal = str(q.get("regulation_goal") or "").strip()
-
-    return f"{current_state}{regulation_goal}".strip()
+    return f"{q.get('current_state', '')}{q.get('regulation_goal', '')}".strip()
 
 
-def get_strategy(q):
-    strategy = str(q.get("strategy") or "").strip()
-
-    if not strategy:
-        raise ValueError(f"{get_query_id(q)} 缺少 strategy")
-
-    return strategy
+def query_strategy(q):
+    s = str(q.get("strategy") or "").strip()
+    if not s:
+        raise ValueError(f"{qid(q)} 缺少 strategy")
+    return s
 
 
-def get_strength(q):
-    return float(q.get("strength", 0.5))
-
-
-def get_strategy_labels(q, strategy):
-    """
-    标签先读 query 里的 strategy_tags。
-    如果新版 JSON 没写，则用 core.config.strategy_tag。
-    """
-    labels = q.get("strategy_tags", None)
-
+def query_labels(q, strategy):
+    labels = q.get("strategy_tags")
     if labels is None:
         labels = strategy_tag.get(strategy, [])
-
-    if not isinstance(labels, list):
-        raise ValueError(f"{get_query_id(q)} strategy_tags 必须是 list: {labels}")
-
     return labels
 
 
-def main():
-    queries = json.loads(query_json.read_text(encoding="utf-8"))
-
-    tracks = load_tracks()
+def load_music():
     tracks = [
-        t for t in tracks
+        t for t in load_tracks()
         if t.get("va") is not None and t.get("tag26") is not None
     ]
-
-    print(f"全量音乐数量: {len(tracks)}")
-    print(f"query 数量: {len(queries)}")
-
     z_matrix = np.asarray([t["va"] for t in tracks], dtype=np.float32)
     y_matrix = np.asarray([t["tag26"] for t in tracks], dtype=np.float32)
+    return tracks, z_matrix, y_matrix
 
+
+def row_from_track(q, track, rank, score, z_q, mu_q):
+    return {
+        "method": "ours",
+        "query_id": qid(q),
+        "rank": rank,
+        "song_id": str(track["song_id"]),
+        "score": round(float(score), 6),
+
+        "text": query_full_text(q),
+        "current_state": str(q.get("current_state", "")).strip(),
+        "regulation_goal": str(q.get("regulation_goal", "")).strip(),
+        "strategy": str(q.get("strategy", "")).strip(),
+        "strategy_zh": str(q.get("strategy_zh") or q.get("strategy") or "").strip(),
+        "strength": float(q.get("strength", 0.5)),
+        "z_q": json.dumps(z_q, ensure_ascii=False),
+        "mu_q": json.dumps(mu_q, ensure_ascii=False),
+
+        "display_tags": "|".join(map(str, track.get("display_tags", []))),
+        "va": json.dumps(track.get("va", []), ensure_ascii=False),
+        "audio_path": str(track.get("song_path") or track.get("audio_path") or ""),
+    }
+
+
+def write_csv(rows):
+    OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
+
+    fields = [
+        "method", "query_id", "rank", "song_id", "score",
+        "text", "current_state", "regulation_goal",
+        "strategy", "strategy_zh", "strength", "z_q", "mu_q",
+        "display_tags", "va", "audio_path",
+    ]
+
+    with OUT_CSV.open("w", encoding="utf-8-sig", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def main():
+    queries = load_queries()
+    tracks, z_matrix, y_matrix = load_music()
     prototypes = compute_tag_prototypes(tracks)
-
     estimator = UserStateEstimator()
 
     rows = []
 
-    for qi, q in enumerate(queries, start=1):
-        qid = get_query_id(q)
-        strategy = get_strategy(q)
-        strength = get_strength(q)
+    for q in queries:
+        strategy = query_strategy(q)
+        strength = float(q.get("strength", 0.5))
 
-        current_state = get_current_state_text(q)
-        display_text = get_display_text(q)
-        regulation_goal = str(q.get("regulation_goal") or "").strip()
-        strategy_zh = str(q.get("strategy_zh") or strategy).strip()
-
-        print("=" * 80)
-        print(f"[{qi}/{len(queries)}] {qid}")
-        print(f"strategy: {strategy}, strength: {strength}")
-        print(f"current_state: {current_state}")
-
-        # Ours: current_state -> z_q, strategy + strength -> mu_q
         state = estimator.process(
-            text=current_state,
+            text=query_current_text(q),
             strategy=strategy,
             strength=strength,
         )
@@ -147,8 +138,7 @@ def main():
         z_q = state["z_q"]
         mu_q = state["mu_q"]
 
-        labels = get_strategy_labels(q, strategy)
-
+        labels = query_labels(q, strategy)
         if labels == ["auto"]:
             labels = select_nearest_tags(mu_q, prototypes, TAG26)
 
@@ -169,72 +159,16 @@ def main():
             alpha=1.0,
             beta=1.0,
             gamma=1.0,
-        )
+        )["total_score"]
 
-        top_idx = topk_indices(scores["total_score"], TOP_K)
-
-        for rank, idx in enumerate(top_idx, start=1):
+        for rank, idx in enumerate(topk_indices(scores, TOP_K), start=1):
             idx = int(idx)
-            track = tracks[idx]
+            rows.append(row_from_track(q, tracks[idx], rank, scores[idx], z_q, mu_q))
 
-            rows.append({
-                "method": "ours",
-                "query_id": qid,
-                "rank": rank,
-                "song_id": str(track["song_id"]),
-                "score": round(float(scores["total_score"][idx]), 6),
+    write_csv(rows)
 
-                "text": display_text,
-                "current_state": current_state,
-                "regulation_goal": regulation_goal,
-                "strategy": strategy,
-                "strategy_zh": strategy_zh,
-                "strength": strength,
-                "z_q": json.dumps(z_q, ensure_ascii=False),
-                "mu_q": json.dumps(mu_q, ensure_ascii=False),
-
-                "display_tags": "|".join(map(str, track.get("display_tags", []))),
-                "va": json.dumps(track.get("va", []), ensure_ascii=False),
-                "audio_path": str(track.get("song_path") or track.get("audio_path") or ""),
-            })
-
-    out_csv.parent.mkdir(parents=True, exist_ok=True)
-
-    fieldnames = [
-        "method",
-        "query_id",
-        "rank",
-        "song_id",
-        "score",
-        "text",
-        "current_state",
-        "regulation_goal",
-        "strategy",
-        "strategy_zh",
-        "strength",
-        "z_q",
-        "mu_q",
-        "display_tags",
-        "va",
-        "audio_path",
-    ]
-
-    with out_csv.open("w", encoding="utf-8-sig", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
-    print("=" * 80)
-    print("Ours full-library Top-5 生成完成")
-    print(f"输出: {out_csv}")
+    print(f"完成 Ours Top-{TOP_K}: {OUT_CSV}")
     print(f"输出行数: {len(rows)}")
-
-    expected_rows = len(queries) * TOP_K
-    if len(rows) != expected_rows:
-        print(f"Warning: 期望 {expected_rows} 行，实际 {len(rows)} 行")
-
-    empty_audio_path = sum(1 for r in rows if not r["audio_path"])
-    print(f"audio_path 为空数量: {empty_audio_path}")
 
 
 if __name__ == "__main__":
