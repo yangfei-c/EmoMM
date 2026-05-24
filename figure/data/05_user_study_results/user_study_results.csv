@@ -1,0 +1,16 @@
+result_level,strategy,method,n,mean_score,std_score,median_score,best_count,total_count,best_ratio,source
+overall,overall,Ours,225,4.662222222222222,1.5034616142079669,4.0,95,225,42.22222222222222,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_stats.csv
+overall,overall,CLaMP3,225,4.315555555555555,1.7810956143064265,4.0,88,225,39.111111111111114,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_stats.csv
+overall,overall,CLAP,225,3.3777777777777778,1.8766527107660056,3.0,42,225,18.666666666666668,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_stats.csv
+by_strategy,calm,Ours,57,4.84,1.56,,23,57,40.35,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,calm,CLaMP3,57,3.93,1.74,,14,57,24.56,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,calm,CLAP,57,4.32,1.96,,20,57,35.09,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,comfort,Ours,55,4.42,1.52,,21,55,38.18,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,comfort,CLaMP3,55,4.76,1.63,,26,55,47.27,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,comfort,CLAP,55,3.58,1.65,,8,55,14.55,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,energize,Ours,56,4.57,1.14,,24,56,42.86,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,energize,CLaMP3,56,4.45,1.68,,31,56,55.36,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,energize,CLAP,56,2.48,1.36,,1,56,1.79,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,maintain,Ours,57,4.81,1.73,,27,57,47.37,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,maintain,CLaMP3,57,4.14,1.98,,17,57,29.82,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md
+by_strategy,maintain,CLAP,57,3.12,2.00,,13,57,22.81,D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\paper_tables\paper_main_table_zh.md

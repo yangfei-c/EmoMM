@@ -458,10 +458,10 @@ def parse_args():
 
 
 def main():
-    args = parse_args()
 
-    input_path = Path(args.input)
-    out_dir = Path(args.out) if args.out else input_path.parent / "paper_tables"
+
+    input_path = Path(r"D:\AAAAAAAAAA_emotion\Code\EmoMusicRec\eval\user_study\downloaded_responses\responses_merged.csv")
+    out_dir = input_path.parent / "paper_tables"
 
     df = read_csv_safely(input_path)
     mode = detect_score_mode(df)

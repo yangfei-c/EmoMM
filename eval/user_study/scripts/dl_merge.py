@@ -12,8 +12,8 @@ from botocore.client import Config
 # Spaces 配置：本地填入，不要把真实 key/secret 提交到公开 GitHub
 # =============================================================================
 
-SPACES_KEY = "在这里填写你的_SPACES_ACCESS_KEY"
-SPACES_SECRET = "在这里填写你的_SPACES_SECRET_KEY"
+SPACES_KEY = "DO801HBPLEHUEQZFKVXV"
+SPACES_SECRET = "wqIPqYRPHVkHkjVcYV4XHvfyZCbXQvSHj7wKTx9HIZc"
 
 SPACES_REGION = "sfo3"
 SPACES_BUCKET = "emmrmusic"
